@@ -12,517 +12,318 @@
 </head>
 <body>
 
-  <!-- Particles Background -->
-  <canvas id="particles"></canvas>
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">HF</a>
+    <ul class="nav-links">
+      <li><a href="#about" class="active" data-t="nav_about">About</a></li>
+      <li><a href="#experience" data-t="nav_exp">Experience</a></li>
+      <li><a href="#skills" data-t="nav_skills">Skills</a></li>
+      <li><a href="#education" data-t="nav_edu">Education</a></li>
+      <li><a href="#contact" data-t="nav_contact">Contact</a></li>
+    </ul>
+    <button class="btn-lang" id="btnLang" onclick="toggleLang()">🇫🇷 FR</button>
+  </div>
+</nav>
 
-  <!-- Navbar -->
-  <nav class="navbar" id="navbar">
-    <div class="container">
-      <a href="#" class="nav-logo">HF</a>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#about" class="active" data-i18n="nav_about">About</a></li>
-        <li><a href="#experience" data-i18n="nav_experience">Experience</a></li>
-        <li><a href="#skills" data-i18n="nav_skills">Skills</a></li>
-        <li><a href="#education" data-i18n="nav_education">Education</a></li>
-        <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+<!-- HERO -->
+<section class="hero" id="about">
+  <div class="hero-grid fade">
+    <img src="photo.jpg" alt="Hamza FEKKAK" class="hero-photo">
+    <div>
+      <div class="hero-badge"><i></i><span data-t="hero_badge">Open to opportunities</span></div>
+      <h1>Hamza <span>FEKKAK</span></h1>
+      <p class="hero-role" data-t="hero_role">IT Engineer · Cybersecurity · Cloud</p>
+      <p class="hero-bio" data-t="hero_bio">IT professional specialized in systems administration, cloud infrastructure, and cybersecurity. Proactive and adaptable, I bring technical expertise and a collaborative spirit to drive innovation.</p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-fill" data-t="btn_contact">Contact Me</a>
+        <a href="Videos/FEKKAK HAMZA CV.pdf" class="btn btn-ghost" download data-t="btn_cv">Download CV</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about section" id="about2">
+  <div class="section-inner fade">
+    <h2 class="section-title" data-t="about_title">About Me</h2>
+    <div class="section-bar"></div>
+    <div class="about-grid">
+      <div>
+        <p data-t="about_p">Professionnel de l'informatique spécialisé en administration des systèmes IT, je mets à disposition mon expertise technique, mon dynamisme et ma capacité d'adaptation. Mon ambition est de poursuivre le développement de mes compétences tout en contribuant à la performance de votre organisation.</p>
+        <div class="stats">
+          <div><div class="stat-num">5+</div><div class="stat-lbl" data-t="stat_yrs">Years Exp.</div></div>
+          <div><div class="stat-num">50+</div><div class="stat-lbl" data-t="stat_proj">Projects</div></div>
+          <div><div class="stat-num">600+</div><div class="stat-lbl" data-t="stat_users">Users Supported</div></div>
+        </div>
+      </div>
+      <div>
+        <h3>Langues / Languages</h3>
+        <p>🇲🇦 Arabe — Maternel</p>
+        <p>🇫🇷 Français — Courant</p>
+        <p>🇬🇧 English — Proficient</p>
+        <h3 style="margin-top:16px">Loisirs</h3>
+        <p>🔧 Montage &amp; réparation matériel informatique</p>
+        <p>🤖 Programmation robotique Arduino</p>
+        <p>🔒 Recherche de vulnérabilités informatiques</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="section" id="experience">
+  <div class="section-inner fade">
+    <h2 class="section-title" data-t="sec_exp">Professional Experience</h2>
+    <div class="section-bar"></div>
+
+    <div class="xp-item">
+      <div class="xp-date" data-t="xp1_date">Sep 2025 – Present</div>
+      <div class="xp-role" data-t="xp1_role">IT Engineer</div>
+      <div class="xp-company" data-t="xp1_co">SOFRECOM · Orange Group · Casablanca</div>
+      <ul class="xp-list">
+        <li data-t="xp1_a">Security reviews of infrastructure systems</li>
+        <li data-t="xp1_b">IT project management &amp; cross-team coordination</li>
+        <li data-t="xp1_c">MDT / WDS / SCCM / PDQ Deploy administration</li>
+        <li data-t="xp1_d">Technical documentation &amp; procedures</li>
+        <li data-t="xp1_e">Security compliance &amp; exemption tracking</li>
+        <li data-t="xp1_f">User training on IT best practices &amp; security</li>
+        <li data-t="xp1_g">IT asset management via OCS Inventory</li>
+        <li data-t="xp1_h">Level 2–3 technical support for complex incidents</li>
       </ul>
-      <button class="lang-toggle" id="langBtn" onclick="toggleLang()">🇫🇷 FR</button>
-      <button class="nav-toggle" onclick="toggleNav()" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
     </div>
-  </nav>
 
-  <!-- Hero Section -->
-  <section class="hero" id="about">
-    <div class="container">
-      <div class="hero-content fade-up">
-        <div class="hero-badge">
-          <span class="dot"></span>
-          <span data-i18n="hero_badge">Available for opportunities</span>
-        </div>
-        <h1>Hamza <span>FEKKAK</span></h1>
-        <p class="hero-role" data-i18n="hero_role">IT Engineer & Cybersecurity</p>
-        <p class="hero-desc" data-i18n="hero_desc">IT professional specialized in systems administration, cloud infrastructure, and cybersecurity. Proactive and adaptable, I bring technical expertise and a strong collaborative spirit to drive innovation.</p>
-        <div class="hero-stats">
-          <div class="stat">
-            <div class="stat-value">5+</div>
-            <div class="stat-label" data-i18n="stat_years">Years Exp.</div>
-          </div>
-          <div class="stat">
-            <div class="stat-value">50+</div>
-            <div class="stat-label" data-i18n="stat_projects">Projects Done</div>
-          </div>
-          <div class="stat">
-            <div class="stat-value">600+</div>
-            <div class="stat-label" data-i18n="stat_users">Users Supported</div>
-          </div>
-        </div>
-        <div class="hero-actions">
-          <a href="#contact" class="btn btn-primary">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            <span data-i18n="btn_contact">Contact Me</span>
-          </a>
-          <a href="Videos/FEKKAK HAMZA CV.pdf" class="btn btn-outline" download>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            <span data-i18n="btn_cv">Download CV</span>
-          </a>
-        </div>
-      </div>
-      <div class="hero-photo-wrap fade-up">
-        <div class="hero-photo-ring">
-          <img src="photo.jpg" alt="Hamza FEKKAK" class="hero-photo">
-        </div>
-        <!-- Floating badges with inline SVG icons -->
-        <div class="float-badge b1">
-          <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-          Windows Server
-        </div>
-        <div class="float-badge b2">
-          <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-          Cloud & Security
-        </div>
-        <div class="float-badge b3">
-          <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          Cybersecurity
-        </div>
+    <div class="xp-item">
+      <div class="xp-date" data-t="xp2_date">Dec 2022 – Sep 2025</div>
+      <div class="xp-role" data-t="xp2_role">IT Technician</div>
+      <div class="xp-company" data-t="xp2_co">LATECOERE INTERCONNECTION SYSTEMS · Casablanca</div>
+      <ul class="xp-list">
+        <li data-t="xp2_a">Data Center management — AD DS, DNS, DHCP (+98% security compliance)</li>
+        <li data-t="xp2_b">SCCM deployment, configuration &amp; upgrades</li>
+        <li data-t="xp2_c">CrowdStrike EDR &amp; Sophos Mobile MDM management</li>
+        <li data-t="xp2_d">VMware vSphere &amp; Azure server administration</li>
+        <li data-t="xp2_e">PowerShell automation — 30% reduction in manual tasks</li>
+        <li data-t="xp2_f">Cisco Webex VoIP telephony management</li>
+        <li data-t="xp2_g">Backup management — 99%+ uptime</li>
+        <li data-t="xp2_h">Server room maintenance — 20% energy reduction</li>
+        <li data-t="xp2_i">Technical documentation for 600+ users</li>
+        <li data-t="xp2_j">92% first-contact ticket resolution</li>
+      </ul>
+    </div>
+
+    <div class="xp-item">
+      <div class="xp-date" data-t="xp3_date">Jul 2021 – Dec 2022</div>
+      <div class="xp-role" data-t="xp3_role">IT Technician</div>
+      <div class="xp-company" data-t="xp3_co">AMEX ROYAL AIR MAROC · Casablanca</div>
+      <ul class="xp-list">
+        <li data-t="xp3_a">Incident management via Micro Focus SMAX</li>
+        <li data-t="xp3_b">Hardware installation, configuration &amp; maintenance</li>
+        <li data-t="xp3_c">User session &amp; access management</li>
+        <li data-t="xp3_d">Software deployment via ManageEngine</li>
+        <li data-t="xp3_e">IT stock management</li>
+        <li data-t="xp3_f">Multi-channel user support (phone, email, remote)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="skills section" id="skills">
+  <div class="section-inner fade">
+    <h2 class="section-title" data-t="sec_skills">Technical Skills</h2>
+    <div class="section-bar"></div>
+
+    <div class="sk-cat">
+      <div class="sk-cat-title" data-t="sk_sys">Systems &amp; Infrastructure</div>
+      <div class="sk-tags">
+        <span class="sk-tag">Windows Server</span>
+        <span class="sk-tag">Active Directory</span>
+        <span class="sk-tag">Group Policy (GPO)</span>
+        <span class="sk-tag">DNS / DHCP</span>
+        <span class="sk-tag">SCCM</span>
+        <span class="sk-tag">MDT / WDS</span>
+        <span class="sk-tag">PDQ Deploy</span>
+        <span class="sk-tag">OCS Inventory</span>
+        <span class="sk-tag">PowerShell</span>
+        <span class="sk-tag">Linux</span>
       </div>
     </div>
-  </section>
 
-  <!-- Experience Section -->
-  <section class="experience section" id="experience">
-    <div class="container">
-      <h2 class="section-title fade-up" data-i18n="exp_title">Professional Experience</h2>
-      <p class="section-subtitle fade-up" data-i18n="exp_subtitle">My career journey in IT</p>
-
-      <div class="timeline">
-        <!-- Experience 1 -->
-        <div class="timeline-item fade-up">
-          <div class="timeline-dot"></div>
-          <span class="timeline-date" data-i18n="exp1_date">Sep 2025 – Present</span>
-          <div class="timeline-card">
-            <h3 data-i18n="exp1_title">IT Engineer</h3>
-            <p class="timeline-company" data-i18n="exp1_company">SOFRECOM, Orange Group</p>
-            <p class="timeline-location">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              <span data-i18n="exp1_location">Casablanca Nearshore, Casablanca</span>
-            </p>
-            <ul class="timeline-tasks">
-              <li data-i18n="exp1_t1">Conduct regular security reviews of infrastructure systems</li>
-              <li data-i18n="exp1_t2">Manage internal IT projects, coordinating between technical teams</li>
-              <li data-i18n="exp1_t3">Administer MDT, WDS, SCCM and PDQ Deploy deployment solutions</li>
-              <li data-i18n="exp1_t4">Write and maintain technical documentation and procedures</li>
-              <li data-i18n="exp1_t5">Monitor security compliance and track exemptions</li>
-              <li data-i18n="exp1_t6">Train users on IT best practices and security awareness</li>
-              <li data-i18n="exp1_t7">Supervise IT asset management via OCS Inventory</li>
-              <li data-i18n="exp1_t8">Level 2 &amp; 3 technical support for complex incidents</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Experience 2 -->
-        <div class="timeline-item fade-up">
-          <div class="timeline-dot"></div>
-          <span class="timeline-date" data-i18n="exp2_date">Dec 2022 – Sep 2025</span>
-          <div class="timeline-card">
-            <h3 data-i18n="exp2_title">IT Technician</h3>
-            <p class="timeline-company" data-i18n="exp2_company">LATECOERE INTERCONNECTION SYSTEMS</p>
-            <p class="timeline-location">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              <span data-i18n="exp2_location">Had Soualem, Casablanca</span>
-            </p>
-            <ul class="timeline-tasks">
-              <li data-i18n="exp2_t1">Data Center management — AD DS, DNS, DHCP, access rights (+98% security compliance)</li>
-              <li data-i18n="exp2_t2">Deployment, configuration via SCCM</li>
-              <li data-i18n="exp2_t3">EDR CrowdStrike &amp; MDM Sophos Mobile management</li>
-              <li data-i18n="exp2_t4">VMware vSphere &amp; Azure server administration</li>
-              <li data-i18n="exp2_t5">PowerShell automation — 30% reduction in manual repetitive tasks</li>
-              <li data-i18n="exp2_t6">Cisco Webex VoIP telephony management</li>
-              <li data-i18n="exp2_t7">Backup management &amp; 99%+ uptime guarantee</li>
-              <li data-i18n="exp2_t8">Server room maintenance — 20% energy reduction</li>
-              <li data-i18n="exp2_t9">Technical documentation for 600+ users</li>
-              <li data-i18n="exp2_t10">92% first-contact ticket resolution rate</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Experience 3 -->
-        <div class="timeline-item fade-up">
-          <div class="timeline-dot"></div>
-          <span class="timeline-date" data-i18n="exp3_date">Jul 2021 – Dec 2022</span>
-          <div class="timeline-card">
-            <h3 data-i18n="exp3_title">IT Technician</h3>
-            <p class="timeline-company" data-i18n="exp3_company">AMEX ROYAL AIR MAROC</p>
-            <p class="timeline-location">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              <span data-i18n="exp3_location">Casablanca</span>
-            </p>
-            <ul class="timeline-tasks">
-              <li data-i18n="exp3_t1">Incident management via Micro Focus SMAX</li>
-              <li data-i18n="exp3_t2">Hardware installation, configuration and maintenance</li>
-              <li data-i18n="exp3_t3">User session and access management</li>
-              <li data-i18n="exp3_t4">Software deployment via ManageEngine</li>
-              <li data-i18n="exp3_t5">IT stock management and resource optimization</li>
-              <li data-i18n="exp3_t6">Multi-channel user support (phone, email, remote)</li>
-            </ul>
-          </div>
-        </div>
+    <div class="sk-cat">
+      <div class="sk-cat-title" data-t="sk_cloud">Cloud &amp; Virtualization</div>
+      <div class="sk-tags">
+        <span class="sk-tag">Microsoft Azure</span>
+        <span class="sk-tag">Amazon AWS</span>
+        <span class="sk-tag">VMware vSphere</span>
+        <span class="sk-tag">Proxmox</span>
+        <span class="sk-tag">Hyper-V</span>
+        <span class="sk-tag">Docker</span>
+        <span class="sk-tag">Office 365</span>
       </div>
     </div>
-  </section>
 
-  <!-- Skills Section -->
-  <section class="skills section" id="skills">
-    <div class="container">
-      <h2 class="section-title fade-up" data-i18n="skills_title">Technical Skills</h2>
-      <p class="section-subtitle fade-up" data-i18n="skills_subtitle">Technologies I work with daily</p>
-
-      <!-- Infrastructure & Systems -->
-      <div class="skill-category fade-up">
-        <h3 class="skill-category-title" data-i18n="cat_infra">Infrastructure &amp; Systems</h3>
-        <div class="skills-grid">
-          <div class="skill-card">
-            <div class="skill-icon"><svg viewBox="0 0 24 24" fill="#0078D4"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg></div>
-            <span class="skill-name">Windows Server</span>
-          </div>
-          <div class="skill-card">
-            <div class="skill-icon"><svg viewBox="0 0 24 24" fill="#FCC624"><path d="M12.504 0c-.155 0-.311.001-.465.003-.653.014-1.302.067-1.943.198a6.883 6.883 0 0 0-1.033.291c-.439.156-.86.35-1.258.587a7.336 7.336 0 0 0-1.13.87c-.34.318-.65.665-.927 1.036a7.978 7.978 0 0 0-.68 1.168 8.58 8.58 0 0 0-.46 1.26c-.118.43-.203.868-.255 1.31a11.23 11.23 0 0 0-.05 1.33c.012.442.057.882.135 1.317.078.435.188.864.33 1.283.142.42.315.828.517 1.222.202.394.433.771.692 1.128.26.357.547.692.858 1.003.311.311.646.598 1.003.858.357.26.734.49 1.128.692.394.202.802.375 1.222.517.42.142.848.252 1.283.33.435.078.875.123 1.317.135.442.012.885-.005 1.325-.05.44-.052.875-.137 1.3-.255.43-.128.85-.285 1.255-.472.405-.187.795-.403 1.165-.647.37-.244.72-.515 1.047-.812.327-.297.63-.618.907-.96.277-.342.527-.703.748-1.08.222-.377.414-.77.575-1.175.16-.405.29-.82.387-1.243.098-.423.163-.853.195-1.286.032-.433.032-.868 0-1.301a6.877 6.877 0 0 0-.195-1.286 7.535 7.535 0 0 0-.387-1.243 7.978 7.978 0 0 0-.575-1.175 8.367 8.367 0 0 0-.748-1.08 8.737 8.737 0 0 0-.907-.96 9.09 9.09 0 0 0-1.047-.812 9.42 9.42 0 0 0-1.165-.647 9.73 9.73 0 0 0-1.255-.472A10.02 10.02 0 0 0 13.829.253a10.28 10.28 0 0 0-1.325-.05L12.504 0z"/></svg></div>
-            <span class="skill-name">Linux</span>
-          </div>
-          <div class="skill-card">
-            <div class="skill-icon"><svg viewBox="0 0 24 24" fill="#0078D4"><path d="M2.7 6.1h7.2L2.7 17.9a1.1 1.1 0 0 1-.7-1V7.1a1 1 0 0 1 1-1zm18.6-1.1a1 1 0 0 0-1-1h-6.5l-2.7 3.1h9.2a1 1 0 0 0 1-1V5zM9.9 6.1h4.2l-6.5 11.3H3.4l6.5-11.3zm5.4 0h4.2a1 1 0 0 1 1 1v9.8a1 1 0 0 1-1 1h-7.2l3-3.5h1.2v-2h-3.2l1.2-1.4v-3.9z"/></svg></div>
-            <span class="skill-name">Active Directory</span>
-          </div>
-          <div class="skill-card">
-            <div class="skill-icon"><svg viewBox="0 0 24 24" fill="#0078D4"><path d="M11.4 2.1c.3-.2.7-.2 1 0l9.3 5.4c.3.2.5.5.5.9v7.2c0 .4-.2.7-.5.9l-9.3 5.4c-.3.2-.7.2-1 0l-9.3-5.4c-.3-.2-.5-.5-.5-.9V8.4c0-.4.2-.7.5-.9l9.3-5.4z"/></svg></div>
-            <span class="skill-name">Group Policy (GPO)</span>
-          </div>
-          <div class="skill-card">
-            <div class="skill-icon"><svg viewBox="0 0 24 24" fill="#0078D4"><path d="M3 3h8v8H3V3zm10 0h8v8h-8V3zM3 13h8v8H3v-8zm10 0h8v8h-8v-8z"/></svg></div>
-            <span class="skill-name">SCCM / MDT / WDS</span>
-          </div>
-          <div class="skill-card">
-            <div class="skill-icon"><svg viewBox="0 0 24 24" fill="#5391FE"><path d="M21.8 3.4c.3.2.4.5.4.8v15.6c0 .3-.1.6-.4.8-.2.2-.5.3-.8.3H3c-.3 0-.6-.1-.8-.3-.3-.2-.4-.5-.4-.8V4.2c0-.3.1-.6.4-.8.2-.2.5-.3.8-.3h18c.3 0 .6.1.8.3zM5.5 7l3.5 7-3.5 7h3l2.5-5.3L13.5 21h3l-3.5-7 3.5-7h-3L11 12.3 8.5 7h-3z"/></svg></div>
-            <span class="skill-name">PowerShell</span>
-          </div>
-          <div class="skill-card">
-            <div class="skill-icon"><svg viewBox="0 0 24 24" fill="#00A3DF"><path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.2l7.4 3.7L12 11.6 4.6 7.9 12 4.2zM4 9.4l7 3.5v6.7l-7-3.5V9.4zm9 10.2v-6.7l7-3.5v6.7l-7 3.5z"/></svg></div>
-            <span class="skill-name">PDQ Deploy</span>
-          </div>
-          <div class="skill-card">
-            <div class="skill-icon"><svg viewBox="0 0 24 24" fill="#5E5E5E"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 3c1.7 0 3 1.3 3 3s-1.3 3-3 3-3-1.3-3-3 1.3-3 3-3zm0 14.2c-2.5 0-4.7-1.3-6-3.2.1-2 4-3.1 6-3.1s5.9 1.1 6 3.1c-1.3 1.9-3.5 3.2-6 3.2z"/></svg></div>
-            <span class="skill-name">OCS Inventory</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Cloud & Virtualization -->
-      <div class="skill-category fade-up">
-        <h3 class="skill-category-title" data-i18n="cat_cloud">Cloud &amp; Virtualization</h3>
-        <div class="skills-grid">
-          <div class="skill-card">
-            <div class="skill-icon"><svg viewBox="0 0 24 24" fill="#0078D4"><path d="M22.4 16.6c.1-.4.1-.8 0-1.2l-1.4-.8c-.1-.6-.3-1.1-.6-1.6l.6-1.4c-.2-.3-.4-.6-.7-.9-.3-.2-.6-.4-.9-.5l-1.4.6c-.5-.3-1-.5-1.6-.6l-.8-1.4c-.4-.1-.8-.1-1.2 0-.4.1-.7.3-1 .6l-.8 1.4c-.6.1-1.1.3-1.6.6l-1.4-.6c-.3.1-.6.3-.9.5-.2.3-.4.6-.5.9l.6 1.4c-.3.5-.5 1-.6 1.6l-1.4.8c-.1.4-.1.8 0 1.2.1.4.3.7.6 1l1.4.8c.1.6.3 1.1.6 1.6l-.6 1.4c.1.3.3.6.5.9.3.2.6.4.9.5l1.4-.6c.5.3 1 .5 1.6.6l.8 1.4c.4.1.8.1 1.2 0 .4-.1.7-.3 1-.6l.8-1.4c.6-.1 1.1-.3 1.6-.6l1.4.6c.3-.1.6-.3.9-.5.2-.3.4-.6.5-.9l-.6-1.4c.3-.5.5-1 .6-1.6l1.4-.8c.3-.3.5-.6.6-1zM12 15.5c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.6 3.5 3.5-1.6 3.5-3.5 3.5z"/></svg></div>
-            <span class="skill-name">Microsoft Azure</span>
-          </div>
-          <div class="skill-card">
-            <div class="skill-icon"><svg viewBox="0 0 24 24" fill="#FF9900"><path d="M6.763 10.036c0 .296.032.535.088.71.064.176.144.368.256.576.04.063.056.127.056.183 0 .08-.048.16-.152.24l-.503.335a.383.383 0 0 1-.208.072c-.08 0-.16-.04-.239-.112a2.47 2.47 0 0 1-.287-.375 6.18 6.18 0 0 1-.248-.471c-.622.734-1.405 1.101-2.347 1.101-.67 0-1.205-.191-1.596-.574-.391-.384-.59-.894-.59-1.533 0-.678.239-1.23.726-1.644.487-.415 1.133-.623 1.955-.623.272 0 .551.024.846.064.296.04.6.104.918.176v-.583c0-.607-.127-1.03-.375-1.277-.255-.248-.686-.367-1.3-.367-.28 0-.568.031-.863.103-.295.072-.583.16-.862.272a2.287 2.287 0 0 1-.28.104.488.488 0 0 1-.127.023c-.112 0-.168-.08-.168-.247v-.391c0-.128.016-.224.056-.28a.597.597 0 0 1 .224-.167c.279-.144.614-.264 1.005-.36a4.84 4.84 0 0 1 1.246-.151c.95 0 1.644.216 2.091.647.439.43.662 1.085.662 1.963v2.586zm-3.24 1.214c.263 0 .534-.048.822-.144.287-.096.543-.271.758-.51.128-.152.224-.32.272-.512.047-.191.08-.423.08-.694v-.335a6.66 6.66 0 0 0-.735-.136 6.02 6.02 0 0 0-.75-.048c-.535 0-.926.104-1.19.32-.263.215-.39.518-.39.917 0 .375.095.655.295.846.191.2.47.296.838.296zm6.41.862c-.144 0-.24-.024-.304-.08-.064-.048-.12-.16-.168-.311L7.586 5.55a1.398 1.398 0 0 1-.072-.32c0-.128.064-.2.191-.2h.783c.151 0 .255.025.31.08.065.048.113.16.16.312l1.342 5.284 1.245-5.284c.04-.16.088-.264.151-.312a.549.549 0 0 1 .32-.08h.638c.152 0 .256.025.32.08.063.048.12.16.151.312l1.261 5.348 1.381-5.348c.048-.16.104-.264.16-.312a.52.52 0 0 1 .311-.08h.743c.127 0 .2.065.2.2 0 .04-.009.08-.017.128a1.137 1.137 0 0 1-.056.2l-1.923 6.17c-.048.16-.104.263-.168.311a.51.51 0 0 1-.303.08h-.687c-.151 0-.255-.024-.32-.08-.063-.056-.119-.16-.15-.32l-1.238-5.148-1.23 5.14c-.04.16-.087.264-.15.32-.065.056-.177.08-.32.08zm10.256.215c-.415 0-.83-.048-1.229-.143-.399-.096-.71-.2-.918-.32-.128-.071-.215-.151-.247-.223a.563.563 0 0 1-.048-.224v-.407c0-.167.064-.247.183-.247.048 0 .096.008.144.024.048.016.12.048.2.08.271.12.566.215.878.279.319.064.63.096.95.096.502 0 .894-.088 1.165-.264a.86.86 0 0 0 .415-.758.777.777 0 0 0-.215-.559c-.144-.151-.416-.287-.807-.415l-1.157-.36c-.583-.183-1.014-.454-1.277-.813a1.902 1.902 0 0 1-.4-1.158c0-.335.073-.63.216-.886.144-.255.335-.479.575-.654.24-.184.51-.32.83-.415.32-.096.655-.136 1.006-.136.175 0 .359.008.535.032.183.024.35.056.518.088.16.04.312.08.455.127.144.048.256.096.336.144a.69.69 0 0 1 .24.2.43.43 0 0 1 .071.263v.375c0 .168-.064.256-.184.256a.83.83 0 0 1-.303-.096 3.652 3.652 0 0 0-1.532-.311c-.455 0-.815.071-1.062.223-.248.152-.375.383-.375.694 0 .223.08.415.24.567.159.152.454.304.877.44l1.134.358c.574.184.99.44 1.237.767.247.327.367.702.367 1.117 0 .343-.072.655-.207.926-.144.272-.336.511-.583.703-.248.2-.543.343-.886.447-.36.111-.734.167-1.142.167zM21.698 16.207c-2.626 1.94-6.442 2.969-9.722 2.969-4.598 0-8.74-1.7-11.87-4.526-.247-.223-.024-.527.27-.351 3.384 1.963 7.559 3.153 11.877 3.153 2.914 0 6.114-.607 9.06-1.852.439-.2.814.287.385.607zM22.792 14.961c-.336-.43-2.22-.207-3.074-.103-.255.032-.295-.192-.063-.36 1.5-1.053 3.967-.75 4.254-.399.287.36-.08 2.826-1.485 4.007-.215.184-.423.088-.327-.151.32-.79 1.03-2.57.695-2.994z"/></svg></div>
-            <span class="skill-name">Amazon AWS</span>
-          </div>
-          <div class="skill-card">
-            <div class="skill-icon"><svg viewBox="0 0 24 24" fill="#607078"><path d="M12 2L2 12l10 10 10-10L12 2zm0 3.4L18.6 12 12 18.6 5.4 12 12 5.4z"/></svg></div>
-            <span class="skill-name">VMware vSphere</span>
-          </div>
-          <div class="skill-card">
-            <div class="skill-icon"><svg viewBox="0 0 24 24" fill="#E57000"><path d="M12 2L2 7l10 5 10-5-10-5zm0 9l-6-3 6-3 6 3-6 3zm0 2l-8-4v8l8 4 8-4v-8l-8 4z"/></svg></div>
-            <span class="skill-name">Proxmox</span>
-          </div>
-          <div class="skill-card">
-            <div class="skill-icon"><svg viewBox="0 0 24 24" fill="#2496ED"><path d="M13.983 11.078h2.119a.186.186 0 0 0 .186-.185V9.006a.186.186 0 0 0-.186-.186h-2.119a.185.185 0 0 0-.185.185v1.888c0 .102.083.185.185.185m-2.954-5.43h2.118a.186.186 0 0 0 .186-.186V3.574a.186.186 0 0 0-.186-.185h-2.118a.185.185 0 0 0-.185.185v1.888c0 .102.082.185.185.186m0 2.716h2.118a.187.187 0 0 0 .186-.186V6.29a.186.186 0 0 0-.186-.185h-2.118a.185.185 0 0 0-.185.185v1.887c0 .102.082.185.185.186m-2.93 0h2.12a.186.186 0 0 0 .184-.186V6.29a.185.185 0 0 0-.185-.185H8.1a.185.185 0 0 0-.185.185v1.887c0 .102.083.185.185.186m-2.964 0h2.119a.186.186 0 0 0 .185-.186V6.29a.185.185 0 0 0-.185-.185H5.136a.186.186 0 0 0-.186.185v1.887c0 .102.084.185.186.186m5.893 2.715h2.118a.186.186 0 0 0 .186-.185V9.006a.186.186 0 0 0-.186-.186h-2.118a.185.185 0 0 0-.185.185v1.888c0 .102.082.185.185.185m-2.93 0h2.12a.185.185 0 0 0 .184-.185V9.006a.185.185 0 0 0-.184-.186h-2.12a.185.185 0 0 0-.184.185v1.888c0 .102.083.185.185.185m-2.964 0h2.119a.185.185 0 0 0 .185-.185V9.006a.185.185 0 0 0-.184-.186h-2.12a.186.186 0 0 0-.186.186v1.887c0 .102.084.185.186.185m-2.92 0h2.12a.185.185 0 0 0 .184-.185V9.006a.185.185 0 0 0-.184-.186h-2.12a.185.185 0 0 0-.184.185v1.888c0 .102.082.185.185.185M23.763 9.89c-.065-.051-.672-.51-1.954-.51-.338.001-.676.03-1.01.087-.248-1.7-1.653-2.53-1.716-2.566l-.344-.199-.226.327c-.284.438-.49.922-.612 1.43-.23.97-.09 1.882.403 2.661-.595.332-1.55.413-1.744.42H.751a.751.751 0 0 0-.75.748 11.376 11.376 0 0 0 .692 4.062c.545 1.428 1.355 2.48 2.41 3.124 1.18.723 3.1 1.137 5.275 1.137.983.003 1.963-.086 2.93-.266a12.248 12.248 0 0 0 3.823-1.389c.98-.567 1.86-1.288 2.61-2.136 1.252-1.418 1.998-2.997 2.553-4.4h.221c1.372 0 2.215-.549 2.68-1.009.309-.293.55-.65.707-1.046l.098-.288Z"/></svg></div>
-            <span class="skill-name">Docker</span>
-          </div>
-          <div class="skill-card">
-            <div class="skill-icon"><svg viewBox="0 0 24 24" fill="#0078D4"><path d="M2 2h8v8H2V2zm10 0h8v8h-8V2zM2 12h8v8H2v-8zm10 0h8v8h-8v-8z"/></svg></div>
-            <span class="skill-name">Hyper-V</span>
-          </div>
-          <div class="skill-card">
-            <div class="skill-icon"><svg viewBox="0 0 24 24" fill="#D83B01"><path d="M2 3h9v9H2V3zm11 0h9v9h-9V3zM2 14h9v9H2v-9zm11 0h9v9h-9v-9z"/></svg></div>
-            <span class="skill-name">Office 365</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Security & Monitoring -->
-      <div class="skill-category fade-up">
-        <h3 class="skill-category-title" data-i18n="cat_security">Security &amp; Monitoring</h3>
-        <div class="skills-grid">
-          <div class="skill-card">
-            <div class="skill-icon"><svg viewBox="0 0 24 24" fill="#F24E4E"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg></div>
-            <span class="skill-name">CrowdStrike EDR</span>
-          </div>
-          <div class="skill-card">
-            <div class="skill-icon"><svg viewBox="0 0 24 24" fill="#00A3DF"><path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.2l7.4 3.7L12 11.6 4.6 7.9 12 4.2zM4 9.4l7 3.5v6.7l-7-3.5V9.4zm9 10.2v-6.7l7-3.5v6.7l-7 3.5z"/></svg></div>
-            <span class="skill-name">Sophos Mobile</span>
-          </div>
-          <div class="skill-card">
-            <div class="skill-icon"><svg viewBox="0 0 24 24" fill="#EE3124"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-            <span class="skill-name">Fortinet</span>
-          </div>
-          <div class="skill-card">
-            <div class="skill-icon"><svg viewBox="0 0 24 24" fill="#D40000"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
-            <span class="skill-name">Zabbix</span>
-          </div>
-          <div class="skill-card">
-            <div class="skill-icon"><svg viewBox="0 0 24 24" fill="#1679A7"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9v-2h2v2zm0-4H9V8h2v4zm4 4h-2v-2h2v2zm0-4h-2V8h2v4z"/></svg></div>
-            <span class="skill-name">Wireshark</span>
-          </div>
-          <div class="skill-card">
-            <div class="skill-icon"><svg viewBox="0 0 24 24" fill="#E6522C"><path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.5L19.5 8 12 11.5 4.5 8 12 4.5zM4 9.5l7 3.5v6.5l-7-3.5V9.5zm16 0v6.5l-7 3.5v-6.5l7-3.5z"/></svg></div>
-            <span class="skill-name">Prometheus</span>
-          </div>
-          <div class="skill-card">
-            <div class="skill-icon"><svg viewBox="0 0 24 24" fill="#87569F"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg></div>
-            <span class="skill-name">Nagios</span>
-          </div>
-          <div class="skill-card">
-            <div class="skill-icon"><svg viewBox="0 0 24 24" fill="#3B82F6"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg></div>
-            <span class="skill-name">Wazuh SIEM</span>
-          </div>
-          <div class="skill-card">
-            <div class="skill-icon"><svg viewBox="0 0 24 24" fill="#EE3124"><path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.2l7.4 3.7L12 11.6 4.6 7.9 12 4.2z"/></svg></div>
-            <span class="skill-name">Suricata IDS</span>
-          </div>
-          <div class="skill-card">
-            <div class="skill-icon"><svg viewBox="0 0 24 24" fill="#00A3DF"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
-            <span class="skill-name">Security Onion</span>
-          </div>
-          <div class="skill-card">
-            <div class="skill-icon"><svg viewBox="0 0 24 24" fill="#00B338"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
-            <span class="skill-name">Veeam Backup</span>
-          </div>
-          <div class="skill-card">
-            <div class="skill-icon"><svg viewBox="0 0 24 24" fill="#00A3DF"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
-            <span class="skill-name">CommVault</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Network & VoIP -->
-      <div class="skill-category fade-up">
-        <h3 class="skill-category-title" data-i18n="cat_network">Network &amp; VoIP</h3>
-        <div class="skills-grid">
-          <div class="skill-card">
-            <div class="skill-icon"><svg viewBox="0 0 24 24" fill="#1BA0D7"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg></div>
-            <span class="skill-name">Cisco</span>
-          </div>
-          <div class="skill-card">
-            <div class="skill-icon"><svg viewBox="0 0 24 24" fill="#000000"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
-            <span class="skill-name">Cisco Webex</span>
-          </div>
-          <div class="skill-card">
-            <div class="skill-icon"><svg viewBox="0 0 24 24" fill="#E31937"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
-            <span class="skill-name">Asterisk PBX</span>
-          </div>
-          <div class="skill-card">
-            <div class="skill-icon"><svg viewBox="0 0 24 24" fill="#00A3DF"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
-            <span class="skill-name">Grandstream</span>
-          </div>
-          <div class="skill-card">
-            <div class="skill-icon"><svg viewBox="0 0 24 24" fill="#000000"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
-            <span class="skill-name">Nmap</span>
-          </div>
-          <div class="skill-card">
-            <div class="skill-icon"><svg viewBox="0 0 24 24" fill="#1679A7"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
-            <span class="skill-name">TCPDump</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Automation & DevOps -->
-      <div class="skill-category fade-up">
-        <h3 class="skill-category-title" data-i18n="cat_automation">Automation &amp; DevOps</h3>
-        <div class="skills-grid">
-          <div class="skill-card">
-            <div class="skill-icon"><svg viewBox="0 0 24 24" fill="#EE0000"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
-            <span class="skill-name">Ansible</span>
-          </div>
-          <div class="skill-card">
-            <div class="skill-icon"><svg viewBox="0 0 24 24" fill="#F05032"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg></div>
-            <span class="skill-name">Git</span>
-          </div>
-          <div class="skill-card">
-            <div class="skill-icon"><svg viewBox="0 0 24 24" fill="#00878F"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
-            <span class="skill-name">Arduino</span>
-          </div>
-          <div class="skill-card">
-            <div class="skill-icon"><svg viewBox="0 0 24 24" fill="#00A3DF"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
-            <span class="skill-name">ManageEngine</span>
-          </div>
-          <div class="skill-card">
-            <div class="skill-icon"><svg viewBox="0 0 24 24" fill="#5E5E5E"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
-            <span class="skill-name">GLPI / ITSM</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Standards -->
-      <div class="skill-category fade-up">
-        <h3 class="skill-category-title" data-i18n="cat_standards">Standards &amp; Methods</h3>
-        <div class="skills-grid">
-          <div class="skill-card">
-            <div class="skill-icon"><svg viewBox="0 0 24 24" fill="#00A3DF"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
-            <span class="skill-name">ITIL Framework</span>
-          </div>
-          <div class="skill-card">
-            <div class="skill-icon"><svg viewBox="0 0 24 24" fill="#00A3DF"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
-            <span class="skill-name">ISO 27001 / 27002</span>
-          </div>
-        </div>
+    <div class="sk-cat">
+      <div class="sk-cat-title" data-t="sk_sec">Security &amp; Monitoring</div>
+      <div class="sk-tags">
+        <span class="sk-tag">CrowdStrike EDR</span>
+        <span class="sk-tag">Sophos Mobile</span>
+        <span class="sk-tag">Fortinet</span>
+        <span class="sk-tag">Zabbix</span>
+        <span class="sk-tag">Wireshark</span>
+        <span class="sk-tag">Prometheus</span>
+        <span class="sk-tag">Nagios</span>
+        <span class="sk-tag">Centreon</span>
+        <span class="sk-tag">Wazuh SIEM</span>
+        <span class="sk-tag">Suricata IDS</span>
+        <span class="sk-tag">Security Onion</span>
+        <span class="sk-tag">Veeam Backup</span>
+        <span class="sk-tag">CommVault</span>
       </div>
     </div>
-  </section>
 
-  <!-- Education Section -->
-  <section class="education section" id="education">
-    <div class="container">
-      <h2 class="section-title fade-up" data-i18n="edu_title">Education</h2>
-      <p class="section-subtitle fade-up" data-i18n="edu_subtitle">Academic background</p>
+    <div class="sk-cat">
+      <div class="sk-cat-title" data-t="sk_net">Network &amp; VoIP</div>
+      <div class="sk-tags">
+        <span class="sk-tag">Cisco</span>
+        <span class="sk-tag">Cisco Webex</span>
+        <span class="sk-tag">Asterisk PBX</span>
+        <span class="sk-tag">Grandstream</span>
+        <span class="sk-tag">Nmap</span>
+        <span class="sk-tag">TCPDump</span>
+      </div>
+    </div>
 
-      <div class="edu-grid">
-        <div class="edu-card fade-up">
-          <span class="edu-year" data-i18n="edu1_year">2023 – 2025</span>
-          <div class="edu-content">
-            <h3 data-i18n="edu1_title">Master's in Systems, Networks &amp; Cybersecurity Engineering</h3>
-            <p class="edu-school" data-i18n="edu1_school">ENSI, Casablanca</p>
+    <div class="sk-cat">
+      <div class="sk-cat-title" data-t="sk_auto">Automation &amp; DevOps</div>
+      <div class="sk-tags">
+        <span class="sk-tag">Ansible</span>
+        <span class="sk-tag">Git</span>
+        <span class="sk-tag">Arduino</span>
+        <span class="sk-tag">ManageEngine</span>
+        <span class="sk-tag">GLPI / ITSM</span>
+      </div>
+    </div>
+
+    <div class="sk-cat">
+      <div class="sk-cat-title" data-t="sk_std">Standards &amp; Methods</div>
+      <div class="sk-tags">
+        <span class="sk-tag">ITIL Framework</span>
+        <span class="sk-tag">ISO 27001 / 27002</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION & CERTS -->
+<section class="section" id="education">
+  <div class="section-inner fade">
+    <h2 class="section-title" data-t="sec_edu">Education &amp; Certifications</h2>
+    <div class="section-bar"></div>
+
+    <div class="edu-item">
+      <span class="edu-year" data-t="edu1_yr">2023–2025</span>
+      <div>
+        <div class="edu-degree" data-t="edu1_deg">Master — Systems, Networks &amp; Cybersecurity Engineering</div>
+        <div class="edu-school" data-t="edu1_sch">ENSI, Casablanca</div>
+      </div>
+    </div>
+    <div class="edu-item">
+      <span class="edu-year" data-t="edu2_yr">2023–2024</span>
+      <div>
+        <div class="edu-degree" data-t="edu2_deg">Bachelor — Systems Administration, Databases &amp; Cloud</div>
+        <div class="edu-school" data-t="edu2_sch">SUPEMIR, Casablanca</div>
+      </div>
+    </div>
+    <div class="edu-item">
+      <span class="edu-year" data-t="edu3_yr">2018–2021</span>
+      <div>
+        <div class="edu-degree" data-t="edu3_deg">Bachelor — Project Management</div>
+        <div class="edu-school" data-t="edu3_sch">WESFORD, France</div>
+      </div>
+    </div>
+    <div class="edu-item">
+      <span class="edu-year" data-t="edu4_yr">2018–2020</span>
+      <div>
+        <div class="edu-degree" data-t="edu4_deg">Technician Diploma — IT Maintenance &amp; Network Support</div>
+        <div class="edu-school" data-t="edu4_sch">ISTICG, Berrechid</div>
+      </div>
+    </div>
+    <div class="edu-item">
+      <span class="edu-year" data-t="edu5_yr">2016–2017</span>
+      <div>
+        <div class="edu-degree" data-t="edu5_deg">Baccalaureate — Physical Sciences</div>
+        <div class="edu-school" data-t="edu5_sch">Lycée Eljadida, Berrechid</div>
+      </div>
+    </div>
+
+    <h3 style="margin-top:40px; margin-bottom:4px; font-size:1rem; color:var(--clr-accent);" data-t="sec_certs">Certifications</h3>
+    <div class="cert-row">
+      <div class="cert-badge"><span class="dot"></span><span data-t="c1_n">System Administration &amp; IT Infrastructure</span> — <span data-t="c1_o">Google</span></div>
+      <div class="cert-badge"><span class="dot"></span><span data-t="c2_n">Ethical Hacker</span> — <span data-t="c2_o">Cisco</span></div>
+      <div class="cert-badge"><span class="dot"></span><span data-t="c3_n">Fortinet Associate — Cybersecurity</span> — <span data-t="c3_o">Fortinet</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact section" id="contact">
+  <div class="section-inner fade">
+    <h2 class="section-title" data-t="sec_contact">Get in Touch</h2>
+    <div class="section-bar"></div>
+    <div class="contact-grid">
+      <div>
+        <p class="contact-text" data-t="ct_intro">Open to new projects, creative ideas, or opportunities to be part of your vision.</p>
+        <div class="contact-row">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#58a6ff" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
           </div>
+          <span>hamza33fekkak@gmail.com</span>
         </div>
-        <div class="edu-card fade-up">
-          <span class="edu-year" data-i18n="edu2_year">2023 – 2024</span>
-          <div class="edu-content">
-            <h3 data-i18n="edu2_title">Bachelor's in Systems Administration, Databases &amp; Cloud Computing</h3>
-            <p class="edu-school" data-i18n="edu2_school">SUPEMIR, Casablanca</p>
+        <div class="contact-row">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#58a6ff" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
           </div>
+          <span>+212 661 438 472</span>
         </div>
-        <div class="edu-card fade-up">
-          <span class="edu-year" data-i18n="edu3_year">2018 – 2021</span>
-          <div class="edu-content">
-            <h3 data-i18n="edu3_title">Bachelor's in Project Management</h3>
-            <p class="edu-school" data-i18n="edu3_school">WESFORD, France</p>
+        <div class="contact-row">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#58a6ff" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
           </div>
+          <span>284 Lot INESS, Berrechid, Maroc</span>
         </div>
-        <div class="edu-card fade-up">
-          <span class="edu-year" data-i18n="edu4_year">2018 – 2020</span>
-          <div class="edu-content">
-            <h3 data-i18n="edu4_title">Technician Diploma in IT Maintenance &amp; Network Support</h3>
-            <p class="edu-school" data-i18n="edu4_school">ISTICG, Berrechid</p>
+        <div class="contact-row">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#58a6ff" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
           </div>
-        </div>
-        <div class="edu-card fade-up">
-          <span class="edu-year" data-i18n="edu5_year">2016 – 2017</span>
-          <div class="edu-content">
-            <h3 data-i18n="edu5_title">Baccalaureate in Physical Sciences</h3>
-            <p class="edu-school" data-i18n="edu5_school">Lycée Eljadida, Berrechid</p>
-          </div>
+          <a href="https://github.com/hamza22fekkak-art" target="_blank">github.com/hamza22fekkak-art</a>
         </div>
       </div>
 
-      <!-- Certifications -->
-      <h2 class="section-title fade-up" style="margin-top:60px" data-i18n="certs_title">Certifications</h2>
-      <p class="section-subtitle fade-up" data-i18n="certs_subtitle">Professional credentials</p>
-
-      <div class="certs-grid">
-        <div class="cert-card fade-up">
-          <div class="cert-icon"><svg viewBox="0 0 24 24" fill="#4285F4"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
-          <div class="cert-info">
-            <h3 data-i18n="cert1_title">System Administration &amp; IT Infrastructure Services</h3>
-            <p data-i18n="cert1_org">Google Professional Certificate</p>
-          </div>
+      <form id="contactForm">
+        <div class="form-group">
+          <label data-t="ct_name">Name</label>
+          <input type="text" data-ph="ct_ph_name" placeholder="Your name" required>
         </div>
-        <div class="cert-card fade-up">
-          <div class="cert-icon"><svg viewBox="0 0 24 24" fill="#1BA0D7"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
-          <div class="cert-info">
-            <h3 data-i18n="cert2_title">Ethical Hacker</h3>
-            <p data-i18n="cert2_org">Cisco Networking Academy</p>
-          </div>
+        <div class="form-group">
+          <label data-t="ct_email">Email</label>
+          <input type="email" data-ph="ct_ph_email" placeholder="your@email.com" required>
         </div>
-        <div class="cert-card fade-up">
-          <div class="cert-icon"><svg viewBox="0 0 24 24" fill="#EE3124"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
-          <div class="cert-info">
-            <h3 data-i18n="cert3_title">Fortinet Certified Associate Cybersecurity</h3>
-            <p data-i18n="cert3_org">Fortinet</p>
-          </div>
+        <div class="form-group">
+          <label data-t="ct_msg">Message</label>
+          <textarea data-ph="ct_ph_msg" placeholder="Your message…" required></textarea>
         </div>
-      </div>
+        <button type="submit" class="btn btn-fill" style="width:100%;justify-content:center" data-t="ct_send">Send Message</button>
+      </form>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Contact Section -->
-  <section class="contact section" id="contact">
-    <div class="container">
-      <h2 class="section-title fade-up" data-i18n="contact_title">Get In Touch</h2>
-      <p class="section-subtitle fade-up" data-i18n="contact_subtitle">Feel free to reach out for collaborations or opportunities</p>
+<!-- FOOTER -->
+<footer class="footer">
+  <p>© 2025 Hamza FEKKAK · <span data-t="footer">Built with ♥ by Hamza FEKKAK</span></p>
+</footer>
 
-      <div class="contact-grid">
-        <div class="contact-info fade-up">
-          <h3 data-i18n="contact_intro">I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</h3>
-
-          <div class="contact-items">
-            <div class="contact-item">
-              <div class="contact-item-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              </div>
-              <span>hamza33fekkak@gmail.com</span>
-            </div>
-            <div class="contact-item">
-              <div class="contact-item-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              </div>
-              <span>+212 661 438 472</span>
-            </div>
-            <div class="contact-item">
-              <div class="contact-item-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              </div>
-              <span>284 Lot INESS, Berrechid, Maroc</span>
-            </div>
-            <div class="contact-item">
-              <div class="contact-item-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
-              </div>
-              <a href="https://github.com/hamza22fekkak-art" target="_blank">github.com/hamza22fekkak-art</a>
-            </div>
-          </div>
-        </div>
-
-        <form class="contact-form fade-up" onsubmit="handleSubmit(event)">
-          <div class="form-group">
-            <label data-i18n="contact_name">Name</label>
-            <input type="text" data-i18n-placeholder="contact_placeholder_name" placeholder="Your name" required>
-          </div>
-          <div class="form-group">
-            <label data-i18n="contact_email">Email</label>
-            <input type="email" data-i18n-placeholder="contact_placeholder_email" placeholder="your@email.com" required>
-          </div>
-          <div class="form-group">
-            <label data-i18n="contact_message">Message</label>
-            <textarea data-i18n-placeholder="contact_placeholder_message" placeholder="Your message..." required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-            <span data-i18n="contact_send">Send Message</span>
-          </button>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <p>© 2025 Hamza FEKKAK. <span data-i18n="footer_text">Designed &amp; built with</span> ❤️ <span data-i18n="footer_by">by Hamza FEKKAK</span></p>
-    </div>
-  </footer>
-
-  <script src="assets/js/main.js"></script>
+<script src="assets/js/main.js"></script>
 </body>
 </html>
