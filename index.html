@@ -1,446 +1,447 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Hamza FEKKAK — World-Class IT Engineer & Cybersecurity Portfolio">
-  <title>Hamza FEKKAK | IT Engineer · Cybersecurity · Cloud</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-
-<!-- ═══════════════════════════════════════
-     NAVBAR
-     ═══════════════════════════════════════ -->
-<nav class="navbar" id="navbar">
-  <div class="container">
-    <a href="#" class="nav-logo">HF</a>
-    <ul class="nav-links">
-      <li><a href="#about" class="active" data-t="nav_about">About</a></li>
-      <li><a href="#experience" data-t="nav_exp">Experience</a></li>
-      <li><a href="#skills" data-t="nav_skills">Skills</a></li>
-      <li><a href="#projects" data-t="nav_projects">Projects</a></li>
-      <li><a href="#contact" data-t="nav_contact">Contact</a></li>
-    </ul>
-    <button class="btn-lang" id="btnLang" onclick="toggleLang()">FR</button>
-  </div>
-</nav>
-
-<!-- ═══════════════════════════════════════
-     HERO
-     ═══════════════════════════════════════ -->
-<section class="hero" id="hero">
-  <div class="hero-bg">
-    <div class="hero-bg-orb"></div>
-    <div class="hero-bg-orb"></div>
-    <div class="hero-bg-orb"></div>
-  </div>
-  <div class="hero-grid-pattern"></div>
-
-  <div class="container">
-    <div class="hero-grid">
-      <div class="hero-text">
-        <h1 class="hero-title reveal">Hamza<br><span class="text-gradient">FEKKAK</span></h1>
-        <p class="hero-subtitle reveal reveal-delay-1">
-          <span id="typing-text"></span><span class="typing-cursor"></span>
-        </p>
-        <p class="hero-desc reveal reveal-delay-2" data-t="hero_desc">IT professional specialized in systems administration, cloud infrastructure, and cybersecurity. Proactive and adaptable, I bring technical expertise and a collaborative spirit to drive innovation.</p>
-
-        <div class="hero-metrics reveal reveal-delay-3">
-          <div><div class="metric-val">5+</div><div class="metric-lbl" data-t="metric_exp">Years Exp</div></div>
-          <div><div class="metric-val">50+</div><div class="metric-lbl" data-t="metric_projects">Projects</div></div>
-          <div><div class="metric-val">600+</div><div class="metric-lbl" data-t="metric_users">Users Supported</div></div>
-        </div>
-
-        <div class="hero-ctas reveal reveal-delay-4">
-          <a href="#projects" class="btn-cta btn-cta-primary">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-            <span data-t="btn_projects">View Projects</span>
-          </a>
-          <a href="#contact" class="btn-cta btn-cta-ghost">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            <span data-t="btn_contact">Contact Me</span>
-          </a>
-          <a href="Videos/FEKKAK HAMZA CV.pdf" class="btn-cta btn-cta-ghost" download>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            <span data-t="btn_cv">Download CV</span>
-          </a>
-        </div>
-      </div>
-
-      <div class="hero-photo-wrap reveal reveal-delay-2">
-        <div class="hero-photo-frame">
-          <div class="hero-photo-inner">
-            <img src="photo.jpg" alt="Hamza FEKKAK">
-          </div>
-        </div>
-        <div class="hero-photo-ring"></div>
-
-        <!-- Floating particles -->
-        <div class="hero-float-particle particle-1">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          Cybersecurity
-        </div>
-        <div class="hero-float-particle particle-2">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="2"><path d="M12 2L2 7v10l10 5 10-5V7L12 2z"/></svg>
-          Cloud Architecture
-        </div>
-        <div class="hero-float-particle particle-3">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
-          DevSecOps
-        </div>
-
-        <!-- Canvas particles -->
-        <canvas id="hero-canvas" style="position:absolute;inset:-60px;pointer-events:none;z-index:-1;"></canvas>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="section-divider"></div>
-
-<!-- ═══════════════════════════════════════
-     ABOUT
-     ═══════════════════════════════════════ -->
-<section class="section" id="about">
-  <div class="container">
-    <div class="reveal">
-      <div class="section-label" data-t="sec_about">About Me</div>
-      <h2 class="section-title">Who I Am</h2>
-      <p class="section-desc" data-t="about_p">Passionate IT engineer with 5+ years of experience in systems administration, cloud infrastructure, and cybersecurity. I specialize in building secure, scalable infrastructure and driving digital transformation for enterprise clients.</p>
-    </div>
-  </div>
-</section>
-
-<div class="section-divider"></div>
-
-<!-- ═══════════════════════════════════════
-     EXPERIENCE
-     ═══════════════════════════════════════ -->
-<section class="section" id="experience">
-  <div class="container">
-    <div class="reveal">
-      <div class="section-label" data-t="sec_exp">Experience</div>
-      <h2 class="section-title">Career Journey</h2>
-    </div>
-
-    <div class="xp-timeline">
-      <!-- XP 1 -->
-      <div class="xp-item reveal">
-        <div class="xp-dot"></div>
-        <div class="xp-date" data-t="xp1_date">Sep 2025 – Present</div>
-        <div class="glass xp-card">
-          <div class="xp-role" data-t="xp1_role">IT Engineer</div>
-          <div class="xp-company" data-t="xp1_co">SOFRECOM · Orange Group</div>
-          <ul class="xp-tasks">
-            <li>Conduct regular security reviews of infrastructure systems</li>
-            <li>Manage internal IT projects, coordinating between technical teams</li>
-            <li>Administer MDT, WDS, SCCM and PDQ Deploy deployment solutions</li>
-            <li>Write and maintain technical documentation and procedures</li>
-            <li>Monitor security compliance and track exemptions</li>
-            <li>Train users on IT best practices and security awareness</li>
-            <li>Supervise IT asset management via OCS Inventory</li>
-            <li>Level 2–3 technical support for complex incidents</li>
-          </ul>
-          <div class="xp-badges" data-xp-badges="1"></div>
-        </div>
-      </div>
-
-      <!-- XP 2 -->
-      <div class="xp-item reveal">
-        <div class="xp-dot"></div>
-        <div class="xp-date" data-t="xp2_date">Dec 2022 – Sep 2025</div>
-        <div class="glass xp-card">
-          <div class="xp-role" data-t="xp2_role">IT Technician</div>
-          <div class="xp-company" data-t="xp2_co">LATECOERE INTERCONNECTION SYSTEMS</div>
-          <ul class="xp-tasks">
-            <li>Data Center management — AD DS, DNS, DHCP (+98% security compliance)</li>
-            <li>SCCM deployment, configuration and upgrades</li>
-            <li>CrowdStrike EDR and Sophos Mobile MDM management</li>
-            <li>VMware vSphere and Azure server administration</li>
-            <li>PowerShell automation — 30% reduction in manual tasks</li>
-            <li>Cisco Webex VoIP telephony management</li>
-            <li>Backup management — 99%+ uptime guarantee</li>
-            <li>Server room maintenance — 20% energy reduction</li>
-            <li>Technical documentation for 600+ users</li>
-            <li>92% first-contact ticket resolution rate</li>
-          </ul>
-          <div class="xp-badges" data-xp-badges="2"></div>
-        </div>
-      </div>
-
-      <!-- XP 3 -->
-      <div class="xp-item reveal">
-        <div class="xp-dot"></div>
-        <div class="xp-date" data-t="xp3_date">Jul 2021 – Dec 2022</div>
-        <div class="glass xp-card">
-          <div class="xp-role" data-t="xp3_role">IT Technician</div>
-          <div class="xp-company" data-t="xp3_co">AMEX ROYAL AIR MAROC</div>
-          <ul class="xp-tasks">
-            <li>Incident management via Micro Focus SMAX</li>
-            <li>Hardware installation, configuration and maintenance</li>
-            <li>User session and access management</li>
-            <li>Software deployment via ManageEngine</li>
-            <li>IT stock management and resource optimization</li>
-            <li>Multi-channel user support (phone, email, remote)</li>
-          </ul>
-          <div class="xp-badges" data-xp-badges="3"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="section-divider"></div>
-
-<!-- ═══════════════════════════════════════
-     SKILLS
-     ═══════════════════════════════════════ -->
-<section class="section" id="skills">
-  <div class="container">
-    <div class="reveal">
-      <div class="section-label" data-t="sec_skills">Technical Skills</div>
-      <h2 class="section-title">Tech Arsenal</h2>
-    </div>
-
-    <div class="skills-bento">
-      <!-- Systems -->
-      <div class="skill-item glass reveal"><svg viewBox="0 0 24 24" fill="#0078D4"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg><span>Windows Server</span></div>
-      <div class="skill-item glass reveal"><svg viewBox="0 0 24 24" fill="#E57000"><path d="M12 2L2 7l10 5 10-5-10-5zm0 9l-6-3 6-3 6 3-6 3zm0 2l-8-4v8l8 4 8-4v-8l-8 4z"/></svg><span>Linux</span></div>
-      <div class="skill-item glass reveal"><svg viewBox="0 0 24 24" fill="#0078D4"><path d="M11.4 2.1c.3-.2.7-.2 1 0l9.3 5.4c.3.2.5.5.5.9v7.2c0 .4-.2.7-.5.9l-9.3 5.4c-.3.2-.7.2-1 0l-9.3-5.4c-.3-.2-.5-.5-.5-.9V8.4c0-.4.2-.7.5-.9l9.3-5.4z"/></svg><span>Active Directory</span></div>
-      <div class="skill-item glass reveal"><svg viewBox="0 0 24 24" fill="#5391FE"><path d="M21.8 3.4c.3.2.4.5.4.8v15.6c0 .3-.1.6-.4.8-.2.2-.5.3-.8.3H3c-.3 0-.6-.1-.8-.3-.3-.2-.4-.5-.4-.8V4.2c0-.3.1-.6.4-.8.2-.2.5-.3.8-.3h18c.3 0 .6.1.8.3z"/></svg><span>PowerShell</span></div>
-      <div class="skill-item glass reveal"><svg viewBox="0 0 24 24" fill="#0078D4"><path d="M3 3h8v8H3V3zm10 0h8v8h-8V3zM3 13h8v8H3v-8zm10 0h8v8h-8v-8z"/></svg><span>SCCM / MDT</span></div>
-      <div class="skill-item glass reveal"><svg viewBox="0 0 24 24" fill="#5E5E5E"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 3c1.7 0 3 1.3 3 3s-1.3 3-3 3-3-1.3-3-3 1.3-3 3-3zm0 14.2c-2.5 0-4.7-1.3-6-3.2.1-2 4-3.1 6-3.1s5.9 1.1 6 3.1c-1.3 1.9-3.5 3.2-6 3.2z"/></svg><span>OCS Inventory</span></div>
-      <div class="skill-item glass reveal"><svg viewBox="0 0 24 24" fill="#D83B01"><path d="M2 3h9v9H2V3zm11 0h9v9h-9V3zM2 14h9v9H2v-9zm11 0h9v9h-9v-9z"/></svg><span>Office 365</span></div>
-      <div class="skill-item glass reveal"><svg viewBox="0 0 24 24" fill="#00A3DF"><path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.2l7.4 3.7L12 11.6 4.6 7.9 12 4.2z"/></svg><span>GLPI / ITSM</span></div>
-
-      <!-- Cloud -->
-      <div class="skill-item glass reveal"><svg viewBox="0 0 24 24" fill="#0078D4"><path d="M2.7 6.1h7.2L2.7 17.9a1.1 1.1 0 0 1-.7-1V7.1a1 1 0 0 1 1-1zm18.6-1.1a1 1 0 0 0-1-1h-6.5l-2.7 3.1h9.2a1 1 0 0 0 1-1V5z"/></svg><span>Microsoft Azure</span></div>
-      <div class="skill-item glass reveal"><svg viewBox="0 0 24 24" fill="#FF9900"><path d="M6.763 10.036c0 .296.032.535.088.71.064.176.144.368.256.576.04.063.056.127.056.183 0 .08-.048.16-.152.24l-.503.335a.383.383 0 0 1-.208.072c-.08 0-.16-.04-.239-.112a2.47 2.47 0 0 1-.287-.375 6.18 6.18 0 0 1-.248-.471c-.622.734-1.405 1.101-2.347 1.101-.67 0-1.205-.191-1.596-.574-.391-.384-.59-.894-.59-1.533 0-.678.239-1.23.726-1.644.487-.415 1.133-.623 1.955-.623.272 0 .551.024.846.064.296.04.6.104.918.176v-.583c0-.607-.127-1.03-.375-1.277-.255-.248-.686-.367-1.3-.367-.28 0-.568.031-.863.103-.295.072-.583.16-.862.272a2.287 2.287 0 0 1-.28.104.488.488 0 0 1-.127.023c-.112 0-.168-.08-.168-.247v-.391c0-.128.016-.224.056-.28a.597.597 0 0 1 .224-.167c.279-.144.614-.264 1.005-.36a4.84 4.84 0 0 1 1.246-.151c.95 0 1.644.216 2.091.647.439.43.662 1.085.662 1.963v2.586z"/></svg><span>Amazon AWS</span></div>
-      <div class="skill-item glass reveal"><svg viewBox="0 0 24 24" fill="#607078"><path d="M12 2L2 12l10 10 10-10L12 2zm0 3.4L18.6 12 12 18.6 5.4 12 12 5.4z"/></svg><span>VMware vSphere</span></div>
-      <div class="skill-item glass reveal"><svg viewBox="0 0 24 24" fill="#E57000"><path d="M12 2L2 7l10 5 10-5-10-5zm0 9l-6-3 6-3 6 3-6 3zm0 2l-8-4v8l8 4 8-4v-8l-8 4z"/></svg><span>Proxmox</span></div>
-      <div class="skill-item glass reveal"><svg viewBox="0 0 24 24" fill="#2496ED"><path d="M13.983 11.078h2.119a.186.186 0 0 0 .186-.185V9.006a.186.186 0 0 0-.186-.186h-2.119a.185.185 0 0 0-.185.185v1.888c0 .102.083.185.185.185"/></svg><span>Docker</span></div>
-      <div class="skill-item glass reveal"><svg viewBox="0 0 24 24" fill="#0078D4"><path d="M2 2h8v8H2V2zm10 0h8v8h-8V2zM2 12h8v8H2v-8zm10 0h8v8h-8v-8z"/></svg><span>Hyper-V</span></div>
-
-      <!-- Security -->
-      <div class="skill-item glass reveal"><svg viewBox="0 0 24 24" fill="#F24E4E"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93z"/></svg><span>CrowdStrike</span></div>
-      <div class="skill-item glass reveal"><svg viewBox="0 0 24 24" fill="#EE3124"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Fortinet</span></div>
-      <div class="skill-item glass reveal"><svg viewBox="0 0 24 24" fill="#D40000"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg><span>Zabbix</span></div>
-      <div class="skill-item glass reveal"><svg viewBox="0 0 24 24" fill="#1679A7"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9v-2h2v2zm0-4H9V8h2v4z"/></svg><span>Wireshark</span></div>
-      <div class="skill-item glass reveal"><svg viewBox="0 0 24 24" fill="#E6522C"><path d="M12 2L2 7v10l10 5 10-5V7L12 2z"/></svg><span>Prometheus</span></div>
-      <div class="skill-item glass reveal"><svg viewBox="0 0 24 24" fill="#3B82F6"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg><span>Wazuh SIEM</span></div>
-      <div class="skill-item glass reveal"><svg viewBox="0 0 24 24" fill="#EE3124"><path d="M12 2L2 7v10l10 5 10-5V7L12 2z"/></svg><span>Suricata IDS</span></div>
-      <div class="skill-item glass reveal"><svg viewBox="0 0 24 24" fill="#00B338"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg><span>Veeam Backup</span></div>
-
-      <!-- Network -->
-      <div class="skill-item glass reveal"><svg viewBox="0 0 24 24" fill="#1BA0D7"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93z"/></svg><span>Cisco</span></div>
-      <div class="skill-item glass reveal"><svg viewBox="0 0 24 24" fill="#000"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg><span>Webex VoIP</span></div>
-      <div class="skill-item glass reveal"><svg viewBox="0 0 24 24" fill="#E31937"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg><span>Asterisk PBX</span></div>
-      <div class="skill-item glass reveal"><svg viewBox="0 0 24 24" fill="#000"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg><span>Nmap</span></div>
-
-      <!-- Automation -->
-      <div class="skill-item glass reveal"><svg viewBox="0 0 24 24" fill="#EE0000"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg><span>Ansible</span></div>
-      <div class="skill-item glass reveal"><svg viewBox="0 0 24 24" fill="#F05032"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg><span>Git</span></div>
-      <div class="skill-item glass reveal"><svg viewBox="0 0 24 24" fill="#00878F"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg><span>Arduino</span></div>
-      <div class="skill-item glass reveal"><svg viewBox="0 0 24 24" fill="#00A3DF"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg><span>ManageEngine</span></div>
-    </div>
-  </div>
-</section>
-
-<div class="section-divider"></div>
-
-<!-- ═══════════════════════════════════════
-     PROJECTS (BENTO)
-     ═══════════════════════════════════════ -->
-<section class="section" id="projects">
-  <div class="container">
-    <div class="reveal">
-      <div class="section-label" data-t="sec_projects">Featured Projects</div>
-      <h2 class="section-title">Cybersecurity &amp; AI Projects</h2>
-    </div>
-
-    <div class="bento-grid">
-      <div class="bento-item large glass reveal">
-        <div>
-          <div class="bento-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 8v4M12 16h.01"/></svg>
-          </div>
-          <h3 data-t="proj1_title">SOC Automation Platform</h3>
-          <p data-t="proj1_desc">Built a Security Operations Center dashboard with real-time threat detection using Wazuh SIEM, Suricata IDS, and custom Python alerting pipelines.</p>
-        </div>
-        <span class="bento-tag">Cybersecurity · SIEM</span>
-      </div>
-
-      <div class="bento-item glass reveal">
-        <div>
-          <div class="bento-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="1.5"><path d="M12 2L2 7v10l10 5 10-5V7L12 2z"/></svg>
-          </div>
-          <h3 data-t="proj2_title">Cloud Migration Framework</h3>
-          <p data-t="proj2_desc">Enterprise cloud migration from VMware to Azure, reducing costs by 40%.</p>
-        </div>
-        <span class="bento-tag">Cloud · Azure</span>
-      </div>
-
-      <div class="bento-item glass reveal">
-        <div>
-          <div class="bento-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42"/></svg>
-          </div>
-          <h3 data-t="proj3_title">AI Vulnerability Scanner</h3>
-          <p data-t="proj3_desc">ML-powered vulnerability assessment tool for intelligent CVE prioritization.</p>
-        </div>
-        <span class="bento-tag">AI · Security</span>
-      </div>
-
-      <div class="bento-item glass reveal">
-        <div>
-          <div class="bento-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          </div>
-          <h3 data-t="proj4_title">Zero Trust Architecture</h3>
-          <p data-t="proj4_desc">Zero-trust network segmentation with micro-segmentation and identity-based access.</p>
-        </div>
-        <span class="bento-tag">Network · Security</span>
-      </div>
-
-      <div class="bento-item large glass reveal">
-        <div>
-          <div class="bento-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-          </div>
-          <h3 data-t="proj5_title">DevSecOps Pipeline</h3>
-          <p data-t="proj5_desc">CI/CD pipeline with SAST/DAST scanning, container verification, and compliance-as-code.</p>
-        </div>
-        <span class="bento-tag">DevSecOps · CI/CD</span>
-      </div>
-
-      <div class="bento-item glass reveal">
-        <div>
-          <div class="bento-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-          </div>
-          <h3 data-t="proj6_title">Incident Response Automation</h3>
-          <p data-t="proj6_desc">Automated playbooks reducing MTTR from 4 hours to 15 minutes.</p>
-        </div>
-        <span class="bento-tag">Automation · Security</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="section-divider"></div>
-
-<!-- ═══════════════════════════════════════
-     CERTIFICATIONS + GITHUB STATS
-     ═══════════════════════════════════════ -->
-<section class="section" id="certifications">
-  <div class="container">
-    <div class="reveal">
-      <div class="section-label" data-t="sec_certs">Certifications</div>
-      <h2 class="section-title">Professional Credentials</h2>
-    </div>
-
-    <div class="cert-grid">
-      <div class="cert-card glass reveal">
-        <div class="cert-dot"></div>
-        <div>
-          <div class="cert-name" data-t="c1_n">System Administration &amp; IT Infrastructure</div>
-          <div class="cert-org" data-t="c1_o">Google Professional Certificate</div>
-        </div>
-      </div>
-      <div class="cert-card glass reveal">
-        <div class="cert-dot"></div>
-        <div>
-          <div class="cert-name" data-t="c2_n">Ethical Hacker</div>
-          <div class="cert-org" data-t="c2_o">Cisco Networking Academy</div>
-        </div>
-      </div>
-      <div class="cert-card glass reveal">
-        <div class="cert-dot"></div>
-        <div>
-          <div class="cert-name" data-t="c3_n">Fortinet Associate — Cybersecurity</div>
-          <div class="cert-org" data-t="c3_o">Fortinet</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- GitHub Stats -->
-    <div class="reveal" style="margin-top:60px">
-      <div class="section-label" data-t="sec_github">GitHub Stats</div>
-      <h2 class="section-title">Open Source Activity</h2>
-    </div>
-    <div class="github-grid">
-      <div class="github-stat glass reveal"><div class="github-stat-val">50+</div><div class="github-stat-lbl">Repositories</div></div>
-      <div class="github-stat glass reveal"><div class="github-stat-val">200+</div><div class="github-stat-lbl">Commits</div></div>
-      <div class="github-stat glass reveal"><div class="github-stat-val">15+</div><div class="github-stat-lbl">Projects</div></div>
-      <div class="github-stat glass reveal"><div class="github-stat-val">5+</div><div class="github-stat-lbl">Years Active</div></div>
-    </div>
-  </div>
-</section>
-
-<div class="section-divider"></div>
-
-<!-- ═══════════════════════════════════════
-     CONTACT
-     ═══════════════════════════════════════ -->
-<section class="section" id="contact">
-  <div class="container">
-    <div class="reveal">
-      <div class="section-label" data-t="sec_contact">Get in Touch</div>
-      <h2 class="section-title">Let's Connect</h2>
-    </div>
-
-    <div class="contact-grid">
-      <div class="reveal">
-        <p class="contact-intro" data-t="ct_intro">Open to new projects, creative ideas, or opportunities to be part of your vision.</p>
-        <div class="contact-row">
-          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-          <span>hamza33fekkak@gmail.com</span>
-        </div>
-        <div class="contact-row">
-          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
-          <span>+212 661 438 472</span>
-        </div>
-        <div class="contact-row">
-          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-          <span>284 Lot INESS, Berrechid, Maroc</span>
-        </div>
-        <div class="contact-row">
-          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></div>
-          <a href="https://github.com/hamza22fekkak-art" target="_blank">github.com/hamza22fekkak-art</a>
-        </div>
-      </div>
-
-      <form id="contactForm" class="contact-form-wrap glass reveal">
-        <div class="form-group">
-          <label data-t="ct_name">Name</label>
-          <input type="text" data-ph="ct_ph_name" placeholder="Your name" required>
-        </div>
-        <div class="form-group">
-          <label data-t="ct_email">Email</label>
-          <input type="email" data-ph="ct_ph_email" placeholder="your@email.com" required>
-        </div>
-        <div class="form-group">
-          <label data-t="ct_msg">Message</label>
-          <textarea data-ph="ct_ph_msg" placeholder="Your message…" required></textarea>
-        </div>
-        <button type="submit" class="btn-cta btn-cta-primary btn-submit" data-t="ct_send">Send Message</button>
-      </form>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════
-     FOOTER
-     ═══════════════════════════════════════ -->
-<footer class="footer">
-  <p>© 2025 Hamza FEKKAK · <span data-t="footer">Designed &amp; built with ♥ by Hamza FEKKAK · 2025</span></p>
-</footer>
-
-<script src="assets/js/main.js"></script>
-</body>
-</html>
+1|<!DOCTYPE html>
+2|<html lang="en">
+3|<head>
+4|  <meta charset="UTF-8">
+5|  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+6|  <meta name="description" content="Hamza FEKKAK — World-Class IT Engineer & Cybersecurity Portfolio">
+7|  <title>Hamza FEKKAK | IT Engineer · Cybersecurity · Cloud</title>
+8|  <link rel="preconnect" href="https://fonts.googleapis.com">
+9|  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+10|  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+11|  <link rel="stylesheet" href="assets/css/style.css">
+12|</head>
+13|<body>
+14|
+15|<!-- ═══════════════════════════════════════
+16|     NAVBAR
+17|     ═══════════════════════════════════════ -->
+18|<nav class="navbar" id="navbar">
+19|  <div class="container">
+20|    <a href="#" class="nav-logo">HF</a>
+21|    <ul class="nav-links">
+22|      <li><a href="#about" class="active" data-t="nav_about">About</a></li>
+23|      <li><a href="#experience" data-t="nav_exp">Experience</a></li>
+24|      <li><a href="#skills" data-t="nav_skills">Skills</a></li>
+25|      <li><a href="#projects" data-t="nav_projects">Projects</a></li>
+26|      <li><a href="#contact" data-t="nav_contact">Contact</a></li>
+27|    </ul>
+28|    <button class="btn-lang" id="btnLang" onclick="toggleLang()">FR</button>
+29|  </div>
+30|</nav>
+31|
+32|<!-- ═══════════════════════════════════════
+33|     HERO
+34|     ═══════════════════════════════════════ -->
+35|<section class="hero" id="hero">
+36|  <div class="hero-bg">
+37|    <div class="hero-bg-orb"></div>
+38|    <div class="hero-bg-orb"></div>
+39|    <div class="hero-bg-orb"></div>
+40|  </div>
+41|  <div class="hero-grid-pattern"></div>
+42|
+43|  <div class="container">
+44|    <div class="hero-grid">
+45|      <div class="hero-text">
+46|        <h1 class="hero-title reveal">Hamza<br><span class="text-gradient">FEKKAK</span></h1>
+47|        <p class="hero-subtitle reveal reveal-delay-1">
+48|          <span id="typing-text"></span><span class="typing-cursor"></span>
+49|        </p>
+50|        <p class="hero-desc reveal reveal-delay-2" data-t="hero_desc">IT professional specialized in systems administration, cloud infrastructure, and cybersecurity. Proactive and adaptable, I bring technical expertise and a collaborative spirit to drive innovation.</p>
+51|
+52|        <div class="hero-metrics reveal reveal-delay-3">
+53|          <div><div class="metric-val">5+</div><div class="metric-lbl" data-t="metric_exp">Years Exp</div></div>
+54|          <div><div class="metric-val">50+</div><div class="metric-lbl" data-t="metric_projects">Projects</div></div>
+55|          <div><div class="metric-val">600+</div><div class="metric-lbl" data-t="metric_users">Users Supported</div></div>
+56|        </div>
+57|
+58|        <div class="hero-ctas reveal reveal-delay-4">
+59|          <a href="#projects" class="btn-cta btn-cta-primary">
+60|            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+61|            <span data-t="btn_projects">View Projects</span>
+62|          </a>
+63|          <a href="#contact" class="btn-cta btn-cta-ghost">
+64|            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+65|            <span data-t="btn_contact">Contact Me</span>
+66|          </a>
+67|          <a href="Videos/FEKKAK HAMZA CV.pdf" class="btn-cta btn-cta-ghost" download>
+68|            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+69|            <span data-t="btn_cv">Download CV</span>
+70|          </a>
+71|        </div>
+72|      </div>
+73|
+74|      <div class="hero-photo-wrap reveal reveal-delay-2">
+75|        <div class="hero-photo-frame">
+76|          <div class="hero-photo-inner">
+77|            <img src="photo.jpg" alt="Hamza FEKKAK">
+78|          </div>
+79|        </div>
+80|        <div class="hero-photo-ring"></div>
+81|
+82|        <!-- Floating particles -->
+83|        <div class="hero-float-particle particle-1">
+84|          <svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+85|          Cybersecurity
+86|        </div>
+87|        <div class="hero-float-particle particle-2">
+88|          <svg viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="2"><path d="M12 2L2 7v10l10 5 10-5V7L12 2z"/></svg>
+89|          Cloud Architecture
+90|        </div>
+91|        <div class="hero-float-particle particle-3">
+92|          <svg viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+93|          DevSecOps
+94|        </div>
+95|
+96|        <!-- Canvas particles -->
+97|        <canvas id="hero-canvas" style="position:absolute;inset:-60px;pointer-events:none;z-index:-1;"></canvas>
+98|      </div>
+99|    </div>
+100|  </div>
+101|</section>
+102|
+103|<div class="section-divider"></div>
+104|
+105|<!-- ═══════════════════════════════════════
+106|     ABOUT
+107|     ═══════════════════════════════════════ -->
+108|<section class="section" id="about">
+109|  <div class="container">
+110|    <div class="reveal">
+111|      <div class="section-label" data-t="sec_about">About Me</div>
+112|      <h2 class="section-title">Who I Am</h2>
+113|      <p class="section-desc" data-t="about_p">Passionate IT engineer with 5+ years of experience in systems administration, cloud infrastructure, and cybersecurity. I specialize in building secure, scalable infrastructure and driving digital transformation for enterprise clients.</p>
+114|    </div>
+115|  </div>
+116|</section>
+117|
+118|<div class="section-divider"></div>
+119|
+120|<!-- ═══════════════════════════════════════
+121|     EXPERIENCE
+122|     ═══════════════════════════════════════ -->
+123|<section class="section" id="experience">
+124|  <div class="container">
+125|    <div class="reveal">
+126|      <div class="section-label" data-t="sec_exp">Experience</div>
+127|      <h2 class="section-title">Career Journey</h2>
+128|    </div>
+129|
+130|    <div class="xp-timeline">
+131|      <!-- XP 1 -->
+132|      <div class="xp-item reveal">
+133|        <div class="xp-dot"></div>
+134|        <div class="xp-date" data-t="xp1_date">Sep 2025 – Present</div>
+135|        <div class="glass xp-card">
+136|          <div class="xp-role" data-t="xp1_role">IT Engineer</div>
+137|          <div class="xp-company" data-t="xp1_co">SOFRECOM · Orange Group</div>
+138|          <ul class="xp-tasks">
+139|            <li>Conduct regular security reviews of infrastructure systems</li>
+140|            <li>Manage internal IT projects, coordinating between technical teams</li>
+141|            <li>Administer MDT, WDS, SCCM and PDQ Deploy deployment solutions</li>
+142|            <li>Write and maintain technical documentation and procedures</li>
+143|            <li>Monitor security compliance and track exemptions</li>
+144|            <li>Train users on IT best practices and security awareness</li>
+145|            <li>Supervise IT asset management via OCS Inventory</li>
+146|            <li>Level 2–3 technical support for complex incidents</li>
+147|          </ul>
+148|          <div class="xp-badges" data-xp-badges="1"></div>
+149|        </div>
+150|      </div>
+151|
+152|      <!-- XP 2 -->
+153|      <div class="xp-item reveal">
+154|        <div class="xp-dot"></div>
+155|        <div class="xp-date" data-t="xp2_date">Dec 2022 – Sep 2025</div>
+156|        <div class="glass xp-card">
+157|          <div class="xp-role" data-t="xp2_role">IT Technician</div>
+158|          <div class="xp-company" data-t="xp2_co">LATECOERE INTERCONNECTION SYSTEMS</div>
+159|          <ul class="xp-tasks">
+160|            <li>Data Center management — AD DS, DNS, DHCP (+98% security compliance)</li>
+161|            <li>SCCM deployment, configuration and upgrades</li>
+162|            <li>CrowdStrike EDR and Sophos Mobile MDM management</li>
+163|            <li>VMware vSphere and Azure server administration</li>
+164|            <li>PowerShell automation — 30% reduction in manual tasks</li>
+165|            <li>Cisco Webex VoIP telephony management</li>
+166|            <li>Backup management — 99%+ uptime guarantee</li>
+167|            <li>Server room maintenance — 20% energy reduction</li>
+168|            <li>Technical documentation for 600+ users</li>
+169|            <li>92% first-contact ticket resolution rate</li>
+170|          </ul>
+171|          <div class="xp-badges" data-xp-badges="2"></div>
+172|        </div>
+173|      </div>
+174|
+175|      <!-- XP 3 -->
+176|      <div class="xp-item reveal">
+177|        <div class="xp-dot"></div>
+178|        <div class="xp-date" data-t="xp3_date">Jul 2021 – Dec 2022</div>
+179|        <div class="glass xp-card">
+180|          <div class="xp-role" data-t="xp3_role">IT Technician</div>
+181|          <div class="xp-company" data-t="xp3_co">AMEX ROYAL AIR MAROC</div>
+182|          <ul class="xp-tasks">
+183|            <li>Incident management via Micro Focus SMAX</li>
+184|            <li>Hardware installation, configuration and maintenance</li>
+185|            <li>User session and access management</li>
+186|            <li>Software deployment via ManageEngine</li>
+187|            <li>IT stock management and resource optimization</li>
+188|            <li>Multi-channel user support (phone, email, remote)</li>
+189|          </ul>
+190|          <div class="xp-badges" data-xp-badges="3"></div>
+191|        </div>
+192|      </div>
+193|    </div>
+194|  </div>
+195|</section>
+196|
+197|<div class="section-divider"></div>
+198|
+199|<!-- ═══════════════════════════════════════
+200|     SKILLS
+201|     ═══════════════════════════════════════ -->
+202|<section class="section" id="skills">
+203|  <div class="container">
+204|    <div class="reveal">
+205|      <div class="section-label" data-t="sec_skills">Technical Skills</div>
+206|      <h2 class="section-title">Tech Arsenal</h2>
+207|    </div>
+208|
+209|    <div class="skills-bento">
+210|      <!-- Systems -->
+211|      <div class="skill-item glass reveal"><span class="dot"></span><span>Windows Server</span></div>
+212|      <div class="skill-item glass reveal"><span class="dot"></span><span>Linux</span></div>
+213|      <div class="skill-item glass reveal"><span class="dot"></span><span>Active Directory</span></div>
+214|      <div class="skill-item glass reveal"><span class="dot"></span><span>PowerShell</span></div>
+215|      <div class="skill-item glass reveal"><span class="dot"></span><span>SCCM / MDT</span></div>
+216|      <div class="skill-item glass reveal"><span class="dot"></span><span>OCS Inventory</span></div>
+217|      <div class="skill-item glass reveal"><span class="dot"></span><span>Office 365</span></div>
+218|      <div class="skill-item glass reveal"><span class="dot"></span><span>GLPI / ITSM</span></div>
+219|
+220|      <!-- Cloud -->
+221|      <div class="skill-item glass reveal"><span class="dot"></span><span>Microsoft Azure</span></div>
+222|      <div class="skill-item glass reveal"><span class="dot"></span><span>Amazon AWS</span></div>
+223|      <div class="skill-item glass reveal"><span class="dot"></span><span>VMware vSphere</span></div>
+224|      <div class="skill-item glass reveal"><span class="dot"></span><span>Proxmox</span></div>
+225|      <div class="skill-item glass reveal"><span class="dot"></span><span>Docker</span></div>
+226|      <div class="skill-item glass reveal"><span class="dot"></span><span>Hyper-V</span></div>
+227|
+228|      <!-- Security -->
+229|      <div class="skill-item glass reveal"><span class="dot"></span><span>CrowdStrike</span></div>
+230|      <div class="skill-item glass reveal"><span class="dot"></span><span>Fortinet</span></div>
+231|      <div class="skill-item glass reveal"><span class="dot"></span><span>Zabbix</span></div>
+232|      <div class="skill-item glass reveal"><span class="dot"></span><span>Wireshark</span></div>
+233|      <div class="skill-item glass reveal"><span class="dot"></span><span>Prometheus</span></div>
+234|      <div class="skill-item glass reveal"><span class="dot"></span><span>Wazuh SIEM</span></div>
+235|      <div class="skill-item glass reveal"><span class="dot"></span><span>Suricata IDS</span></div>
+236|      <div class="skill-item glass reveal"><span class="dot"></span><span>Veeam Backup</span></div>
+237|
+238|      <!-- Network -->
+239|      <div class="skill-item glass reveal"><span class="dot"></span><span>Cisco</span></div>
+240|      <div class="skill-item glass reveal"><span class="dot"></span><span>Webex VoIP</span></div>
+241|      <div class="skill-item glass reveal"><span class="dot"></span><span>Asterisk PBX</span></div>
+242|      <div class="skill-item glass reveal"><span class="dot"></span><span>Nmap</span></div>
+243|
+244|      <!-- Automation -->
+245|      <div class="skill-item glass reveal"><span class="dot"></span><span>Ansible</span></div>
+246|      <div class="skill-item glass reveal"><span class="dot"></span><span>Git</span></div>
+247|      <div class="skill-item glass reveal"><span class="dot"></span><span>Arduino</span></div>
+248|      <div class="skill-item glass reveal"><span class="dot"></span><span>ManageEngine</span></div>
+249|    </div>
+250|  </div>
+251|</section>
+252|
+253|<div class="section-divider"></div>
+254|
+255|<!-- ═══════════════════════════════════════
+256|     PROJECTS (BENTO)
+257|     ═══════════════════════════════════════ -->
+258|<section class="section" id="projects">
+259|  <div class="container">
+260|    <div class="reveal">
+261|      <div class="section-label" data-t="sec_projects">Featured Projects</div>
+262|      <h2 class="section-title">Cybersecurity &amp; AI Projects</h2>
+263|    </div>
+264|
+265|    <div class="bento-grid">
+266|      <div class="bento-item large glass reveal">
+267|        <div>
+268|          <div class="bento-icon">
+269|            <svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 8v4M12 16h.01"/></svg>
+270|          </div>
+271|          <h3 data-t="proj1_title">SOC Automation Platform</h3>
+272|          <p data-t="proj1_desc">Built a Security Operations Center dashboard with real-time threat detection using Wazuh SIEM, Suricata IDS, and custom Python alerting pipelines.</p>
+273|        </div>
+274|        <span class="bento-tag">Cybersecurity · SIEM</span>
+275|      </div>
+276|
+277|      <div class="bento-item glass reveal">
+278|        <div>
+279|          <div class="bento-icon">
+280|            <svg viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="1.5"><path d="M12 2L2 7v10l10 5 10-5V7L12 2z"/></svg>
+281|          </div>
+282|          <h3 data-t="proj2_title">Cloud Migration Framework</h3>
+283|          <p data-t="proj2_desc">Enterprise cloud migration from VMware to Azure, reducing costs by 40%.</p>
+284|        </div>
+285|        <span class="bento-tag">Cloud · Azure</span>
+286|      </div>
+287|
+288|      <div class="bento-item glass reveal">
+289|        <div>
+290|          <div class="bento-icon">
+291|            <svg viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42"/></svg>
+292|          </div>
+293|          <h3 data-t="proj3_title">AI Vulnerability Scanner</h3>
+294|          <p data-t="proj3_desc">ML-powered vulnerability assessment tool for intelligent CVE prioritization.</p>
+295|        </div>
+296|        <span class="bento-tag">AI · Security</span>
+297|      </div>
+298|
+299|      <div class="bento-item glass reveal">
+300|        <div>
+301|          <div class="bento-icon">
+302|            <svg viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+303|          </div>
+304|          <h3 data-t="proj4_title">Zero Trust Architecture</h3>
+305|          <p data-t="proj4_desc">Zero-trust network segmentation with micro-segmentation and identity-based access.</p>
+306|        </div>
+307|        <span class="bento-tag">Network · Security</span>
+308|      </div>
+309|
+310|      <div class="bento-item large glass reveal">
+311|        <div>
+312|          <div class="bento-icon">
+313|            <svg viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+314|          </div>
+315|          <h3 data-t="proj5_title">DevSecOps Pipeline</h3>
+316|          <p data-t="proj5_desc">CI/CD pipeline with SAST/DAST scanning, container verification, and compliance-as-code.</p>
+317|        </div>
+318|        <span class="bento-tag">DevSecOps · CI/CD</span>
+319|      </div>
+320|
+321|      <div class="bento-item glass reveal">
+322|        <div>
+323|          <div class="bento-icon">
+324|            <svg viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+325|          </div>
+326|          <h3 data-t="proj6_title">Incident Response Automation</h3>
+327|          <p data-t="proj6_desc">Automated playbooks reducing MTTR from 4 hours to 15 minutes.</p>
+328|        </div>
+329|        <span class="bento-tag">Automation · Security</span>
+330|      </div>
+331|    </div>
+332|  </div>
+333|</section>
+334|
+335|<div class="section-divider"></div>
+336|
+337|<!-- ═══════════════════════════════════════
+338|     CERTIFICATIONS + GITHUB STATS
+339|     ═══════════════════════════════════════ -->
+340|<section class="section" id="certifications">
+341|  <div class="container">
+342|    <div class="reveal">
+343|      <div class="section-label" data-t="sec_certs">Certifications</div>
+344|      <h2 class="section-title">Professional Credentials</h2>
+345|    </div>
+346|
+347|    <div class="cert-grid">
+348|      <div class="cert-card glass reveal">
+349|        <div class="cert-dot"></div>
+350|        <div>
+351|          <div class="cert-name" data-t="c1_n">System Administration &amp; IT Infrastructure</div>
+352|          <div class="cert-org" data-t="c1_o">Google Professional Certificate</div>
+353|        </div>
+354|      </div>
+355|      <div class="cert-card glass reveal">
+356|        <div class="cert-dot"></div>
+357|        <div>
+358|          <div class="cert-name" data-t="c2_n">Ethical Hacker</div>
+359|          <div class="cert-org" data-t="c2_o">Cisco Networking Academy</div>
+360|        </div>
+361|      </div>
+362|      <div class="cert-card glass reveal">
+363|        <div class="cert-dot"></div>
+364|        <div>
+365|          <div class="cert-name" data-t="c3_n">Fortinet Associate — Cybersecurity</div>
+366|          <div class="cert-org" data-t="c3_o">Fortinet</div>
+367|        </div>
+368|      </div>
+369|    </div>
+370|
+371|    <!-- GitHub Stats -->
+372|    <div class="reveal" style="margin-top:60px">
+373|      <div class="section-label" data-t="sec_github">GitHub Stats</div>
+374|      <h2 class="section-title">Open Source Activity</h2>
+375|    </div>
+376|    <div class="github-grid">
+377|      <div class="github-stat glass reveal"><div class="github-stat-val">50+</div><div class="github-stat-lbl">Repositories</div></div>
+378|      <div class="github-stat glass reveal"><div class="github-stat-val">200+</div><div class="github-stat-lbl">Commits</div></div>
+379|      <div class="github-stat glass reveal"><div class="github-stat-val">15+</div><div class="github-stat-lbl">Projects</div></div>
+380|      <div class="github-stat glass reveal"><div class="github-stat-val">5+</div><div class="github-stat-lbl">Years Active</div></div>
+381|    </div>
+382|  </div>
+383|</section>
+384|
+385|<div class="section-divider"></div>
+386|
+387|<!-- ═══════════════════════════════════════
+388|     CONTACT
+389|     ═══════════════════════════════════════ -->
+390|<section class="section" id="contact">
+391|  <div class="container">
+392|    <div class="reveal">
+393|      <div class="section-label" data-t="sec_contact">Get in Touch</div>
+394|      <h2 class="section-title">Let's Connect</h2>
+395|    </div>
+396|
+397|    <div class="contact-grid">
+398|      <div class="reveal">
+399|        <p class="contact-intro" data-t="ct_intro">Open to new projects, creative ideas, or opportunities to be part of your vision.</p>
+400|        <div class="contact-row">
+401|          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+402|          <span>hamza33fekkak@gmail.com</span>
+403|        </div>
+404|        <div class="contact-row">
+405|          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+406|          <span>+212 661 438 472</span>
+407|        </div>
+408|        <div class="contact-row">
+409|          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+410|          <span>284 Lot INESS, Berrechid, Maroc</span>
+411|        </div>
+412|        <div class="contact-row">
+413|          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></div>
+414|          <a href="https://github.com/hamza22fekkak-art" target="_blank">github.com/hamza22fekkak-art</a>
+415|        </div>
+416|      </div>
+417|
+418|      <form id="contactForm" class="contact-form-wrap glass reveal">
+419|        <div class="form-group">
+420|          <label data-t="ct_name">Name</label>
+421|          <input type="text" data-ph="ct_ph_name" placeholder="Your name" required>
+422|        </div>
+423|        <div class="form-group">
+424|          <label data-t="ct_email">Email</label>
+425|          <input type="email" data-ph="ct_ph_email" placeholder="your@email.com" required>
+426|        </div>
+427|        <div class="form-group">
+428|          <label data-t="ct_msg">Message</label>
+429|          <textarea data-ph="ct_ph_msg" placeholder="Your message…" required></textarea>
+430|        </div>
+431|        <button type="submit" class="btn-cta btn-cta-primary btn-submit" data-t="ct_send">Send Message</button>
+432|      </form>
+433|    </div>
+434|  </div>
+435|</section>
+436|
+437|<!-- ═══════════════════════════════════════
+438|     FOOTER
+439|     ═══════════════════════════════════════ -->
+440|<footer class="footer">
+441|  <p>© 2025 Hamza FEKKAK · <span data-t="footer">Designed &amp; built with ♥ by Hamza FEKKAK · 2025</span></p>
+442|</footer>
+443|
+444|<script src="assets/js/main.js"></script>
+445|</body>
+446|</html>
+447|
