@@ -1,426 +1,303 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Hamza FEKKAK — Ingénieur Systèmes, Réseaux & Cybersécurité. Enterprise Cybersecurity & Infrastructure Engineer.">
+<meta name="description" content="Hamza FEKKAK — Ingénieur Systèmes, Réseaux & Cybersécurité">
 <title>Hamza FEKKAK | Ingénieur Systèmes, Réseaux & Cybersécurité</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-<!-- ═══════════════════════════════════════
-     NAVBAR
-     ═══════════════════════════════════════ -->
-<nav class="navbar" id="nav">
-  <div class="container">
-    <a href="#" class="nav-logo">HF</a>
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">Hamza FEKKAK</a>
     <ul class="nav-links">
-      <li><a href="#about" class="active">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact" class="nav-cta">Contact</a></li>
+      <li><a href="#profil">Profil</a></li>
+      <li><a href="#experience">Expérience</a></li>
+      <li><a href="#competences">Compétences</a></li>
+      <li><a href="#formations">Formations</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
-    <div style="display:flex;align-items:center">
-      <button class="btn-lang" id="btnLang" onclick="toggleLang()">FR</button>
-      <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
-    </div>
   </div>
 </nav>
 
-<!-- ═══════════════════════════════════════
-     HERO
-     ═══════════════════════════════════════ -->
-<section class="hero" id="hero">
-  <div class="hero-orb"></div>
-  <div class="hero-orb"></div>
-  <div class="hero-orb"></div>
-  <div class="hero-grid-bg"></div>
-  <canvas id="network-canvas"></canvas>
-
-  <div class="container">
-    <div class="hero-inner">
-      <div class="hero-photo-card reveal"><img src="photo.jpg" alt="Hamza FEKKAK"></div>
-      <div class="hero-text-wrap">
-        <h1 class="reveal">Hamza <span class="tg">FEKKAK</span></h1>
-        <p class="hero-tagline reveal reveal-d1">Building Secure, Intelligent &amp; Scalable IT Infrastructure for Modern Enterprises.</p>
-        <p class="hero-sub-tagline reveal reveal-d2">
-          <span id="typing-text"></span><span class="typing-cursor"></span>
-        </p>
-        <p class="hero-sub-tagline reveal reveal-d3">Cybersecurity Engineer specialized in Infrastructure, Cloud, IT Governance and Enterprise Security. <span class="flag">🇲🇦</span></p>
-        <div class="hero-ctas reveal reveal-d4">
-          <a href="#projects" class="btn btn-primary">View Projects</a>
-          <a href="#contact" class="btn btn-ghost">Contact Me</a>
-          <a href="Videos/FEKKAK HAMZA CV.pdf" class="btn btn-ghost" download>Download CV</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="scroll-indicator">
-    <div class="mouse"></div>
-    <span>Scroll</span>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════
-     ABOUT
-     ═══════════════════════════════════════ -->
-<section class="section about" id="about">
-  <div class="container">
-    <div class="reveal">
-      <div class="section-label">About</div>
-      <h2 class="section-title">Enterprise Cybersecurity &amp; Infrastructure Engineer</h2>
-      <p class="section-sub">Multinational expertise in systems administration, cloud infrastructure, cybersecurity governance, and enterprise IT operations. Proven track record across aerospace, telecommunications, and aviation sectors.</p>
-    </div>
-    <div class="about-grid reveal">
-      <div class="glass about-card">
-        <h3>Expertise</h3>
-        <p>🔒 Cybersecurity &amp; Threat Detection</p>
-        <p>☁️ Cloud Architecture (Azure, AWS)</p>
-        <p>🖥️ Data Center &amp; Infrastructure</p>
-        <p>📡 Network Administration</p>
-        <p>🤖 IT Automation &amp; DevSecOps</p>
-        <p>📋 IT Governance &amp; Compliance</p>
-      </div>
-      <div class="glass about-card">
-        <h3>Languages &amp; Location</h3>
-        <p>🇲🇦 Arabic — Native</p>
-        <p>🇫🇷 French — Fluent (Professional)</p>
-        <p>🇬🇧 English — Proficient (Technical)</p>
-        <p>📍 Berrechid, Morocco</p>
-        <p>✈️ Open to international opportunities</p>
-        <p>🔧 Hardware &amp; robotics enthusiast</p>
-      </div>
-    </div>
-    <div class="quick-stats reveal">
-      <div class="qs-item"><div class="qs-num">5+</div><div class="qs-lbl">Years</div></div>
-      <div class="qs-item"><div class="qs-num">3</div><div class="qs-lbl">Multinationals</div></div>
-      <div class="qs-item"><div class="qs-num">600+</div><div class="qs-lbl">Users</div></div>
-      <div class="qs-item"><div class="qs-num">99%</div><div class="qs-lbl">Uptime</div></div>
+<!-- PROFIL -->
+<section class="hero" id="profil">
+  <img src="photo.jpg" alt="Hamza FEKKAK" class="hero-photo">
+  <div class="hero-info">
+    <h1>Hamza FEKKAK</h1>
+    <p class="hero-role">Ingénieur Systèmes, Réseaux & Cybersécurité</p>
+    <p class="hero-desc">Professionnel IT spécialisé en administration des systèmes, infrastructure cloud et cybersécurité. 5+ ans d'expérience dans des environnements multinationnels (aéronautique, télécom, aviation). Expertise en conformité sécurité, gestion de data centers et déploiement d'infrastructures d'entreprise.</p>
+    <div class="hero-links">
+      <a href="mailto:hamza33fekkak@gmail.com">✉ Email</a>
+      <a href="tel:+212661438472">☎ Tél</a>
+      <a href="https://www.linkedin.com/in/hamza-fekkak-93b886200" target="_blank">💼 LinkedIn</a>
+      <a href="https://github.com/hamza22fekkak-art" target="_blank">🔗 GitHub</a>
+      <a href="Videos/FEKKAK HAMZA CV.pdf" download>📄 CV</a>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════
-     SKILLS
-     ═══════════════════════════════════════ -->
-<section class="section" id="skills">
-  <div class="container">
-    <div class="reveal">
-      <div class="section-label">Technical Skills</div>
-      <h2 class="section-title">Technology Arsenal</h2>
-      <p class="section-sub">Enterprise-grade technologies and platforms mastered across multinational environments.</p>
-    </div>
-    <div class="skills-grid reveal">
-      <div class="skill-chip"><span class="dot"></span>Windows Server</div>
-      <div class="skill-chip"><span class="dot"></span>Linux</div>
-      <div class="skill-chip"><span class="dot"></span>Active Directory</div>
-      <div class="skill-chip"><span class="dot"></span>Group Policy</div>
-      <div class="skill-chip"><span class="dot"></span>PowerShell</div>
-      <div class="skill-chip"><span class="dot"></span>SCCM / MDT / WDS</div>
-      <div class="skill-chip"><span class="dot"></span>PDQ Deploy</div>
-      <div class="skill-chip"><span class="dot"></span>OCS Inventory</div>
-      <div class="skill-chip"><span class="dot"></span>Office 365</div>
-      <div class="skill-chip"><span class="dot"></span>GLPI / ITSM</div>
-      <div class="skill-chip"><span class="dot"></span>Microsoft Azure</div>
-      <div class="skill-chip"><span class="dot"></span>Amazon AWS</div>
-      <div class="skill-chip"><span class="dot"></span>VMware vSphere</div>
-      <div class="skill-chip"><span class="dot"></span>Proxmox</div>
-      <div class="skill-chip"><span class="dot"></span>Hyper-V</div>
-      <div class="skill-chip"><span class="dot"></span>Docker</div>
-      <div class="skill-chip"><span class="dot"></span>CrowdStrike EDR</div>
-      <div class="skill-chip"><span class="dot"></span>Fortinet</div>
-      <div class="skill-chip"><span class="dot"></span>Zabbix</div>
-      <div class="skill-chip"><span class="dot"></span>Wireshark</div>
-      <div class="skill-chip"><span class="dot"></span>Prometheus</div>
-      <div class="skill-chip"><span class="dot"></span>Wazuh SIEM</div>
-      <div class="skill-chip"><span class="dot"></span>Suricata IDS</div>
-      <div class="skill-chip"><span class="dot"></span>Security Onion</div>
-      <div class="skill-chip"><span class="dot"></span>Veeam Backup</div>
-      <div class="skill-chip"><span class="dot"></span>CommVault</div>
-      <div class="skill-chip"><span class="dot"></span>Cisco</div>
-      <div class="skill-chip"><span class="dot"></span>Webex VoIP</div>
-      <div class="skill-chip"><span class="dot"></span>Asterisk PBX</div>
-      <div class="skill-chip"><span class="dot"></span>Nmap</div>
-      <div class="skill-chip"><span class="dot"></span>Ansible</div>
-      <div class="skill-chip"><span class="dot"></span>Git</div>
-      <div class="skill-chip"><span class="dot"></span>ManageEngine</div>
-      <div class="skill-chip"><span class="dot"></span>ITIL</div>
-      <div class="skill-chip"><span class="dot"></span>ISO 27001</div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════
-     EXPERIENCE
-     ═══════════════════════════════════════ -->
+<!-- EXPÉRIENCE -->
 <section class="section" id="experience">
-  <div class="container">
-    <div class="reveal">
-      <div class="section-label">Experience</div>
-      <h2 class="section-title">Professional Journey</h2>
-      <p class="section-sub">Progressive career across multinational enterprises in aerospace, telecommunications, and aviation.</p>
+  <div class="section-inner">
+    <h2 class="section-title">Expérience Professionnelle</h2>
+
+    <div class="xp-item">
+      <div class="xp-header">
+        <div>
+          <div class="xp-role">Ingénieur IT</div>
+          <div class="xp-company">SOFRECOM · Groupe Orange · Casablanca</div>
+        </div>
+        <div class="xp-date">Sep 2025 – Présent</div>
+      </div>
+      <ul class="xp-list">
+        <li>Réaliser des revues régulières de sécurité des systèmes d'infrastructure</li>
+        <li>Piloter les projets IT internes, coordination entre équipes techniques</li>
+        <li>Gérer les solutions de déploiement MDT, WDS, SCCM et PDQ Deploy</li>
+        <li>Rédiger et maintenir la documentation technique et les procédures</li>
+        <li>Contrôler l'application des règles de sécurité et suivi des dérogations</li>
+        <li>Former et sensibiliser les utilisateurs aux bonnes pratiques IT</li>
+        <li>Superviser la gestion des équipements via OCS Inventory</li>
+        <li>Support technique niveaux 2 et 3 pour les incidents complexes</li>
+        <li>Interlocuteur avec les fournisseurs et équipes IT/Réseau/Sécurité (Maroc & France)</li>
+      </ul>
     </div>
-    <div class="xp-timeline">
-      <div class="xp-item reveal">
-        <div class="xp-dot"></div>
-        <div class="xp-date">Sep 2025 – Present</div>
-        <div class="glass xp-card">
-          <div class="xp-role">IT Engineer</div>
-          <div class="xp-company">SOFRECOM · Orange Group · Casablanca Nearshore</div>
-          <ul class="xp-list">
-            <li>Conduct regular security reviews of infrastructure systems</li>
-            <li>Manage internal IT projects, coordinating between technical teams</li>
-            <li>Administer MDT, WDS, SCCM and PDQ Deploy deployment solutions</li>
-            <li>Write and maintain technical documentation and procedures</li>
-            <li>Monitor security compliance and track exemptions</li>
-            <li>Train users on IT best practices and security awareness</li>
-            <li>Supervise IT asset management via OCS Inventory</li>
-            <li>Level 2–3 technical support for complex incidents</li>
-            <li>Liaison with vendors and IT/security teams in Morocco and France</li>
-          </ul>
-          <div class="xp-badges">
-            <span class="xp-badge">Security Reviews</span>
-            <span class="xp-badge">SCCM</span>
-            <span class="xp-badge">PowerShell</span>
-            <span class="xp-badge">ITIL</span>
-            <span class="xp-badge">OCS Inventory</span>
-          </div>
+
+    <div class="xp-item">
+      <div class="xp-header">
+        <div>
+          <div class="xp-role">Technicien IT</div>
+          <div class="xp-company">LATECOERE INTERCONNECTION SYSTEMS · Casablanca</div>
         </div>
+        <div class="xp-date">Déc 2022 – Sep 2025</div>
       </div>
-      <div class="xp-item reveal">
-        <div class="xp-dot"></div>
-        <div class="xp-date">Dec 2022 – Sep 2025</div>
-        <div class="glass xp-card">
-          <div class="xp-role">IT Technician</div>
-          <div class="xp-company">LATECOERE INTERCONNECTION SYSTEMS · Had Soualem, Casablanca</div>
-          <ul class="xp-list">
-            <li>Data Center management — AD DS, DNS, DHCP (+98% security compliance)</li>
-            <li>SCCM deployment, configuration and upgrades</li>
-            <li>CrowdStrike EDR and Sophos Mobile MDM management</li>
-            <li>VMware vSphere and Azure server administration</li>
-            <li>PowerShell automation — 30% reduction in manual repetitive tasks</li>
-            <li>Cisco Webex VoIP telephony management</li>
-            <li>Backup management — 99%+ uptime guarantee</li>
-            <li>Server room maintenance — 20% energy reduction</li>
-            <li>Technical documentation for 600+ users</li>
-            <li>92% first-contact ticket resolution rate</li>
-          </ul>
-          <div class="xp-badges">
-            <span class="xp-badge">Data Center</span>
-            <span class="xp-badge">CrowdStrike</span>
-            <span class="xp-badge">VMware</span>
-            <span class="xp-badge">Azure</span>
-            <span class="xp-badge">99% Uptime</span>
-            <span class="xp-badge">600+ Users</span>
-          </div>
-        </div>
-      </div>
-      <div class="xp-item reveal">
-        <div class="xp-dot"></div>
-        <div class="xp-date">Jul 2021 – Dec 2022</div>
-        <div class="glass xp-card">
-          <div class="xp-role">IT Technician</div>
+      <ul class="xp-list">
+        <li>Gestion du Data Center — AD DS, DNS, DHCP (+98% conformité sécurité)</li>
+        <li>Déploiement, configuration et mise à niveau via SCCM</li>
+        <li>Gestion EDR CrowdStrike et MDM Sophos Mobile</li>
+        <li>Administration VMware vSphere et serveurs Azure</li>
+        <li>Automatisation PowerShell — réduction de 30% des tâches manuelles</li>
+        <li>Gestion téléphonie VoIP Cisco Webex</li>
+        <li>Sauvegardes et continuité — disponibilité supérieure à 99%</li>
+        <li>Maintenance salles serveurs — réduction 20% consommation énergétique</li>
+        <li>Documentation technique pour +600 utilisateurs</li>
+        <li>92% de tickets résolus au premier contact</li>
+      </ul>
+    </div>
+
+    <div class="xp-item">
+      <div class="xp-header">
+        <div>
+          <div class="xp-role">Technicien IT</div>
           <div class="xp-company">AMEX ROYAL AIR MAROC · Casablanca</div>
-          <ul class="xp-list">
-            <li>Incident management via Micro Focus SMAX</li>
-            <li>Hardware installation, configuration and maintenance</li>
-            <li>User session and access management</li>
-            <li>Software deployment via ManageEngine</li>
-            <li>IT stock management and resource optimization</li>
-            <li>Multi-channel user support (phone, email, remote)</li>
-          </ul>
-          <div class="xp-badges">
-            <span class="xp-badge">SMAX</span>
-            <span class="xp-badge">ManageEngine</span>
-            <span class="xp-badge">User Support</span>
-          </div>
         </div>
+        <div class="xp-date">Juil 2021 – Déc 2022</div>
+      </div>
+      <ul class="xp-list">
+        <li>Gestion des demandes et incidents via Micro Focus SMAX</li>
+        <li>Installation, configuration et maintenance du matériel informatique</li>
+        <li>Paramétrage et gestion des sessions utilisateurs</li>
+        <li>Déploiement logiciel via ManageEngine</li>
+        <li>Gestion du stock informatique et optimisation des ressources</li>
+        <li>Accompagnement et support utilisateurs multicanal</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- COMPÉTENCES -->
+<section class="section skills-section" id="competences">
+  <div class="section-inner">
+    <h2 class="section-title">Compétences Techniques</h2>
+    <div class="skills-grid">
+      <span class="skill-tag">Windows Server</span>
+      <span class="skill-tag">Linux</span>
+      <span class="skill-tag">Active Directory</span>
+      <span class="skill-tag">Group Policy</span>
+      <span class="skill-tag">DNS / DHCP</span>
+      <span class="skill-tag">PowerShell</span>
+      <span class="skill-tag">SCCM</span>
+      <span class="skill-tag">MDT / WDS</span>
+      <span class="skill-tag">PDQ Deploy</span>
+      <span class="skill-tag">OCS Inventory</span>
+      <span class="skill-tag">Office 365</span>
+      <span class="skill-tag">GLPI / ITSM</span>
+      <span class="skill-tag">Microsoft Azure</span>
+      <span class="skill-tag">Amazon AWS</span>
+      <span class="skill-tag">VMware vSphere</span>
+      <span class="skill-tag">Proxmox</span>
+      <span class="skill-tag">Hyper-V</span>
+      <span class="skill-tag">Docker</span>
+      <span class="skill-tag">CrowdStrike EDR</span>
+      <span class="skill-tag">Sophos Mobile</span>
+      <span class="skill-tag">Fortinet</span>
+      <span class="skill-tag">Zabbix</span>
+      <span class="skill-tag">Wireshark</span>
+      <span class="skill-tag">Prometheus</span>
+      <span class="skill-tag">Wazuh SIEM</span>
+      <span class="skill-tag">Suricata IDS</span>
+      <span class="skill-tag">Veeam Backup</span>
+      <span class="skill-tag">Cisco</span>
+      <span class="skill-tag">Webex VoIP</span>
+      <span class="skill-tag">Nmap</span>
+      <span class="skill-tag">Ansible</span>
+      <span class="skill-tag">Git</span>
+      <span class="skill-tag">ManageEngine</span>
+      <span class="skill-tag">ITIL</span>
+      <span class="skill-tag">ISO 27001</span>
+    </div>
+  </div>
+</section>
+
+<!-- FORMATIONS -->
+<section class="section" id="formations">
+  <div class="section-inner">
+    <h2 class="section-title">Formations & Diplômes</h2>
+
+    <div class="edu-item">
+      <div class="edu-year">2023 – 2025</div>
+      <div class="edu-degree">Master Professionnel — Ingénierie Systèmes, Réseaux & Cybersécurité (Bac+5)</div>
+      <div class="edu-school">ENSI, Casablanca</div>
+    </div>
+
+    <div class="edu-item">
+      <div class="edu-year">2023 – 2024</div>
+      <div class="edu-degree">Licence Professionnelle — Administration Systèmes, Bases de Données & Cloud Computing (Bac+3)</div>
+      <div class="edu-school">SUPEMIR, Casablanca</div>
+    </div>
+
+    <div class="edu-item">
+      <div class="edu-year">2018 – 2021</div>
+      <div class="edu-degree">Bachelor — Responsable de Projets</div>
+      <div class="edu-school">WESFORD, France</div>
+    </div>
+
+    <div class="edu-item">
+      <div class="edu-year">2018 – 2020</div>
+      <div class="edu-degree">Diplôme de Technicien — Maintenance et Support Informatique et Réseaux</div>
+      <div class="edu-school">ISTICG, Berrechid</div>
+    </div>
+
+    <div class="edu-item">
+      <div class="edu-year">2016 – 2017</div>
+      <div class="edu-degree">Baccalauréat — Sciences Physiques</div>
+      <div class="edu-school">Lycée Eljadida, Berrechid</div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section class="section cert-section" id="certifications">
+  <div class="section-inner">
+    <h2 class="section-title">Certifications</h2>
+
+    <div class="cert-item">
+      <div class="cert-dot"></div>
+      <div>
+        <div class="cert-name">System Administration and IT Infrastructure Services</div>
+        <div class="cert-org">Google Professional Certificate</div>
+      </div>
+    </div>
+
+    <div class="cert-item">
+      <div class="cert-dot"></div>
+      <div>
+        <div class="cert-name">Ethical Hacker</div>
+        <div class="cert-org">Cisco Networking Academy</div>
+      </div>
+    </div>
+
+    <div class="cert-item">
+      <div class="cert-dot"></div>
+      <div>
+        <div class="cert-name">Fortinet Certified Associate — Cybersecurity</div>
+        <div class="cert-org">Fortinet</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════
-     PROJECTS
-     ═══════════════════════════════════════ -->
-<section class="section projects" id="projects">
-  <div class="container">
-    <div class="reveal">
-      <div class="section-label">Projects</div>
-      <h2 class="section-title">Cybersecurity &amp; AI Projects</h2>
-      <p class="section-sub">Enterprise-grade solutions designed for security, scalability, and automation.</p>
-    </div>
-    <div class="proj-grid">
-      <div class="glass proj-card reveal">
-        <h3><span class="proj-icon">🛡</span>SOC Automation Platform</h3>
-        <p>Built a Security Operations Center dashboard with real-time threat detection using Wazuh SIEM, Suricata IDS, and custom Python alerting pipelines.</p>
-        <div class="proj-tags"><span class="proj-tag">Cybersecurity</span><span class="proj-tag">SIEM</span><span class="proj-tag">Python</span></div>
-      </div>
-      <div class="glass proj-card reveal">
-        <h3><span class="proj-icon">☁</span>Cloud Migration Framework</h3>
-        <p>Designed and executed enterprise cloud migration strategy from on-premise VMware to Azure, reducing infrastructure costs by 40%.</p>
-        <div class="proj-tags"><span class="proj-tag">Azure</span><span class="proj-tag">VMware</span><span class="proj-tag">Migration</span></div>
-      </div>
-      <div class="glass proj-card reveal">
-        <h3><span class="proj-icon">🤖</span>AI Vulnerability Scanner</h3>
-        <p>Developed an intelligent vulnerability assessment tool using machine learning to prioritize CVEs based on network context and exploitability scores.</p>
-        <div class="proj-tags"><span class="proj-tag">AI/ML</span><span class="proj-tag">Security</span><span class="proj-tag">Python</span></div>
-      </div>
-      <div class="glass proj-card reveal">
-        <h3><span class="proj-icon">🔒</span>Zero Trust Architecture</h3>
-        <p>Implemented zero-trust network segmentation with micro-segmentation, identity-based access controls, and continuous verification.</p>
-        <div class="proj-tags"><span class="proj-tag">Zero Trust</span><span class="proj-tag">Network</span><span class="proj-tag">Security</span></div>
-      </div>
-      <div class="glass proj-card reveal">
-        <h3><span class="proj-icon">⚙</span>DevSecOps Pipeline</h3>
-        <p>Built CI/CD pipeline integrating SAST/DAST scanning, container image verification, and compliance-as-code for enterprise applications.</p>
-        <div class="proj-tags"><span class="proj-tag">DevSecOps</span><span class="proj-tag">CI/CD</span><span class="proj-tag">Docker</span></div>
-      </div>
-      <div class="glass proj-card reveal">
-        <h3><span class="proj-icon">⚡</span>Incident Response Automation</h3>
-        <p>Created automated incident response playbooks using Ansible and Python, reducing MTTR from 4 hours to 15 minutes.</p>
-        <div class="proj-tags"><span class="proj-tag">Automation</span><span class="proj-tag">Ansible</span><span class="proj-tag">Python</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════
-     CERTIFICATIONS
-     ═══════════════════════════════════════ -->
-<section class="section" id="certifications">
-  <div class="container">
-    <div class="reveal">
-      <div class="section-label">Certifications</div>
-      <h2 class="section-title">Professional Credentials</h2>
-    </div>
-    <div class="cert-grid reveal">
-      <div class="glass cert-card">
-        <div class="cert-icon">🏅</div>
-        <div>
-          <div class="cert-name">System Administration &amp; IT Infrastructure</div>
-          <div class="cert-org">Google Professional Certificate</div>
-        </div>
-      </div>
-      <div class="glass cert-card">
-        <div class="cert-icon">🔐</div>
-        <div>
-          <div class="cert-name">Ethical Hacker</div>
-          <div class="cert-org">Cisco Networking Academy</div>
-        </div>
-      </div>
-      <div class="glass cert-card">
-        <div class="cert-icon">🛡</div>
-        <div>
-          <div class="cert-name">Fortinet Certified Associate — Cybersecurity</div>
-          <div class="cert-org">Fortinet</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════
-     CONTACT
-     ═══════════════════════════════════════ -->
-<section class="section contact" id="contact">
-  <div class="container">
-    <div class="reveal">
-      <div class="section-label">Contact</div>
-      <h2 class="section-title">Let's Connect</h2>
-    </div>
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <div class="section-inner">
+    <h2 class="section-title">Contact</h2>
     <div class="contact-grid">
-      <div class="reveal">
-        <p class="contact-intro">Open to new projects, creative ideas, or opportunities to be part of your vision. Let's build secure, scalable infrastructure together.</p>
+      <div>
+        <p class="contact-intro">N'hésitez pas à me contacter pour toute collaboration, opportunité professionnelle ou discussion technique.</p>
         <div class="contact-row">
-          <div class="contact-icon">✉</div>
-          <span>hamza33fekkak@gmail.com</span>
+          <div class="icon">✉</div>
+          <a href="mailto:hamza33fekkak@gmail.com">hamza33fekkak@gmail.com</a>
         </div>
         <div class="contact-row">
-          <div class="contact-icon">☎</div>
-          <span>+212 661 438 472</span>
+          <div class="icon">☎</div>
+          <a href="tel:+212661438472">+212 661 438 472</a>
         </div>
         <div class="contact-row">
-          <div class="contact-icon">📍</div>
-          <span>284 Lot INESS, Berrechid, Morocco</span>
+          <div class="icon">📍</div>
+          <span>284 Lot INESS, Berrechid, Maroc</span>
         </div>
         <div class="contact-row">
-          <div class="contact-icon">🔗</div>
+          <div class="icon">💼</div>
+          <a href="https://www.linkedin.com/in/hamza-fekkak-93b886200" target="_blank">linkedin.com/in/hamza-fekkak-93b886200</a>
+        </div>
+        <div class="contact-row">
+          <div class="icon">🔗</div>
           <a href="https://github.com/hamza22fekkak-art" target="_blank">github.com/hamza22fekkak-art</a>
         </div>
-        <div class="contact-row">
-          <div class="contact-icon">💼</div>
-          <a href="https://www.linkedin.com/in/hamza-fekkak-93b886200" target="_blank">linkedin.com/in/hamza-fekkak</a>
-        </div>
       </div>
-      <form class="glass contact-form-wrap reveal" onsubmit="handleSubmit(event)">
+      <form class="contact-form" onsubmit="handleSubmit(event)">
         <div class="form-group">
-          <label>Name</label>
-          <input type="text" placeholder="Your name" required>
+          <label>Nom</label>
+          <input type="text" placeholder="Votre nom" required>
         </div>
         <div class="form-group">
           <label>Email</label>
-          <input type="email" placeholder="your@email.com" required>
+          <input type="email" placeholder="votre@email.com" required>
         </div>
         <div class="form-group">
           <label>Message</label>
-          <textarea placeholder="Your message…" required></textarea>
+          <textarea placeholder="Votre message..." required></textarea>
         </div>
-        <button type="submit" class="btn btn-primary btn-submit">Send Message</button>
+        <button type="submit" class="btn btn-primary" style="width:100%">Envoyer</button>
       </form>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════
-     STATS FINAL
-     ═══════════════════════════════════════ -->
-<section class="section stats-final" id="stats">
-  <div class="container">
-    <div class="reveal">
-      <div class="section-label">Impact</div>
-      <h2 class="section-title">By The Numbers</h2>
-    </div>
-    <div class="stats-grid reveal">
-      <div class="glass stat-card">
-        <div class="stat-num">5+</div>
-        <div class="stat-lbl">Years Experience</div>
-      </div>
-      <div class="glass stat-card">
-        <div class="stat-num">50+</div>
-        <div class="stat-lbl">Projects Delivered</div>
-      </div>
-      <div class="glass stat-card">
-        <div class="stat-num">600+</div>
-        <div class="stat-lbl">Users Supported</div>
-      </div>
-      <div class="glass stat-card">
-        <div class="stat-num">99%</div>
-        <div class="stat-lbl">Infrastructure Uptime</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════
-     FOOTER
-     ═══════════════════════════════════════ -->
+<!-- FOOTER -->
 <footer class="footer">
-  <div class="footer-links">
-    <a href="#about">About</a>
-    <a href="#experience">Experience</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </div>
-  <p>© 2025 Hamza FEKKAK — Ingénieur Systèmes, Réseaux &amp; Cybersécurité · Designed &amp; built with ♥</p>
+  <p>© 2025 Hamza FEKKAK — Tous droits réservés</p>
 </footer>
 
-<script src="assets/js/main.js"></script>
+<script>
+// Form
+function handleSubmit(e) {
+  e.preventDefault();
+  const b = e.target.querySelector('button');
+  const o = b.textContent;
+  b.textContent = '✓ Envoyé !';
+  b.style.background = '#16a34a';
+  setTimeout(() => { b.textContent = o; b.style.background = ''; e.target.reset(); }, 2500);
+}
+
+// Scroll nav highlight
+window.addEventListener('scroll', () => {
+  const y = window.scrollY + 100;
+  document.querySelectorAll('section[id]').forEach(sec => {
+    const a = document.querySelector(`.nav-links a[href="#${sec.id}"]`);
+    if (!a) return;
+    if (y >= sec.offsetTop && y < sec.offsetTop + sec.offsetHeight) {
+      document.querySelectorAll('.nav-links a').forEach(l => l.style.color = '');
+      a.style.color = '#2563eb';
+    }
+  });
+});
+</script>
 </body>
 </html>
