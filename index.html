@@ -1,27 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Hamza FEKKAK — World-Class IT Engineer & Cybersecurity Portfolio">
-  <title>Hamza FEKKAK | IT Engineer · Cybersecurity · Cloud</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Hamza FEKKAK — IT Engineer & Cybersecurity Professional Portfolio">
+<title>Hamza FEKKAK | IT Engineer · Cybersecurity · Cloud</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0e17;--bg2:#111827;--bg3:#1a2235;--line:#1e293b;--text:#e2e8f0;--dim:#94a3b8;--muted:#64748b;--blue:#3b82f6;--cyan:#22d3ee;--purple:#a855f7;--green:#10b981;--r:12px;--max:1100px}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+a{text-decoration:none;color:var(--blue)}
+a:hover{text-decoration:underline}
+img{display:block;max-width:100%}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:99;background:rgba(10,14,23,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav-inner{max-width:var(--max);margin:0 auto;padding:0 24px;height:56px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{font-size:1.2rem;font-weight:800;color:var(--text)}
+.nav-links{display:flex;gap:4px;list-style:none}
+.nav-links a{color:var(--dim);font-size:.85rem;padding:6px 14px;border-radius:8px;transition:.2s}
+.nav-links a:hover,.nav-links a.active{color:var(--text);background:var(--bg3)}
+.btn-lang{background:var(--bg3);border:1px solid var(--line);color:var(--dim);padding:5px 12px;border-radius:8px;font-size:.8rem;cursor:pointer;font-family:inherit}
+.btn-lang:hover{color:var(--text);border-color:var(--blue)}
+
+/* HERO */
+.hero{padding:100px 24px 80px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-30%;left:50%;transform:translateX(-50%);width:800px;height:800px;background:radial-gradient(circle,rgba(59,130,246,.08) 0%,transparent 70%);pointer-events:none}
+.hero-photo{width:180px;height:180px;border-radius:50%;object-fit:cover;border:3px solid var(--line);margin:0 auto 24px}
+.hero h1{font-size:clamp(2.2rem,5vw,3.5rem);font-weight:800;line-height:1.1;margin-bottom:8px}
+.hero h1 span{background:linear-gradient(135deg,var(--blue),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-role{font-size:1.1rem;color:var(--cyan);font-weight:600;margin-bottom:16px;min-height:1.6em}
+.typing-cursor{display:inline-block;width:2px;height:1em;background:var(--cyan);margin-left:2px;vertical-align:text-bottom;animation:blink .8s step-end infinite}
+@keyframes blink{50%{opacity:0}}
+.hero-desc{color:var(--dim);max-width:560px;margin:0 auto 28px;font-size:.95rem}
+.hero-ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:8px;font-size:.9rem;font-weight:600;transition:.2s;cursor:pointer;border:none;font-family:inherit}
+.btn:hover{text-decoration:none;transform:translateY(-2px)}
+.btn-primary{background:linear-gradient(135deg,var(--blue),#6366f1);color:#fff;box-shadow:0 4px 15px rgba(59,130,246,.25)}
+.btn-ghost{background:var(--bg3);color:var(--text);border:1px solid var(--line)}
+.btn-ghost:hover{border-color:var(--blue)}
+
+/* SECTIONS */
+.section{padding:80px 24px}
+.section-inner{max-width:var(--max);margin:0 auto}
+.section-label{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.section-label::before{content:'';width:8px;height:8px;background:var(--blue);border-radius:50%}
+.section-title{font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:800;line-height:1.1;margin-bottom:40px;background:linear-gradient(135deg,#fff 0%,#94a3b8 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+
+/* ABOUT */
+.about{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.about-text{color:var(--dim);font-size:.95rem;margin-bottom:24px}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:32px}
+.about-grid h3{font-size:.95rem;font-weight:700;color:var(--blue);margin-bottom:10px}
+.about-grid p{color:var(--dim);font-size:.88rem;margin-bottom:6px}
+
+/* SKILLS */
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px}
+.skill-tag{background:var(--bg2);border:1px solid var(--line);padding:10px 16px;border-radius:var(--r);font-size:.82rem;font-weight:600;text-align:center;transition:.2s;cursor:default}
+.skill-tag:hover{border-color:var(--blue);background:rgba(59,130,246,.08);transform:translateY(-2px)}
+
+/* EXPERIENCE */
+.xp-item{margin-bottom:40px;padding-left:24px;border-left:2px solid var(--line);position:relative}
+.xp-item::before{content:'';position:absolute;left:-5px;top:6px;width:8px;height:8px;border-radius:50%;background:var(--blue);box-shadow:0 0 8px rgba(59,130,246,.4)}
+.xp-date{font-size:.78rem;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px}
+.xp-role{font-size:1.05rem;font-weight:700;margin-bottom:4px}
+.xp-company{color:var(--muted);font-size:.85rem;margin-bottom:14px}
+.xp-list{list-style:none;display:grid;gap:6px}
+.xp-list li{color:var(--dim);font-size:.88rem;padding-left:16px;position:relative}
+.xp-list li::before{content:'›';position:absolute;left:0;color:var(--blue);font-weight:700}
+.xp-badges{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.xp-badge{background:var(--bg2);border:1px solid var(--line);padding:3px 10px;border-radius:20px;font-size:.72rem;color:var(--dim);font-weight:600}
+
+/* PROJECTS */
+.projects{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.proj-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.proj-card{background:var(--bg3);border:1px solid var(--line);border-radius:var(--r);padding:24px;transition:.2s}
+.proj-card:hover{border-color:var(--blue);transform:translateY(-3px);box-shadow:0 8px 25px rgba(0,0,0,.2)}
+.proj-card h3{font-size:1rem;font-weight:700;margin-bottom:8px}
+.proj-card p{color:var(--dim);font-size:.85rem;line-height:1.6;margin-bottom:12px}
+.proj-tag{display:inline-block;background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.2);padding:3px 10px;border-radius:20px;font-size:.72rem;font-weight:600;color:var(--cyan)}
+
+/* CERTS */
+.cert-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
+.cert-card{background:var(--bg2);border:1px solid var(--line);border-radius:var(--r);padding:20px 24px;display:flex;align-items:center;gap:14px;transition:.2s}
+.cert-card:hover{border-color:var(--purple)}
+.cert-dot{width:10px;height:10px;border-radius:50%;background:var(--green);flex-shrink:0;box-shadow:0 0 8px rgba(16,185,129,.4)}
+.cert-name{font-size:.9rem;font-weight:700;margin-bottom:2px}
+.cert-org{color:var(--muted);font-size:.8rem}
+
+/* STATS */
+.stats{background:var(--bg2);border-top:1px solid var(--line)}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.stat-card{background:var(--bg3);border:1px solid var(--line);border-radius:var(--r);padding:32px 20px;text-align:center;transition:.2s}
+.stat-card:hover{border-color:var(--blue);transform:translateY(-3px)}
+.stat-num{font-size:clamp(1.8rem,3.5vw,2.5rem);font-weight:900;background:linear-gradient(135deg,var(--blue),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.1;margin-bottom:6px}
+.stat-lbl{font-size:.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;font-weight:600}
+
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.contact-intro{color:var(--dim);font-size:.92rem;margin-bottom:24px;line-height:1.8}
+.contact-row{display:flex;align-items:center;gap:12px;margin-bottom:14px;color:var(--dim);font-size:.88rem}
+.contact-icon{width:38px;height:38px;background:var(--bg3);border:1px solid var(--line);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.contact-form{background:var(--bg3);border:1px solid var(--line);border-radius:var(--r);padding:28px}
+.form-group{margin-bottom:16px}
+.form-group label{display:block;font-size:.8rem;font-weight:600;color:var(--dim);margin-bottom:6px}
+.form-group input,.form-group textarea{width:100%;padding:10px 14px;background:var(--bg2);border:1px solid var(--line);border-radius:8px;color:var(--text);font-size:.9rem;font-family:inherit;outline:none;transition:.2s;resize:vertical}
+.form-group input:focus,.form-group textarea:focus{border-color:var(--blue)}
+.form-group textarea{min-height:100px}
+.btn-submit{width:100%;justify-content:center}
+
+/* FOOTER */
+.footer{padding:32px 24px;text-align:center;color:var(--muted);font-size:.82rem;border-top:1px solid var(--line)}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .6s ease,transform .6s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .nav-links{display:none}
+  .hero{padding:80px 24px 60px}
+  .hero-photo{width:140px;height:140px}
+  .about-grid{grid-template-columns:1fr;gap:24px}
+  .skills-grid{grid-template-columns:repeat(auto-fill,minmax(130px,1fr))}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .contact-grid{grid-template-columns:1fr}
+  .proj-grid{grid-template-columns:1fr}
+  .cert-grid{grid-template-columns:1fr}
+  .section{padding:60px 24px}
+}
+</style>
 </head>
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar" id="navbar">
-  <div class="container">
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
     <a href="#" class="nav-logo">HF</a>
     <ul class="nav-links">
-      <li><a href="#about" class="active" data-t="nav_about">About</a></li>
-      <li><a href="#experience" data-t="nav_exp">Experience</a></li>
-      <li><a href="#skills" data-t="nav_skills">Skills</a></li>
-      <li><a href="#projects" data-t="nav_projects">Projects</a></li>
-      <li><a href="#contact" data-t="nav_contact">Contact</a></li>
+      <li><a href="#about" class="active">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
     <button class="btn-lang" id="btnLang" onclick="toggleLang()">FR</button>
   </div>
@@ -29,342 +154,299 @@
 
 <!-- HERO -->
 <section class="hero" id="hero">
-  <div class="hero-bg">
-    <div class="hero-bg-orb"></div>
-    <div class="hero-bg-orb"></div>
-    <div class="hero-bg-orb"></div>
-  </div>
-  <div class="hero-grid-pattern"></div>
-  <div class="container">
-    <div class="hero-grid">
-      <div class="hero-text">
-        <h1 class="hero-title reveal">Hamza<br><span class="text-gradient">FEKKAK</span></h1>
-        <p class="hero-subtitle reveal reveal-delay-1">
-          <span id="typing-text"></span><span class="typing-cursor"></span>
-        </p>
-        <p class="hero-desc reveal reveal-delay-2" data-t="hero_desc">IT professional specialized in systems administration, cloud infrastructure, and cybersecurity. Proactive and adaptable, I bring technical expertise and a collaborative spirit to drive innovation.</p>
-        <div class="hero-ctas reveal reveal-delay-3">
-          <a href="#projects" class="btn-cta btn-cta-primary">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-            <span data-t="btn_projects">View Projects</span>
-          </a>
-          <a href="#contact" class="btn-cta btn-cta-ghost">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            <span data-t="btn_contact">Contact Me</span>
-          </a>
-          <a href="Videos/FEKKAK HAMZA CV.pdf" class="btn-cta btn-cta-ghost" download>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            <span data-t="btn_cv">Download CV</span>
-          </a>
-        </div>
-      </div>
-      <div class="hero-photo-wrap reveal reveal-delay-2">
-        <div class="hero-photo-frame">
-          <div class="hero-photo-inner">
-            <img src="photo.jpg" alt="Hamza FEKKAK">
-          </div>
-        </div>
-        <div class="hero-photo-ring"></div>
-        <canvas id="hero-canvas" style="position:absolute;inset:-60px;pointer-events:none;z-index:-1;"></canvas>
-      </div>
-    </div>
+  <img src="photo.jpg" alt="Hamza FEKKAK" class="hero-photo reveal">
+  <h1 class="reveal">Hamza <span>FEKKAK</span></h1>
+  <p class="hero-role reveal"><span id="typing-text"></span><span class="typing-cursor"></span></p>
+  <p class="hero-desc reveal">IT professional specialized in systems administration, cloud infrastructure, and cybersecurity. Proactive and adaptable, I bring technical expertise and a collaborative spirit to drive innovation.</p>
+  <div class="hero-ctas reveal">
+    <a href="#projects" class="btn btn-primary">View Projects</a>
+    <a href="#contact" class="btn btn-ghost">Contact Me</a>
+    <a href="Videos/FEKKAK HAMZA CV.pdf" class="btn btn-ghost" download>Download CV</a>
   </div>
 </section>
-
-<div class="section-divider"></div>
 
 <!-- ABOUT -->
-<section class="section" id="about">
-  <div class="container">
+<section class="section about" id="about">
+  <div class="section-inner">
     <div class="reveal">
-      <div class="section-label" data-t="sec_about">About Me</div>
+      <div class="section-label">About Me</div>
       <h2 class="section-title">Who I Am</h2>
-      <p class="section-desc" data-t="about_p">Passionate IT engineer with 5+ years of experience in systems administration, cloud infrastructure, and cybersecurity. I specialize in building secure, scalable infrastructure and driving digital transformation for enterprise clients.</p>
+      <p class="about-text">Passionate IT engineer with 5+ years of experience in systems administration, cloud infrastructure, and cybersecurity. I specialize in building secure, scalable infrastructure and driving digital transformation for enterprise clients.</p>
     </div>
-  </div>
-</section>
-
-<div class="section-divider"></div>
-
-<!-- EXPERIENCE -->
-<section class="section" id="experience">
-  <div class="container">
-    <div class="reveal">
-      <div class="section-label" data-t="sec_exp">Experience</div>
-      <h2 class="section-title">Career Journey</h2>
-    </div>
-    <div class="xp-timeline">
-      <div class="xp-item reveal">
-        <div class="xp-dot"></div>
-        <div class="xp-date" data-t="xp1_date">Sep 2025 – Present</div>
-        <div class="glass xp-card">
-          <div class="xp-role" data-t="xp1_role">IT Engineer</div>
-          <div class="xp-company" data-t="xp1_co">SOFRECOM · Orange Group</div>
-          <ul class="xp-tasks">
-            <li>Conduct regular security reviews of infrastructure systems</li>
-            <li>Manage internal IT projects, coordinating between technical teams</li>
-            <li>Administer MDT, WDS, SCCM and PDQ Deploy deployment solutions</li>
-            <li>Write and maintain technical documentation and procedures</li>
-            <li>Monitor security compliance and track exemptions</li>
-            <li>Train users on IT best practices and security awareness</li>
-            <li>Supervise IT asset management via OCS Inventory</li>
-            <li>Level 2–3 technical support for complex incidents</li>
-          </ul>
-          <div class="xp-badges" data-xp-badges="1"></div>
-        </div>
+    <div class="about-grid reveal">
+      <div>
+        <h3>Languages</h3>
+        <p>🇲🇦 Arabic — Native</p>
+        <p>🇫🇷 French — Fluent</p>
+        <p>🇬🇧 English — Proficient</p>
       </div>
-      <div class="xp-item reveal">
-        <div class="xp-dot"></div>
-        <div class="xp-date" data-t="xp2_date">Dec 2022 – Sep 2025</div>
-        <div class="glass xp-card">
-          <div class="xp-role" data-t="xp2_role">IT Technician</div>
-          <div class="xp-company" data-t="xp2_co">LATECOERE INTERCONNECTION SYSTEMS</div>
-          <ul class="xp-tasks">
-            <li>Data Center management — AD DS, DNS, DHCP (+98% security compliance)</li>
-            <li>SCCM deployment, configuration and upgrades</li>
-            <li>CrowdStrike EDR and Sophos Mobile MDM management</li>
-            <li>VMware vSphere and Azure server administration</li>
-            <li>PowerShell automation — 30% reduction in manual tasks</li>
-            <li>Cisco Webex VoIP telephony management</li>
-            <li>Backup management — 99%+ uptime guarantee</li>
-            <li>Server room maintenance — 20% energy reduction</li>
-            <li>Technical documentation for 600+ users</li>
-            <li>92% first-contact ticket resolution rate</li>
-          </ul>
-          <div class="xp-badges" data-xp-badges="2"></div>
-        </div>
-      </div>
-      <div class="xp-item reveal">
-        <div class="xp-dot"></div>
-        <div class="xp-date" data-t="xp3_date">Jul 2021 – Dec 2022</div>
-        <div class="glass xp-card">
-          <div class="xp-role" data-t="xp3_role">IT Technician</div>
-          <div class="xp-company" data-t="xp3_co">AMEX ROYAL AIR MAROC</div>
-          <ul class="xp-tasks">
-            <li>Incident management via Micro Focus SMAX</li>
-            <li>Hardware installation, configuration and maintenance</li>
-            <li>User session and access management</li>
-            <li>Software deployment via ManageEngine</li>
-            <li>IT stock management and resource optimization</li>
-            <li>Multi-channel user support (phone, email, remote)</li>
-          </ul>
-          <div class="xp-badges" data-xp-badges="3"></div>
-        </div>
+      <div>
+        <h3>Interests</h3>
+        <p>🔧 Hardware assembly & repair</p>
+        <p>🤖 Arduino robotics programming</p>
+        <p>🔒 Vulnerability research</p>
       </div>
     </div>
   </div>
 </section>
-
-<div class="section-divider"></div>
 
 <!-- SKILLS -->
 <section class="section" id="skills">
-  <div class="container">
+  <div class="section-inner">
     <div class="reveal">
-      <div class="section-label" data-t="sec_skills">Technical Skills</div>
+      <div class="section-label">Technical Skills</div>
       <h2 class="section-title">Tech Arsenal</h2>
     </div>
-    <div class="skills-bento">
-      <div class="skill-item glass reveal"><span class="dot"></span><span>Windows Server</span></div>
-      <div class="skill-item glass reveal"><span class="dot"></span><span>Linux</span></div>
-      <div class="skill-item glass reveal"><span class="dot"></span><span>Active Directory</span></div>
-      <div class="skill-item glass reveal"><span class="dot"></span><span>PowerShell</span></div>
-      <div class="skill-item glass reveal"><span class="dot"></span><span>SCCM / MDT</span></div>
-      <div class="skill-item glass reveal"><span class="dot"></span><span>OCS Inventory</span></div>
-      <div class="skill-item glass reveal"><span class="dot"></span><span>Office 365</span></div>
-      <div class="skill-item glass reveal"><span class="dot"></span><span>GLPI / ITSM</span></div>
-      <div class="skill-item glass reveal"><span class="dot"></span><span>Microsoft Azure</span></div>
-      <div class="skill-item glass reveal"><span class="dot"></span><span>Amazon AWS</span></div>
-      <div class="skill-item glass reveal"><span class="dot"></span><span>VMware vSphere</span></div>
-      <div class="skill-item glass reveal"><span class="dot"></span><span>Proxmox</span></div>
-      <div class="skill-item glass reveal"><span class="dot"></span><span>Docker</span></div>
-      <div class="skill-item glass reveal"><span class="dot"></span><span>Hyper-V</span></div>
-      <div class="skill-item glass reveal"><span class="dot"></span><span>CrowdStrike</span></div>
-      <div class="skill-item glass reveal"><span class="dot"></span><span>Fortinet</span></div>
-      <div class="skill-item glass reveal"><span class="dot"></span><span>Zabbix</span></div>
-      <div class="skill-item glass reveal"><span class="dot"></span><span>Wireshark</span></div>
-      <div class="skill-item glass reveal"><span class="dot"></span><span>Prometheus</span></div>
-      <div class="skill-item glass reveal"><span class="dot"></span><span>Wazuh SIEM</span></div>
-      <div class="skill-item glass reveal"><span class="dot"></span><span>Suricata IDS</span></div>
-      <div class="skill-item glass reveal"><span class="dot"></span><span>Veeam Backup</span></div>
-      <div class="skill-item glass reveal"><span class="dot"></span><span>Cisco</span></div>
-      <div class="skill-item glass reveal"><span class="dot"></span><span>Webex VoIP</span></div>
-      <div class="skill-item glass reveal"><span class="dot"></span><span>Asterisk PBX</span></div>
-      <div class="skill-item glass reveal"><span class="dot"></span><span>Nmap</span></div>
-      <div class="skill-item glass reveal"><span class="dot"></span><span>Ansible</span></div>
-      <div class="skill-item glass reveal"><span class="dot"></span><span>Git</span></div>
-      <div class="skill-item glass reveal"><span class="dot"></span><span>Arduino</span></div>
-      <div class="skill-item glass reveal"><span class="dot"></span><span>ManageEngine</span></div>
+    <div class="skills-grid reveal">
+      <div class="skill-tag">Windows Server</div>
+      <div class="skill-tag">Linux</div>
+      <div class="skill-tag">Active Directory</div>
+      <div class="skill-tag">PowerShell</div>
+      <div class="skill-tag">SCCM / MDT</div>
+      <div class="skill-tag">OCS Inventory</div>
+      <div class="skill-tag">Office 365</div>
+      <div class="skill-tag">GLPI / ITSM</div>
+      <div class="skill-tag">Microsoft Azure</div>
+      <div class="skill-tag">Amazon AWS</div>
+      <div class="skill-tag">VMware vSphere</div>
+      <div class="skill-tag">Proxmox</div>
+      <div class="skill-tag">Docker</div>
+      <div class="skill-tag">Hyper-V</div>
+      <div class="skill-tag">CrowdStrike</div>
+      <div class="skill-tag">Fortinet</div>
+      <div class="skill-tag">Zabbix</div>
+      <div class="skill-tag">Wireshark</div>
+      <div class="skill-tag">Prometheus</div>
+      <div class="skill-tag">Wazuh SIEM</div>
+      <div class="skill-tag">Suricata IDS</div>
+      <div class="skill-tag">Veeam Backup</div>
+      <div class="skill-tag">Cisco</div>
+      <div class="skill-tag">Webex VoIP</div>
+      <div class="skill-tag">Asterisk PBX</div>
+      <div class="skill-tag">Nmap</div>
+      <div class="skill-tag">Ansible</div>
+      <div class="skill-tag">Git</div>
+      <div class="skill-tag">Arduino</div>
+      <div class="skill-tag">ManageEngine</div>
     </div>
   </div>
 </section>
 
-<div class="section-divider"></div>
+<!-- EXPERIENCE -->
+<section class="section" id="experience">
+  <div class="section-inner">
+    <div class="reveal">
+      <div class="section-label">Experience</div>
+      <h2 class="section-title">Career Journey</h2>
+    </div>
+    <div class="xp-item reveal">
+      <div class="xp-date">Sep 2025 – Present</div>
+      <div class="xp-role">IT Engineer</div>
+      <div class="xp-company">SOFRECOM · Orange Group · Casablanca</div>
+      <ul class="xp-list">
+        <li>Conduct regular security reviews of infrastructure systems</li>
+        <li>Manage internal IT projects, coordinating between technical teams</li>
+        <li>Administer MDT, WDS, SCCM and PDQ Deploy deployment solutions</li>
+        <li>Write and maintain technical documentation and procedures</li>
+        <li>Monitor security compliance and track exemptions</li>
+        <li>Train users on IT best practices and security awareness</li>
+        <li>Supervise IT asset management via OCS Inventory</li>
+        <li>Level 2–3 technical support for complex incidents</li>
+      </ul>
+      <div class="xp-badges">
+        <span class="xp-badge">Security</span>
+        <span class="xp-badge">SCCM</span>
+        <span class="xp-badge">PowerShell</span>
+        <span class="xp-badge">ITIL</span>
+      </div>
+    </div>
+    <div class="xp-item reveal">
+      <div class="xp-date">Dec 2022 – Sep 2025</div>
+      <div class="xp-role">IT Technician</div>
+      <div class="xp-company">LATECOERE INTERCONNECTION SYSTEMS · Casablanca</div>
+      <ul class="xp-list">
+        <li>Data Center management — AD DS, DNS, DHCP (+98% security compliance)</li>
+        <li>SCCM deployment, configuration and upgrades</li>
+        <li>CrowdStrike EDR and Sophos Mobile MDM management</li>
+        <li>VMware vSphere and Azure server administration</li>
+        <li>PowerShell automation — 30% reduction in manual tasks</li>
+        <li>Cisco Webex VoIP telephony management</li>
+        <li>Backup management — 99%+ uptime guarantee</li>
+        <li>Server room maintenance — 20% energy reduction</li>
+        <li>Technical documentation for 600+ users</li>
+        <li>92% first-contact ticket resolution rate</li>
+      </ul>
+      <div class="xp-badges">
+        <span class="xp-badge">Data Center</span>
+        <span class="xp-badge">CrowdStrike</span>
+        <span class="xp-badge">VMware</span>
+        <span class="xp-badge">Azure</span>
+        <span class="xp-badge">99% Uptime</span>
+      </div>
+    </div>
+    <div class="xp-item reveal">
+      <div class="xp-date">Jul 2021 – Dec 2022</div>
+      <div class="xp-role">IT Technician</div>
+      <div class="xp-company">AMEX ROYAL AIR MAROC · Casablanca</div>
+      <ul class="xp-list">
+        <li>Incident management via Micro Focus SMAX</li>
+        <li>Hardware installation, configuration and maintenance</li>
+        <li>User session and access management</li>
+        <li>Software deployment via ManageEngine</li>
+        <li>IT stock management and resource optimization</li>
+        <li>Multi-channel user support (phone, email, remote)</li>
+      </ul>
+      <div class="xp-badges">
+        <span class="xp-badge">SMAX</span>
+        <span class="xp-badge">ManageEngine</span>
+        <span class="xp-badge">Support</span>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- PROJECTS -->
-<section class="section" id="projects">
-  <div class="container">
+<section class="section projects" id="projects">
+  <div class="section-inner">
     <div class="reveal">
-      <div class="section-label" data-t="sec_projects">Featured Projects</div>
+      <div class="section-label">Featured Projects</div>
       <h2 class="section-title">Cybersecurity &amp; AI Projects</h2>
     </div>
-    <div class="bento-grid">
-      <div class="bento-item large glass reveal">
-        <div>
-          <h3 data-t="proj1_title">SOC Automation Platform</h3>
-          <p data-t="proj1_desc">Built a Security Operations Center dashboard with real-time threat detection using Wazuh SIEM, Suricata IDS, and custom Python alerting pipelines.</p>
-        </div>
-        <span class="bento-tag">Cybersecurity · SIEM</span>
+    <div class="proj-grid">
+      <div class="proj-card reveal">
+        <h3>SOC Automation Platform</h3>
+        <p>Built a Security Operations Center dashboard with real-time threat detection using Wazuh SIEM, Suricata IDS, and custom Python alerting pipelines.</p>
+        <span class="proj-tag">Cybersecurity · SIEM</span>
       </div>
-      <div class="bento-item glass reveal">
-        <div>
-          <h3 data-t="proj2_title">Cloud Migration Framework</h3>
-          <p data-t="proj2_desc">Enterprise cloud migration from VMware to Azure, reducing costs by 40%.</p>
-        </div>
-        <span class="bento-tag">Cloud · Azure</span>
+      <div class="proj-card reveal">
+        <h3>Cloud Migration Framework</h3>
+        <p>Enterprise cloud migration from VMware to Azure, reducing infrastructure costs by 40%.</p>
+        <span class="proj-tag">Cloud · Azure</span>
       </div>
-      <div class="bento-item glass reveal">
-        <div>
-          <h3 data-t="proj3_title">AI Vulnerability Scanner</h3>
-          <p data-t="proj3_desc">ML-powered vulnerability assessment tool for intelligent CVE prioritization.</p>
-        </div>
-        <span class="bento-tag">AI · Security</span>
+      <div class="proj-card reveal">
+        <h3>AI Vulnerability Scanner</h3>
+        <p>ML-powered vulnerability assessment tool for intelligent CVE prioritization.</p>
+        <span class="proj-tag">AI · Security</span>
       </div>
-      <div class="bento-item glass reveal">
-        <div>
-          <h3 data-t="proj4_title">Zero Trust Architecture</h3>
-          <p data-t="proj4_desc">Zero-trust network segmentation with micro-segmentation and identity-based access.</p>
-        </div>
-        <span class="bento-tag">Network · Security</span>
+      <div class="proj-card reveal">
+        <h3>Zero Trust Architecture</h3>
+        <p>Zero-trust network segmentation with micro-segmentation and identity-based access controls.</p>
+        <span class="proj-tag">Network · Security</span>
       </div>
-      <div class="bento-item large glass reveal">
-        <div>
-          <h3 data-t="proj5_title">DevSecOps Pipeline</h3>
-          <p data-t="proj5_desc">CI/CD pipeline with SAST/DAST scanning, container verification, and compliance-as-code.</p>
-        </div>
-        <span class="bento-tag">DevSecOps · CI/CD</span>
+      <div class="proj-card reveal">
+        <h3>DevSecOps Pipeline</h3>
+        <p>CI/CD pipeline with SAST/DAST scanning, container verification, and compliance-as-code.</p>
+        <span class="proj-tag">DevSecOps · CI/CD</span>
       </div>
-      <div class="bento-item glass reveal">
-        <div>
-          <h3 data-t="proj6_title">Incident Response Automation</h3>
-          <p data-t="proj6_desc">Automated playbooks reducing MTTR from 4 hours to 15 minutes.</p>
-        </div>
-        <span class="bento-tag">Automation · Security</span>
+      <div class="proj-card reveal">
+        <h3>Incident Response Automation</h3>
+        <p>Automated playbooks reducing MTTR from 4 hours to 15 minutes.</p>
+        <span class="proj-tag">Automation · Security</span>
       </div>
     </div>
   </div>
 </section>
 
-<div class="section-divider"></div>
-
-<!-- CERTIFICATIONS + GITHUB STATS -->
+<!-- CERTIFICATIONS -->
 <section class="section" id="certifications">
-  <div class="container">
+  <div class="section-inner">
     <div class="reveal">
-      <div class="section-label" data-t="sec_certs">Certifications</div>
+      <div class="section-label">Certifications</div>
       <h2 class="section-title">Professional Credentials</h2>
     </div>
-    <div class="cert-grid">
-      <div class="cert-card glass reveal">
+    <div class="cert-grid reveal">
+      <div class="cert-card">
         <div class="cert-dot"></div>
         <div>
-          <div class="cert-name" data-t="c1_n">System Administration &amp; IT Infrastructure</div>
-          <div class="cert-org" data-t="c1_o">Google Professional Certificate</div>
+          <div class="cert-name">System Administration &amp; IT Infrastructure</div>
+          <div class="cert-org">Google Professional Certificate</div>
         </div>
       </div>
-      <div class="cert-card glass reveal">
+      <div class="cert-card">
         <div class="cert-dot"></div>
         <div>
-          <div class="cert-name" data-t="c2_n">Ethical Hacker</div>
-          <div class="cert-org" data-t="c2_o">Cisco Networking Academy</div>
+          <div class="cert-name">Ethical Hacker</div>
+          <div class="cert-org">Cisco Networking Academy</div>
         </div>
       </div>
-      <div class="cert-card glass reveal">
+      <div class="cert-card">
         <div class="cert-dot"></div>
         <div>
-          <div class="cert-name" data-t="c3_n">Fortinet Associate — Cybersecurity</div>
-          <div class="cert-org" data-t="c3_o">Fortinet</div>
+          <div class="cert-name">Fortinet Associate — Cybersecurity</div>
+          <div class="cert-org">Fortinet</div>
         </div>
       </div>
-    </div>
-    <div class="reveal" style="margin-top:60px">
-      <div class="section-label" data-t="sec_github">GitHub Stats</div>
-      <h2 class="section-title">Open Source Activity</h2>
-    </div>
-    <div class="github-grid">
-      <div class="github-stat glass reveal"><div class="github-stat-val">50+</div><div class="github-stat-lbl">Repositories</div></div>
-      <div class="github-stat glass reveal"><div class="github-stat-val">200+</div><div class="github-stat-lbl">Commits</div></div>
-      <div class="github-stat glass reveal"><div class="github-stat-val">15+</div><div class="github-stat-lbl">Projects</div></div>
-      <div class="github-stat glass reveal"><div class="github-stat-val">5+</div><div class="github-stat-lbl">Years Active</div></div>
     </div>
   </div>
 </section>
-
-<div class="section-divider"></div>
 
 <!-- CONTACT -->
 <section class="section" id="contact">
-  <div class="container">
+  <div class="section-inner">
     <div class="reveal">
-      <div class="section-label" data-t="sec_contact">Get in Touch</div>
+      <div class="section-label">Get in Touch</div>
       <h2 class="section-title">Let's Connect</h2>
     </div>
     <div class="contact-grid">
       <div class="reveal">
-        <p class="contact-intro" data-t="ct_intro">Open to new projects, creative ideas, or opportunities to be part of your vision.</p>
+        <p class="contact-intro">Open to new projects, creative ideas, or opportunities to be part of your vision.</p>
         <div class="contact-row">
-          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div class="contact-icon">✉</div>
           <span>hamza33fekkak@gmail.com</span>
         </div>
         <div class="contact-row">
-          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div class="contact-icon">☎</div>
           <span>+212 661 438 472</span>
         </div>
         <div class="contact-row">
-          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div class="contact-icon">📍</div>
           <span>284 Lot INESS, Berrechid, Maroc</span>
         </div>
         <div class="contact-row">
-          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></div>
+          <div class="contact-icon">🔗</div>
           <a href="https://github.com/hamza22fekkak-art" target="_blank">github.com/hamza22fekkak-art</a>
         </div>
       </div>
-      <form id="contactForm" class="contact-form-wrap glass reveal">
+      <form class="contact-form reveal" onsubmit="handleSubmit(event)">
         <div class="form-group">
-          <label data-t="ct_name">Name</label>
-          <input type="text" data-ph="ct_ph_name" placeholder="Your name" required>
+          <label>Name</label>
+          <input type="text" placeholder="Your name" required>
         </div>
         <div class="form-group">
-          <label data-t="ct_email">Email</label>
-          <input type="email" data-ph="ct_ph_email" placeholder="your@email.com" required>
+          <label>Email</label>
+          <input type="email" placeholder="your@email.com" required>
         </div>
         <div class="form-group">
-          <label data-t="ct_msg">Message</label>
-          <textarea data-ph="ct_ph_msg" placeholder="Your message…" required></textarea>
+          <label>Message</label>
+          <textarea placeholder="Your message…" required></textarea>
         </div>
-        <button type="submit" class="btn-cta btn-cta-primary btn-submit" data-t="ct_send">Send Message</button>
+        <button type="submit" class="btn btn-primary btn-submit">Send Message</button>
       </form>
     </div>
   </div>
 </section>
 
 <!-- STATS -->
-<section class="section stats-section">
-  <div class="container">
+<section class="section stats" id="stats">
+  <div class="section-inner">
+    <div class="reveal">
+      <div class="section-label">Key Metrics</div>
+      <h2 class="section-title">By The Numbers</h2>
+    </div>
     <div class="stats-grid reveal">
-      <div class="stat-card glass">
-        <div class="stat-num" data-t="stat_years_val">5+</div>
-        <div class="stat-lbl" data-t="metric_exp">Years Exp</div>
+      <div class="stat-card">
+        <div class="stat-num">5+</div>
+        <div class="stat-lbl">Years Experience</div>
       </div>
-      <div class="stat-card glass">
-        <div class="stat-num" data-t="stat_projects_val">50+</div>
-        <div class="stat-lbl" data-t="metric_projects">Projects</div>
+      <div class="stat-card">
+        <div class="stat-num">50+</div>
+        <div class="stat-lbl">Projects Done</div>
       </div>
-      <div class="stat-card glass">
-        <div class="stat-num" data-t="stat_users_val">600+</div>
-        <div class="stat-lbl" data-t="metric_users">Users Supported</div>
+      <div class="stat-card">
+        <div class="stat-num">600+</div>
+        <div class="stat-lbl">Users Supported</div>
       </div>
-      <div class="stat-card glass">
+      <div class="stat-card">
         <div class="stat-num">99%</div>
         <div class="stat-lbl">Uptime SLA</div>
       </div>
@@ -374,9 +456,65 @@
 
 <!-- FOOTER -->
 <footer class="footer">
-  <p>© 2025 Hamza FEKKAK · <span data-t="footer">Designed &amp; built with ♥ by Hamza FEKKAK · 2025</span></p>
+  <p>© 2025 Hamza FEKKAK · Designed &amp; built with ♥</p>
 </footer>
 
-<script src="assets/js/main.js"></script>
+<script>
+// Typing effect
+const strings=["IT Engineer","Cybersecurity Expert","Cloud Architect","DevSecOps Engineer"];
+let si=0,ci=0,del=false;
+function type(){
+  const el=document.getElementById("typing-text");
+  if(!el)return;
+  const s=strings[si%strings.length];
+  if(!del){
+    el.textContent=s.substring(0,ci+1);ci++;
+    if(ci>=s.length)setTimeout(()=>{del=true;},2000);
+  }else{
+    el.textContent=s.substring(0,ci-1);ci--;
+    if(ci<=0){del=false;si++;}
+  }
+  setTimeout(type,del?40:80);
+}
+type();
+
+// Scroll reveal
+const obs=new IntersectionObserver((es)=>{
+  es.forEach(e=>{if(e.isIntersecting)e.target.classList.add("visible")});
+},{threshold:0.08});
+document.querySelectorAll(".reveal").forEach(el=>obs.observe(el));
+
+// Nav scroll
+window.addEventListener("scroll",()=>{
+  document.getElementById("nav").classList.toggle("scrolled",window.scrollY>50);
+  const y=window.scrollY+100;
+  document.querySelectorAll("section[id]").forEach(sec=>{
+    const a=document.querySelector(`.nav-links a[href="#${sec.id}"]`);
+    if(!a)return;
+    if(y>=sec.offsetTop&&y<sec.offsetTop+sec.offsetHeight){
+      document.querySelectorAll(".nav-links a").forEach(l=>l.classList.remove("active"));
+      a.classList.add("active");
+    }
+  });
+});
+
+// Form
+function handleSubmit(e){
+  e.preventDefault();
+  const b=e.target.querySelector("button");
+  const o=b.textContent;
+  b.textContent="✓ Sent!";
+  b.style.background="#10b981";
+  setTimeout(()=>{b.textContent=o;b.style.background="";e.target.reset();},2500);
+}
+
+// Lang toggle
+let lang="en";
+function toggleLang(){
+  lang=lang==="en"?"fr":"en";
+  const btn=document.getElementById("btnLang");
+  if(btn)btn.textContent=lang==="en"?"FR":"EN";
+}
+</script>
 </body>
 </html>
