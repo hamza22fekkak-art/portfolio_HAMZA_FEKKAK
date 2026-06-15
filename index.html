@@ -32,14 +32,18 @@ img{display:block;max-width:100%}
 .btn-lang:hover{color:var(--text);border-color:var(--blue)}
 
 /* HERO */
-.hero{padding:80px 24px;text-align:center;position:relative;overflow:hidden}
+.hero{padding:100px 24px;position:relative;overflow:hidden;min-height:80vh;display:flex;align-items:center}
 .hero::before{content:'';position:absolute;top:-20%;left:50%;transform:translateX(-50%);width:900px;height:900px;background:radial-gradient(circle,rgba(59,130,246,.07) 0%,transparent 70%);pointer-events:none}
-.hero-photo{width:180px;height:180px;border-radius:50%;object-fit:cover;border:3px solid var(--line);margin:0 auto 24px}
+#particles-bg{position:absolute;inset:0;pointer-events:none;z-index:0}
+.hero-inner{display:flex;align-items:center;gap:48px;max-width:var(--max);margin:0 auto;position:relative;z-index:1}
+.hero-photo-wrap{flex-shrink:0}
+.hero-photo{width:220px;height:220px;border-radius:50%;object-fit:cover;border:3px solid var(--line)}
+.hero-text{flex:1;text-align:left}
 .hero h1{font-size:clamp(2.2rem,5vw,3.2rem);font-weight:900;line-height:1.05;margin-bottom:8px}
 .hero h1 span{background:linear-gradient(135deg,var(--blue),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .hero-role{font-size:1.05rem;color:var(--cyan);font-weight:600;margin-bottom:16px}
-.hero-desc{color:var(--dim);max-width:600px;margin:0 auto 28px;font-size:.95rem}
-.hero-ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.hero-desc{color:var(--dim);max-width:520px;margin-bottom:28px;font-size:.95rem}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:8px;font-size:.88rem;font-weight:600;transition:.2s;cursor:pointer;border:none;font-family:inherit}
 .btn:hover{text-decoration:none;transform:translateY(-2px)}
 .btn-primary{background:linear-gradient(135deg,var(--blue),#6366f1);color:#fff;box-shadow:0 4px 15px rgba(59,130,246,.25)}
@@ -131,8 +135,12 @@ img{display:block;max-width:100%}
 /* RESPONSIVE */
 @media(max-width:768px){
   .nav-links{display:none}
-  .hero{padding:60px 24px}
+  .hero{padding:60px 24px;min-height:auto}
+  .hero-inner{flex-direction:column;gap:24px;text-align:center}
   .hero-photo{width:140px;height:140px}
+  .hero-text{text-align:center}
+  .hero-desc{margin:0 auto 28px}
+  .hero-ctas{justify-content:center}
   .about-grid{grid-template-columns:1fr}
   .stats-grid{grid-template-columns:repeat(2,1fr)}
   .contact-grid{grid-template-columns:1fr}
@@ -161,14 +169,21 @@ img{display:block;max-width:100%}
 
 <!-- HERO -->
 <section class="hero" id="hero">
-  <img src="photo.jpg" alt="Hamza FEKKAK" class="hero-photo reveal">
-  <h1 class="reveal" data-i18n="hero_title">Hamza <span>FEKKAK</span></h1>
-  <p class="hero-role reveal" data-i18n="hero_role">IT Infrastructure Engineer & Cybersecurity Specialist</p>
-  <p class="hero-desc reveal" data-i18n="hero_desc">IT professional specialized in systems administration, cloud infrastructure, and cybersecurity. 5+ years of experience in multinational environments.</p>
-  <div class="hero-ctas reveal">
-    <a href="#contact" class="btn btn-primary" data-i18n="hero_cta_contact">Contact Me</a>
-    <a href="https://raw.githubusercontent.com/hamza22fekkak-art/portfolio_HAMZA_FEKKAK/main/FEKKAK%20HAMZA%20CV.pdf" class="btn btn-ghost" download data-i18n="hero_cta_cv">Download CV</a>
-    <a href="https://www.linkedin.com/in/hamza-fekkak-93b886200" target="_blank" class="btn btn-ghost" data-i18n="hero_cta_linkedin">LinkedIn</a>
+  <canvas id="particles-bg"></canvas>
+  <div class="hero-inner">
+    <div class="hero-photo-wrap reveal">
+      <img src="photo.jpg" alt="Hamza FEKKAK" class="hero-photo">
+    </div>
+    <div class="hero-text">
+      <h1 class="reveal" data-i18n="hero_title">Hamza <span>FEKKAK</span></h1>
+      <p class="hero-role reveal" data-i18n="hero_role">IT Infrastructure Engineer & Cybersecurity Specialist</p>
+      <p class="hero-desc reveal" data-i18n="hero_desc">IT professional specialized in systems administration, cloud infrastructure, and cybersecurity. 5+ years of experience in multinational environments.</p>
+      <div class="hero-ctas reveal">
+        <a href="#contact" class="btn btn-primary" data-i18n="hero_cta_contact">Contact Me</a>
+        <a href="https://raw.githubusercontent.com/hamza22fekkak-art/portfolio_HAMZA_FEKKAK/main/FEKKAK%20HAMZA%20CV.pdf" class="btn btn-ghost" download data-i18n="hero_cta_cv">Download CV</a>
+        <a href="https://www.linkedin.com/in/hamza-fekkak-93b886200" target="_blank" class="btn btn-ghost" data-i18n="hero_cta_linkedin">LinkedIn</a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -576,8 +591,79 @@ function handleSubmit(e) {
   const o = b.textContent;
   b.textContent = lang === 'en' ? '✓ Sent!' : '✓ Envoyé !';
   b.style.background = '#10b981';
-  setTimeout(() => { b.textContent = o; b.style.background = ''; e.target.reset(); }, 2500);
+  setTimeout(() => { b.textContent = o; b.target.reset(); }, 2500);
 }
+
+// Tech Particles Animation
+(function() {
+  const canvas = document.getElementById('particles-bg');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  let w, h;
+  const particles = [];
+  const techIcons = ['<>', '/>', '{ }', '[]', '()', '&&', '||', '==', '++', '--', '**', '//', '::', '##', '$$', '@@', '!!', '??', '~~', '^^'];
+  const colors = ['rgba(59,130,246,', 'rgba(34,211,238,', 'rgba(168,85,247,'];
+
+  function resize() {
+    w = canvas.width = canvas.parentElement.offsetWidth;
+    h = canvas.height = canvas.parentElement.offsetHeight;
+  }
+  resize();
+
+  // Create particles
+  for (let i = 0; i < 50; i++) {
+    particles.push({
+      x: Math.random() * w,
+      y: Math.random() * h,
+      vx: (Math.random() - 0.5) * 0.5,
+      vy: (Math.random() - 0.5) * 0.5,
+      size: Math.random() * 14 + 10,
+      icon: techIcons[Math.floor(Math.random() * techIcons.length)],
+      color: colors[Math.floor(Math.random() * colors.length)],
+      opacity: Math.random() * 0.15 + 0.05,
+      rotation: Math.random() * Math.PI * 2,
+      rotSpeed: (Math.random() - 0.5) * 0.02
+    });
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, w, h);
+    for (const p of particles) {
+      p.x += p.vx; p.y += p.vy; p.rotation += p.rotSpeed;
+      if (p.x < -50) p.x = w + 50;
+      if (p.x > w + 50) p.x = -50;
+      if (p.y < -50) p.y = h + 50;
+      if (p.y > h + 50) p.y = -50;
+
+      ctx.save();
+      ctx.translate(p.x, p.y);
+      ctx.rotate(p.rotation);
+      ctx.font = p.size + "px monospace";
+      ctx.fillStyle = p.color + p.opacity + ')';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(p.icon, 0, 0);
+      ctx.restore();
+
+      // Draw connections
+      for (const q of particles) {
+        const dx = p.x - q.x, dy = p.y - q.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < 150) {
+          ctx.beginPath();
+          ctx.moveTo(p.x, p.y);
+          ctx.lineTo(q.x, q.y);
+          ctx.strokeStyle = `rgba(59,130,246,${0.03 * (1 - dist / 150)})`;
+          ctx.lineWidth = 0.5;
+          ctx.stroke();
+        }
+      }
+    }
+    requestAnimationFrame(draw);
+  }
+  draw();
+  window.addEventListener('resize', resize);
+})();
 </script>
 </body>
 </html>
