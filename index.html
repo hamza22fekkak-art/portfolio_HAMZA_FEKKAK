@@ -75,6 +75,23 @@ img{display:block;max-width:100%}
 .btn-ghost{background:rgba(255,255,255,.03);color:var(--text);border:1px solid var(--line);backdrop-filter:blur(10px)}
 .btn-ghost:hover{border-color:var(--blue);background:rgba(59,130,246,.08)}
 
+/* ══════ TERMINAL ══════ */
+.terminal{background:var(--bg3);border:1px solid var(--line);border-radius:var(--r);padding:0;margin-bottom:32px;overflow:hidden;box-shadow:0 8px 30px rgba(0,0,0,.3);animation:terminal-appear 1s ease-out}
+@keyframes terminal-appear{0%{opacity:0;transform:translateY(-20px)}100%{opacity:1;transform:translateY(0)}}
+.terminal-header{display:flex;align-items:center;gap:8px;padding:12px 16px;background:rgba(255,255,255,.03);border-bottom:1px solid var(--line)}
+.terminal-dot{width:12px;height:12px;border-radius:50%;transition:.3s}
+.terminal-dot:hover{transform:scale(1.2)}
+.terminal-dot.red{background:#ff5f57}
+.terminal-dot.yellow{background:#febc2e}
+.terminal-dot.green:{background:#28c840}
+.terminal-title{font-size:.75rem;color:var(--muted);margin-left:auto;font-family:monospace}
+.terminal-body{padding:20px;font-family:'Courier New',monospace;font-size:.85rem;line-height:1.8}
+.terminal-line{display:flex;gap:8px;margin-bottom:4px}
+.terminal-prompt{color:var(--green)}
+.terminal-cmd{color:var(--cyan)}
+.terminal-output{color:var(--dim);margin-left:8px}
+.terminal-cursor{display:inline-block;width:8px;height:16px;background:var(--cyan);animation:cursor-blink .8s step-end infinite;vertical-align:middle;margin-left:2px}
+
 /* ══════ SECTIONS ══════ */
 .section{padding:80px 0;position:relative;z-index:1}
 .section-inner{max-width:var(--max);margin:0 auto;padding:0 24px}
@@ -223,6 +240,51 @@ img{display:block;max-width:100%}
 <!-- HERO -->
 <section class="hero" id="hero">
   <canvas id="particles-bg"></canvas>
+  
+  <!-- Terminal Intro -->
+  <div class="terminal reveal" style="max-width:600px;margin:0 auto 40px;position:relative;z-index:1">
+    <div class="terminal-header">
+      <div class="terminal-dot red"></div>
+      <div class="terminal-dot yellow"></div>
+      <div class="terminal-dot green"></div>
+      <span class="terminal-title" id="terminal-title">hamza@archlinux:~</span>
+    </div>
+    <div class="terminal-body">
+      <div class="terminal-line">
+        <span class="terminal-prompt">$</span>
+        <span class="terminal-cmd">whoami</span>
+      </div>
+      <div class="terminal-line">
+        <span class="terminal-output" id="terminal-name">Hamza FEKKAK</span>
+      </div>
+      <div class="terminal-line">
+        <span class="terminal-prompt">$</span>
+        <span class="terminal-cmd" id="terminal-cmd1">cat /etc/role</span>
+      </div>
+      <div class="terminal-line">
+        <span class="terminal-output" id="terminal-role">IT Infrastructure Engineer & Cybersecurity Specialist</span>
+      </div>
+      <div class="terminal-line">
+        <span class="terminal-prompt">$</span>
+        <span class="terminal-cmd" id="terminal-cmd2">neofetch --mini</span>
+      </div>
+      <div class="terminal-line">
+        <span class="terminal-output" id="terminal-os">OS: Arch Linux x86_64 | Kernel: Cybersecurity</span>
+      </div>
+      <div class="terminal-line">
+        <span class="terminal-output" id="terminal-shell">Shell: PowerShell / Bash | Terminal: Enterprise IT</span>
+      </div>
+      <div class="terminal-line">
+        <span class="terminal-output" id="terminal-loc">Location: Morocco | Status: Available</span>
+      </div>
+      <div class="terminal-line">
+        <span class="terminal-prompt">$</span>
+        <span class="terminal-cmd">_</span>
+        <span class="terminal-cursor"></span>
+      </div>
+    </div>
+  </div>
+
   <div class="hero-inner">
     <div class="hero-photo-wrap reveal">
       <img src="photo.jpg" alt="Hamza FEKKAK" class="hero-photo">
@@ -393,7 +455,8 @@ const T = {
     edu_title:'Education',edu1_year:'2023–2025',edu1_deg:'Master — Systems, Networks & Cybersecurity Engineering (Bac+5)',edu1_sch:'ENSI, Casablanca',edu2_year:'2023–2024',edu2_deg:'Bachelor — Systems Administration, Databases & Cloud Computing (Bac+3)',edu2_sch:'SUPEMIR, Casablanca',edu3_year:'2018–2021',edu3_deg:'Bachelor — Project Management',edu3_sch:'WESFORD, France',edu4_year:'2018–2020',edu4_deg:'Technician Diploma — IT Maintenance & Network Support',edu4_sch:'ISTICG, Berrechid',edu5_year:'2016–2017',edu5_deg:'Baccalaureate — Physical Sciences',edu5_sch:'Lycée Eljadida, Berrechid',
     cert_title:'Certifications',cert1_name:'System Administration & IT Infrastructure Services',cert1_org:'Google Professional Certificate',cert2_name:'Ethical Hacker',cert2_org:'Cisco Networking Academy',cert3_name:'Fortinet Certified Associate — Cybersecurity',cert3_org:'Fortinet',
     stats_title:'By The Numbers',stat1:'Years Experience',stat2:'Projects Delivered',stat3:'Users Supported',stat4:'Infrastructure Uptime',
-    contact_title:'Get In Touch',contact_intro:'Open to new projects, creative ideas, or opportunities to be part of your vision.',contact_loc:'284 Lot INESS, Berrechid, Morocco',contact_name:'Name',contact_email:'Email',contact_msg:'Message',contact_send:'Send Message',footer:'© 2025 Hamza FEKKAK — Designed & built with ♥'
+    contact_title:'Get In Touch',contact_intro:'Open to new projects, creative ideas, or opportunities to be part of your vision.',contact_loc:'284 Lot INESS, Berrechid, Morocco',contact_name:'Name',contact_email:'Email',contact_msg:'Message',contact_send:'Send Message',footer:'© 2025 Hamza FEKKAK — Designed & built with ♥',
+    terminal_title:'hamza@archlinux:~',terminal_cmd1:'cat /etc/role',terminal_cmd2:'neofetch --mini',terminal_os:'OS: Arch Linux x86_64 | Kernel: Cybersecurity',terminal_shell:'Shell: PowerShell / Bash | Terminal: Enterprise IT',terminal_loc:'Location: Morocco | Status: Available'
   },
   fr: {
     nav_logo:'Hamza <span>FEKKAK</span>',nav_about:'À propos',nav_skills:'Compétences',nav_experience:'Expérience',nav_projects:'Projets',nav_education:'Formation',nav_contact:'Contact',
@@ -405,7 +468,8 @@ const T = {
     edu_title:'Parcours Académique',edu1_year:'2023–2025',edu1_deg:'Master Professionnel — Ingénierie Systèmes, Réseaux & Cybersécurité (Bac+5)',edu1_sch:'ENSI, Casablanca',edu2_year:'2023–2024',edu2_deg:'Licence Professionnelle — Administration Systèmes, BDD & Cloud (Bac+3)',edu2_sch:'SUPEMIR, Casablanca',edu3_year:'2018–2021',edu3_deg:'Bachelor — Responsable de Projets',edu3_sch:'WESFORD, France',edu4_year:'2018–2020',edu4_deg:'Diplôme Technicien — Maintenance & Support Informatique et Réseaux',edu4_sch:'ISTICG, Berrechid',edu5_year:'2016–2017',edu5_deg:'Baccalauréat — Sciences Physiques',edu5_sch:'Lycée Eljadida, Berrechid',
     cert_title:'Certifications',cert1_name:'System Administration and IT Infrastructure Services',cert1_org:'Certification Professionnelle Google',cert2_name:'Ethical Hacker',cert2_org:'Cisco Networking Academy',cert3_name:'Fortinet Certified Associate — Cybersecurity',cert3_org:'Fortinet',
     stats_title:'En Chiffres',stat1:'Années d\'Expérience',stat2:'Projets Réalisés',stat3:'Utilisateurs Supportés',stat4:'Disponibilité Infrastructure',
-    contact_title:'Contactez-Moi',contact_intro:'Ouvert à tout nouveau projet, idée créative ou opportunité de collaboration.',contact_loc:'284 Lot INESS, Berrechid, Maroc',contact_name:'Nom',contact_email:'Email',contact_msg:'Message',contact_send:'Envoyer',footer:'© 2025 Hamza FEKKAK — Conçu et développé avec ♥'
+    contact_title:'Contactez-Moi',contact_intro:'Ouvert à tout nouveau projet, idée créative ou opportunité de collaboration.',contact_loc:'284 Lot INESS, Berrechid, Maroc',contact_name:'Nom',contact_email:'Email',contact_msg:'Message',contact_send:'Envoyer',footer:'© 2025 Hamza FEKKAK — Conçu et développé avec ♥',
+    terminal_title:'hamza@archlinux:~',terminal_cmd1:'cat /etc/role',terminal_cmd2:'neofetch --mini',terminal_os:'OS: Arch Linux x86_64 | Kernel: Cybersécurité',terminal_shell:'Shell: PowerShell / Bash | Terminal: Enterprise IT',terminal_loc:'Localisation: Maroc | Statut: Disponible'
   }
 };
 
@@ -416,9 +480,15 @@ function applyLang() {
     const k = el.getAttribute('data-i18n');
     if (t[k]) { if (k === 'hero_title' || k === 'nav_logo') { el.innerHTML = t[k]; } else { el.textContent = t[k]; } }
   });
+  // Update terminal
+  if(t.terminal_title) document.getElementById('terminal-title').textContent = t.terminal_title;
+  if(t.terminal_cmd1) document.getElementById('terminal-cmd1').textContent = t.terminal_cmd1;
+  if(t.terminal_cmd2) document.getElementById('terminal-cmd2').textContent = t.terminal_cmd2;
+  if(t.terminal_os) document.getElementById('terminal-os').textContent = t.terminal_os;
+  if(t.terminal_shell) document.getElementById('terminal-shell').textContent = t.terminal_shell;
+  if(t.terminal_loc) document.getElementById('terminal-loc').textContent = t.terminal_loc;
   document.getElementById('btnLang').textContent = lang === 'en' ? 'FR' : 'EN';
   document.documentElement.lang = lang;
-  // Restart typing animation with new language
   if (t.typing_texts) { typingStrings = t.typing_texts; typingIndex = 0; charIndex = 0; del = false; document.getElementById('typing-text').textContent = ''; }
 }
 function toggleLang() { lang = lang === 'en' ? 'fr' : 'en'; applyLang(); }
