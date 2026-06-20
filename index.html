@@ -33,22 +33,27 @@ img{display:block;max-width:100%}
 .nav{position:sticky;top:0;z-index:99;background:rgba(3,7,18,.85);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--line);transition:background .3s,box-shadow .3s}
 .nav.scrolled{background:rgba(3,7,18,.95);box-shadow:0 4px 30px rgba(0,0,0,.3)}
 .nav-inner{max-width:var(--max);margin:0 auto;padding:0 24px;height:60px;display:flex;align-items:center;justify-content:space-between}
-.nav-logo{font-size:1.15rem;font-weight:800;color:var(--text);letter-spacing:-.02em}
+.nav-logo{font-size:1.15rem;font-weight:800;color:var(--text);letter-spacing:-.02em;transition:transform .3s}
+.nav-logo:hover{transform:scale(1.05)}
 .nav-logo span{color:var(--blue)}
 .nav-links{display:flex;gap:2px;list-style:none}
-.nav-links a{color:var(--dim);font-size:.82rem;font-weight:500;padding:6px 13px;border-radius:6px;transition:.25s;position:relative}
-.nav-links a:hover,.nav-links a.active{color:var(--text);background:rgba(255,255,255,.05)}
-.nav-links a.active::after{content:'';position:absolute;bottom:2px;left:50%;transform:translateX(-50%);width:16px;height:2px;background:var(--blue);border-radius:2px}
-.btn-lang{background:var(--bg3);border:1px solid var(--line);color:var(--dim);padding:5px 12px;border-radius:6px;font-size:.78rem;font-weight:600;cursor:pointer;font-family:inherit;transition:.2s}
-.btn-lang:hover{color:var(--text);border-color:var(--blue);background:rgba(59,130,246,.1)}
+.nav-links a{color:var(--dim);font-size:.82rem;font-weight:500;padding:6px 13px;border-radius:6px;transition:all .3s;position:relative}
+.nav-links a:hover,.nav-links a.active{color:var(--text);background:rgba(255,255,255,.05);transform:translateY(-1px)}
+.nav-links a.active::after{content:'';position:absolute;bottom:2px;left:50%;transform:translateX(-50%);width:16px;height:2px;background:var(--blue);border-radius:2px;animation:nav-pulse 2s ease-in-out infinite}
+@keyframes nav-pulse{0%,100%{opacity:1}50%{opacity:.5}}
+.btn-lang{background:var(--bg3);border:1px solid var(--line);color:var(--dim);padding:5px 12px;border-radius:6px;font-size:.78rem;font-weight:600;cursor:pointer;font-family:inherit;transition:all .3s}
+.btn-lang:hover{color:var(--text);border-color:var(--blue);background:rgba(59,130,246,.1);transform:scale(1.05)}
 
 /* ══════ HERO ══════ */
 .hero{padding:100px 24px;position:relative;overflow:hidden;min-height:85vh;display:flex;align-items:center}
 #particles-bg{position:absolute;inset:0;pointer-events:none;z-index:0}
 .hero-inner{display:flex;align-items:center;gap:60px;max-width:var(--max);margin:0 auto;position:relative;z-index:1}
 .hero-photo-wrap{flex-shrink:0;position:relative}
-.hero-photo{width:240px;height:240px;border-radius:50%;object-fit:cover;border:3px solid var(--line);transition:.3s}
-.hero-photo:hover{transform:scale(1.03);border-color:var(--blue);box-shadow:0 0 40px rgba(59,130,246,.2)}
+.hero-photo{width:240px;height:240px;border-radius:50%;object-fit:cover;border:3px solid var(--line);transition:all .4s;box-shadow:0 0 0 0 rgba(59,130,246,0)}
+.hero-photo:hover{transform:scale(1.05);border-color:var(--blue);box-shadow:0 0 40px rgba(59,130,246,.3)}
+.hero-photo-wrap::before{content:'';position:absolute;inset:-8px;border-radius:50%;border:2px solid var(--blue);opacity:0;transition:opacity .4s}
+.hero-photo-wrap:hover::before{opacity:.3;animation:photo-ring 1.5s ease-in-out infinite}
+@keyframes photo-ring{0%,100%{transform:scale(1);opacity:.3}50%{transform:scale(1.08);opacity:0}}
 .hero-text{flex:1;text-align:left}
 .hero h1{font-size:clamp(2.4rem,5vw,3.5rem);font-weight:900;line-height:1.05;margin-bottom:10px;letter-spacing:-.03em}
 .hero h1 span{background:linear-gradient(135deg,var(--blue),var(--cyan),var(--purple));background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:gradient-shift 4s ease-in-out infinite}
@@ -56,14 +61,17 @@ img{display:block;max-width:100%}
 .hero-role{font-size:1.1rem;color:var(--cyan);font-weight:600;margin-bottom:18px;display:flex;align-items:center;gap:8px}
 .hero-role::before{content:'';width:8px;height:8px;background:var(--green);border-radius:50%;box-shadow:0 0 10px rgba(16,185,129,.6);animation:pulse-dot 2s ease-in-out infinite}
 @keyframes pulse-dot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
+.typing-text{display:inline}
+.typing-cursor{display:inline-block;width:2px;height:1.1em;background:var(--cyan);margin-left:2px;vertical-align:text-bottom;animation:cursor-blink .8s step-end infinite}
+@keyframes cursor-blink{50%{opacity:0}}
 .hero-desc{color:var(--dim);max-width:520px;margin-bottom:32px;font-size:.95rem;line-height:1.8}
 .hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:13px 26px;border-radius:10px;font-size:.88rem;font-weight:600;transition:all .3s;cursor:pointer;border:none;font-family:inherit;position:relative;overflow:hidden}
-.btn::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.1),transparent);opacity:0;transition:opacity .3s}
+.btn::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.15),transparent);opacity:0;transition:opacity .3s}
 .btn:hover::before{opacity:1}
 .btn:hover{text-decoration:none;transform:translateY(-3px)}
 .btn-primary{background:linear-gradient(135deg,var(--blue),#6366f1);color:#fff;box-shadow:0 4px 20px rgba(59,130,246,.3)}
-.btn-primary:hover{box-shadow:0 8px 30px rgba(59,130,246,.4)}
+.btn-primary:hover{box-shadow:0 8px 35px rgba(59,130,246,.4)}
 .btn-ghost{background:rgba(255,255,255,.03);color:var(--text);border:1px solid var(--line);backdrop-filter:blur(10px)}
 .btn-ghost:hover{border-color:var(--blue);background:rgba(59,130,246,.08)}
 
@@ -71,13 +79,14 @@ img{display:block;max-width:100%}
 .section{padding:80px 0;position:relative;z-index:1}
 .section-inner{max-width:var(--max);margin:0 auto;padding:0 24px}
 .section-title{font-size:1.5rem;font-weight:800;margin-bottom:40px;padding-bottom:14px;border-bottom:2px solid var(--blue);display:inline-block;position:relative}
-.section-title::after{content:'';position:absolute;bottom:-2px;left:0;width:40px;height:2px;background:var(--cyan)}
+.section-title::after{content:'';position:absolute;bottom:-2px;left:0;width:40px;height:2px;background:var(--cyan);animation:title-glow 2s ease-in-out infinite}
+@keyframes title-glow{0%,100%{box-shadow:0 0 5px var(--cyan)}50%{box-shadow:0 0 15px var(--cyan),0 0 30px rgba(34,211,238,.3)}}
 
 /* ══════ ABOUT ══════ */
 .about{background:var(--bg2)}
 .about-desc{color:var(--dim);font-size:.95rem;margin-bottom:36px;max-width:700px;line-height:1.8}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-.about-card{background:var(--bg3);border:1px solid var(--line);border-radius:var(--r);padding:28px;transition:.3s;position:relative;overflow:hidden}
+.about-card{background:var(--bg3);border:1px solid var(--line);border-radius:var(--r);padding:28px;transition:all .3s;position:relative;overflow:hidden}
 .about-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--blue),var(--cyan));transform:scaleX(0);transition:transform .3s}
 .about-card:hover::before{transform:scaleX(1)}
 .about-card:hover{border-color:var(--blue);transform:translateY(-3px);box-shadow:0 10px 40px rgba(0,0,0,.2)}
@@ -142,7 +151,7 @@ img{display:block;max-width:100%}
 .stat-card::before{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--blue),var(--cyan));transform:scaleX(0);transition:transform .3s}
 .stat-card:hover::before{transform:scaleX(1)}
 .stat-card:hover{border-color:var(--blue);transform:translateY(-5px);box-shadow:0 15px 40px rgba(0,0,0,.2)}
-.stat-num{font-size:clamp(2rem,4vw,2.8rem);font-weight:900;background:linear-gradient(135deg,var(--blue),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.1;margin-bottom:8px}
+.stat-num{font-size:clamp(2rem,4vw,2.8rem);font-weight:900;background:linear-gradient(135deg,var(--blue),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.1;margin-bottom:6px}
 .stat-lbl{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;font-weight:600}
 
 /* ══════ CONTACT ══════ */
@@ -221,7 +230,7 @@ img{display:block;max-width:100%}
     <div class="hero-text">
       <h1 class="reveal" data-i18n="hero_title">Hamza <span>FEKKAK</span></h1>
       <p class="hero-role reveal" data-i18n="hero_role">IT Infrastructure Engineer & Cybersecurity Specialist</p>
-      <p class="hero-desc reveal" data-i18n="hero_desc">IT professional specialized in systems administration, cloud infrastructure, and cybersecurity. 5+ years of experience in multinational environments.</p>
+      <p class="hero-desc reveal"><span class="typing-text" id="typing-text"></span><span class="typing-cursor"></span></p>
       <div class="hero-ctas reveal">
         <a href="#contact" class="btn btn-primary" data-i18n="hero_cta_contact">Contact Me</a>
         <a href="FEKKAK HAMZA CV.pdf" class="btn btn-ghost" download data-i18n="hero_cta_cv">Download CV</a>
@@ -376,9 +385,10 @@ img{display:block;max-width:100%}
 const T = {
   en: {
     nav_logo:'Hamza <span>FEKKAK</span>',nav_about:'About',nav_skills:'Skills',nav_experience:'Experience',nav_projects:'Projects',nav_education:'Education',nav_contact:'Contact',
-    hero_title:'Hamza <span>FEKKAK</span>',hero_role:'IT Infrastructure Engineer & Cybersecurity Specialist',hero_desc:'IT professional specialized in systems administration, cloud infrastructure, and cybersecurity. 5+ years of experience in multinational environments (aerospace, telecom, aviation).',hero_cta_contact:'Contact Me',hero_cta_cv:'Download CV',hero_cta_linkedin:'LinkedIn',
+    hero_title:'Hamza <span>FEKKAK</span>',hero_role:'IT Infrastructure Engineer & Cybersecurity Specialist',hero_cta_contact:'Contact Me',hero_cta_cv:'Download CV',hero_cta_linkedin:'LinkedIn',
     about_title:'About Me',about_desc:'Passionate IT engineer with 5+ years of experience in systems administration, cloud infrastructure, and cybersecurity. I specialize in building secure, scalable infrastructure and driving digital transformation for enterprise clients.',about_expertise:'Expertise',exp1:'Cybersecurity & Threat Detection',exp2:'Cloud Architecture (Azure, AWS)',exp3:'Data Center & Infrastructure',exp4:'Network Administration',exp5:'IT Automation & DevSecOps',exp6:'IT Governance & Compliance',about_lang:'Languages & Location',lang1:'Arabic — Native',lang2:'French — Fluent',lang3:'English — Proficient',lang4:'Berrechid, Morocco',lang5:'Open to international opportunities',lang6:'Hardware & robotics enthusiast',
     skills_title:'Technical Skills',xp_title:'Professional Experience',xp1_role:'IT Engineer',xp1_company:'SOFRECOM · Orange Group',xp1_date:'Sep 2025 – Present',xp1_t1:'Conduct regular security reviews of infrastructure systems',xp1_t2:'Manage internal IT projects, coordinating between technical teams',xp1_t3:'Administer MDT, WDS, SCCM and PDQ Deploy deployment solutions',xp1_t4:'Write and maintain technical documentation and procedures',xp1_t5:'Monitor security compliance and track exemptions',xp1_t6:'Train users on IT best practices and security awareness',xp1_t7:'Supervise IT asset management via OCS Inventory',xp1_t8:'Level 2–3 technical support for complex incidents',xp1_t9:'Liaison with vendors and IT/security teams in Morocco and France',xp2_role:'IT Administrator',xp2_company:'LATECOERE INTERCONNECTION SYSTEMS',xp2_date:'Dec 2022 – Sep 2025',xp2_t1:'Data Center management — AD DS, DNS, DHCP (+98% security compliance)',xp2_t2:'SCCM deployment, configuration and upgrades',xp2_t3:'CrowdStrike EDR and Sophos Mobile MDM management',xp2_t4:'VMware vSphere and Azure server administration',xp2_t5:'PowerShell automation — 30% reduction in manual repetitive tasks',xp2_t6:'Cisco Webex VoIP telephony management',xp2_t7:'Backup management — 99%+ uptime guarantee',xp2_t8:'Server room maintenance — 20% energy reduction',xp2_t9:'Technical documentation for 1000+ users',xp2_t10:'92% first-contact ticket resolution rate',xp3_role:'IT Technician',xp3_company:'AMEX ROYAL AIR MAROC',xp3_date:'Jul 2021 – Dec 2022',xp3_t1:'Incident management via Micro Focus SMAX',xp3_t2:'Hardware installation, configuration and maintenance',xp3_t3:'User session and access management',xp3_t4:'Software deployment via ManageEngine',xp3_t5:'IT stock management and resource optimization',xp3_t6:'Multi-channel user support (phone, email, remote)',
+    typing_texts:['Building Secure, Intelligent & Scalable IT Infrastructure for Modern Enterprises.','Cybersecurity Engineer specialized in Infrastructure, Cloud, IT Governance and Enterprise Security.','5+ years of experience across multinational environments.'],
     proj_title:'Projects',proj1_title:'SOC Automation Platform',proj1_desc:'Built a Security Operations Center dashboard with real-time threat detection using Wazuh SIEM, Suricata IDS, and custom Python alerting pipelines.',proj2_title:'Cloud Migration Framework',proj2_desc:'Enterprise cloud migration from VMware to Azure, reducing infrastructure costs by 40%.',proj3_title:'AI Vulnerability Scanner',proj3_desc:'ML-powered vulnerability assessment tool for intelligent CVE prioritization.',proj4_title:'Zero Trust Architecture',proj4_desc:'Zero-trust network segmentation with micro-segmentation and identity-based access controls.',proj5_title:'DevSecOps Pipeline',proj5_desc:'CI/CD pipeline with SAST/DAST scanning, container verification, and compliance-as-code.',proj6_title:'Incident Response Automation',proj6_desc:'Automated playbooks reducing MTTR from 4 hours to 15 minutes.',
     edu_title:'Education',edu1_year:'2023–2025',edu1_deg:'Master — Systems, Networks & Cybersecurity Engineering (Bac+5)',edu1_sch:'ENSI, Casablanca',edu2_year:'2023–2024',edu2_deg:'Bachelor — Systems Administration, Databases & Cloud Computing (Bac+3)',edu2_sch:'SUPEMIR, Casablanca',edu3_year:'2018–2021',edu3_deg:'Bachelor — Project Management',edu3_sch:'WESFORD, France',edu4_year:'2018–2020',edu4_deg:'Technician Diploma — IT Maintenance & Network Support',edu4_sch:'ISTICG, Berrechid',edu5_year:'2016–2017',edu5_deg:'Baccalaureate — Physical Sciences',edu5_sch:'Lycée Eljadida, Berrechid',
     cert_title:'Certifications',cert1_name:'System Administration & IT Infrastructure Services',cert1_org:'Google Professional Certificate',cert2_name:'Ethical Hacker',cert2_org:'Cisco Networking Academy',cert3_name:'Fortinet Certified Associate — Cybersecurity',cert3_org:'Fortinet',
@@ -387,9 +397,10 @@ const T = {
   },
   fr: {
     nav_logo:'Hamza <span>FEKKAK</span>',nav_about:'À propos',nav_skills:'Compétences',nav_experience:'Expérience',nav_projects:'Projets',nav_education:'Formation',nav_contact:'Contact',
-    hero_title:'Hamza <span>FEKKAK</span>',hero_role:'Ingénieur IT & Cybersécurité',hero_desc:'Professionnel de l\'informatique spécialisé en administration des systèmes IT, infrastructure cloud et cybersécurité. 5+ ans d\'expérience dans des environnements multinationaux (aéronautique, télécom, aviation).',hero_cta_contact:'Me Contacter',hero_cta_cv:'Télécharger CV',hero_cta_linkedin:'LinkedIn',
+    hero_title:'Hamza <span>FEKKAK</span>',hero_role:'Ingénieur IT & Cybersécurité',hero_cta_contact:'Me Contacter',hero_cta_cv:'Télécharger CV',hero_cta_linkedin:'LinkedIn',
     about_title:'À propos',about_desc:'Professionnel de l\'informatique spécialisé en administration des systèmes IT, infrastructure cloud et cybersécurité. Je me spécialise dans la construction d\'infrastructures sécurisées et évolutives pour les entreprises.',about_expertise:'Expertise',exp1:'Cybersécurité & Détection de menaces',exp2:'Architecture Cloud (Azure, AWS)',exp3:'Data Center & Infrastructure',exp4:'Administration réseau',exp5:'Automatisation IT & DevSecOps',exp6:'Gouvernance IT & Conformité',about_lang:'Langues & Localisation',lang1:'Arabe — Maternel',lang2:'Français — Courant',lang3:'Anglais — Compétent',lang4:'Berrechid, Maroc',lang5:'Ouvert aux opportunités internationales',lang6:'Passionné de matériel & robotique',
     skills_title:'Compétences Techniques',xp_title:'Expériences Professionnelles',xp1_role:'Ingénieur IT',xp1_company:'SOFRECOM · Groupe Orange',xp1_date:'Sep 2025 – Présent',xp1_t1:'Réaliser des revues régulières de sécurité des systèmes d\'infrastructure',xp1_t2:'Piloter les projets IT internes, coordination entre équipes techniques',xp1_t3:'Gérer les solutions de déploiement MDT, WDS, SCCM et PDQ Deploy',xp1_t4:'Rédiger et maintenir la documentation technique et les procédures',xp1_t5:'Contrôler l\'application des règles de sécurité et suivi des dérogations',xp1_t6:'Former et sensibiliser les utilisateurs aux bonnes pratiques IT',xp1_t7:'Superviser la gestion des équipements via OCS Inventory',xp1_t8:'Support technique niveaux 2 et 3 pour les incidents complexes',xp1_t9:'Interlocuteur avec les fournisseurs et équipes IT (Maroc & France)',xp2_role:'Administrateur IT',xp2_company:'LATECOERE INTERCONNECTION SYSTEMS',xp2_date:'Déc 2022 – Sep 2025',xp2_t1:'Gestion du Data Center — AD DS, DNS, DHCP (+98% conformité sécurité)',xp2_t2:'Déploiement, configuration et mise à niveau via SCCM',xp2_t3:'Gestion EDR CrowdStrike et MDM Sophos Mobile',xp2_t4:'Administration VMware vSphere et serveurs Azure',xp2_t5:'Automatisation PowerShell — réduction 30% des tâches manuelles',xp2_t6:'Gestion téléphonie VoIP Cisco Webex',xp2_t7:'Sauvegardes — disponibilité supérieure à 99%',xp2_t8:'Maintenance salles serveurs — réduction 20% consommation énergétique',xp2_t9:'Documentation technique pour +1000 utilisateurs',xp2_t10:'92% de tickets résolus au premier contact',xp3_role:'Technicien IT',xp3_company:'AMEX ROYAL AIR MAROC',xp3_date:'Juil 2021 – Déc 2022',xp3_t1:'Gestion des incidents via Micro Focus SMAX',xp3_t2:'Installation, configuration et maintenance du matériel',xp3_t3:'Paramétrage et gestion des sessions utilisateurs',xp3_t4:'Déploiement logiciel via ManageEngine',xp3_t5:'Gestion du stock informatique et optimisation des ressources',xp3_t6:'Support utilisateurs multicanal (téléphone, email, à distance)',
+    typing_texts:['Construction d\'infrastructures IT sécurisées, intelligentes et évolutives pour les entreprises modernes.','Ingénieur Cybersécurité spécialisé en Infrastructure, Cloud, Gouvernance IT et Sécurité d\'entreprise.','5+ ans d\'expérience dans des environnements multinationaux.'],
     proj_title:'Projets',proj1_title:'Plateforme SOC Automatisée',proj1_desc:'Création d\'un tableau de bord SOC avec détection de menaces en temps réel utilisant Wazuh SIEM, Suricata IDS et pipelines d\'alerte Python.',proj2_title:'Framework de Migration Cloud',proj2_desc:'Migration cloud d\'entreprise de VMware vers Azure, réduisant les coûts d\'infrastructure de 40%.',proj3_title:'Scanner de Vulnérabilités IA',proj3_desc:'Outil intelligent d\'évaluation des vulnérabilités utilisant le machine learning pour prioriser les CVE.',proj4_title:'Architecture Zero Trust',proj4_desc:'Segmentation réseau zero-trust avec micro-segmentation et contrôles d\'accès basés sur l\'identité.',proj5_title:'Pipeline DevSecOps',proj5_desc:'Pipeline CI/CD intégrant SAST/DAST, vérification d\'images conteneurs et compliance-as-code.',proj6_title:'Automatisation Réponse aux Incidents',proj6_desc:'Playbooks automatisés réduisant le MTTR de 4 heures à 15 minutes.',
     edu_title:'Parcours Académique',edu1_year:'2023–2025',edu1_deg:'Master Professionnel — Ingénierie Systèmes, Réseaux & Cybersécurité (Bac+5)',edu1_sch:'ENSI, Casablanca',edu2_year:'2023–2024',edu2_deg:'Licence Professionnelle — Administration Systèmes, BDD & Cloud (Bac+3)',edu2_sch:'SUPEMIR, Casablanca',edu3_year:'2018–2021',edu3_deg:'Bachelor — Responsable de Projets',edu3_sch:'WESFORD, France',edu4_year:'2018–2020',edu4_deg:'Diplôme Technicien — Maintenance & Support Informatique et Réseaux',edu4_sch:'ISTICG, Berrechid',edu5_year:'2016–2017',edu5_deg:'Baccalauréat — Sciences Physiques',edu5_sch:'Lycée Eljadida, Berrechid',
     cert_title:'Certifications',cert1_name:'System Administration and IT Infrastructure Services',cert1_org:'Certification Professionnelle Google',cert2_name:'Ethical Hacker',cert2_org:'Cisco Networking Academy',cert3_name:'Fortinet Certified Associate — Cybersecurity',cert3_org:'Fortinet',
@@ -407,6 +418,8 @@ function applyLang() {
   });
   document.getElementById('btnLang').textContent = lang === 'en' ? 'FR' : 'EN';
   document.documentElement.lang = lang;
+  // Restart typing animation with new language
+  if (t.typing_texts) { typingStrings = t.typing_texts; typingIndex = 0; charIndex = 0; del = false; document.getElementById('typing-text').textContent = ''; }
 }
 function toggleLang() { lang = lang === 'en' ? 'fr' : 'en'; applyLang(); }
 
@@ -459,6 +472,26 @@ const counterObs = new IntersectionObserver((es) => {
   });
 }, { threshold: 0.5 });
 document.querySelectorAll('[data-count]').forEach(el => counterObs.observe(el));
+
+// Typing effect
+let typingStrings = T.en.typing_texts;
+let typingIndex = 0, charIndex = 0, del = false;
+function typeLoop() {
+  const el = document.getElementById('typing-text');
+  if (!el) return;
+  const s = typingStrings[typingIndex % typingStrings.length];
+  if (!del) {
+    el.textContent = s.substring(0, charIndex + 1);
+    charIndex++;
+    if (charIndex >= s.length) setTimeout(() => { del = true; }, 2500);
+  } else {
+    el.textContent = s.substring(0, charIndex - 1);
+    charIndex--;
+    if (charIndex <= 0) { del = false; typingIndex++; }
+  }
+  setTimeout(typeLoop, del ? 35 : 70);
+}
+typeLoop();
 
 // Tech Particles Animation
 (function() {
